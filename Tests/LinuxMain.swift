@@ -4,8 +4,9 @@ import MonkiProjectsModelTests
 
 var tests = [XCTestCaseEntry]()
 
-// Apps
+// Social Networks
 tests += SocialNetworkTests.allTests()
+tests += SocialProfileTests.allTests()
 
 // Sports
 tests += SportTests.allTests()

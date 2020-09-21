@@ -3,8 +3,9 @@ import XCTest
 #if !canImport(ObjectiveC)
 public func allTests() -> [XCTestCaseEntry] {
 	return [
-		// Apps
+		// Social Networks
 		testCase(SocialNetworkTests.allTests),
+		testCase(SocialProfileTests.allTests),
 		// Sports
 		testCase(SportTests.allTests),
 		testCase(SportLevelTests.allTests),
