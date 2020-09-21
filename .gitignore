@@ -1,5 +1,11 @@
+# Apple
 .DS_Store
+
+# Swift & XCode
 /.build
 /Packages
 /*.xcodeproj
 xcuserdata/
+
+# Jazzy docs
+docs
