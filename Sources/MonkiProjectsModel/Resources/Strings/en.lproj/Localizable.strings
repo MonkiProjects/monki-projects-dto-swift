@@ -1,0 +1,20 @@
+//
+//  Localizable.strings
+//  MonkiProjectsModel
+//
+//  Created by BARDON Rémi on 21/09/2020.
+//  Copyright © 2020 Monki Projects. All rights reserved.
+//
+
+// English translations
+
+// Levels
+"LEVEL_NEVER_TRIED" 	= "Never tried";
+"LEVEL_BEGINNER" 		= "Beginner";
+"LEVEL_INTERMEDIATE" 	= "Intermediate";
+"LEVEL_ADVANCED" 		= "Advanced";
+"LEVEL_PROFESSIONAL" 	= "Professional";
+
+// User types
+"USER_TYPE_USER" 	= "User";
+"USER_TYPE_BOT" 	= "Bot";
