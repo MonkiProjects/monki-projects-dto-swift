@@ -11,7 +11,7 @@ import XCTest
 
 final class UserTypeTests: XCTestCase {
 	
-	private let translations: [UserType:String] = [
+	private let translations: [UserType: String] = [
 		.user: "User",
 		.bot: "Bot",
 	]

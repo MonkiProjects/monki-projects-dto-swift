@@ -11,7 +11,7 @@ import XCTest
 
 final class UserExperiencesLevelTests: XCTestCase {
 	
-	private let translations: [UserExperiences.Level:String] = [
+	private let translations: [UserExperiences.Level: String] = [
 		.neverTried: "Never tried",
 		.beginner: "Beginner",
 		.intermediate: "Intermediate",

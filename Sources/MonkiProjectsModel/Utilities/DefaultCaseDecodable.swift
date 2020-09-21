@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// COmes from [OMG a new enum case!](https://link.medium.com/PhETT8BKg9)
+/// Comes from [OMG a new enum case!](https://link.medium.com/PhETT8BKg9)
 public protocol DefaultCaseDecodable: RawRepresentable, CaseIterable where RawValue: Equatable & Codable {
 	
 	static var defaultCase: Self { get }

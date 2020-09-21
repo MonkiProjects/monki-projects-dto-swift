@@ -1,0 +1,34 @@
+# For more information, visit https://github.com/realm/SwiftLint
+
+disabled_rules:
+  nesting
+opt_in_rules:
+  - trailing_comma
+  
+included:
+  - .
+excluded:
+  - .gitignore
+  - .build
+  - .swiftlint.yml
+
+line_length: 110
+type_body_length:
+  warning: 300
+  error: 400
+file_length:
+  warning: 500
+  error: 1200
+identifier_name:
+  excluded:
+    - id
+    - url
+    - bio
+    - lhs
+    - rhs
+    - bot
+trailing_whitespace:
+  ignores_empty_lines: true
+trailing_comma:
+  mandatory_comma: true
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown, github-actions-logging)
