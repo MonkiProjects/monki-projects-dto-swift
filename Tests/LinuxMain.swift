@@ -4,14 +4,19 @@ import MonkiProjectsModelTests
 
 var tests = [XCTestCaseEntry]()
 
+// Apps
+tests += SocialNetworkTests.allTests()
+
+// Sports
+tests += SportTests.allTests()
+tests += SportLevelTests.allTests()
+
 // Users
-tests += UserTests.allTests()
-tests += UserCreateTests.allTests()
-tests += UserLoginTests.allTests()
-tests += UserPublicTests.allTests()
-tests += UserExperiencesTests.allTests()
-tests += UserExperiencesLevelTests.allTests()
-tests += UserSocialsTests.allTests()
+tests += MPUserTests.allTests()
+tests += MPUserCreateTests.allTests()
+tests += MPUserLoginTests.allTests()
+tests += MPUserPublicTests.allTests()
+tests += MPUserTypeTests.allTests()
 
 // Utilities
 tests += AvatarSourceTests.allTests()

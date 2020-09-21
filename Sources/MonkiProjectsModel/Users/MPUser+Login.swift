@@ -1,0 +1,25 @@
+//
+//  MPUser+Login.swift
+//  MonkiProjectsModel
+//
+//  Created by BARDON Rémi on 14/06/2020.
+//  Copyright © 2020 Monki Projects. All rights reserved.
+//
+
+import Foundation
+
+extension MPUser {
+	
+	public struct Login: Codable, Hashable {
+		
+		public var username: String
+		public var password: String
+		
+		public init(username: String, password: String) {
+			self.username = username
+			self.password = password
+		}
+		
+	}
+	
+}
