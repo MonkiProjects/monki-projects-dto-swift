@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "monki-projects-model_MonkiProjectsModel"
-               BuildableName = "monki-projects-model_MonkiProjectsModel"
-               BlueprintName = "monki-projects-model_MonkiProjectsModel"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "MonkiProjectsModel"
                BuildableName = "MonkiProjectsModel"
                BlueprintName = "MonkiProjectsModel"
@@ -36,10 +22,10 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
+            buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "MonkiProjectsModelTests"
@@ -100,9 +86,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "monki-projects-model_MonkiProjectsModel"
-            BuildableName = "monki-projects-model_MonkiProjectsModel"
-            BlueprintName = "monki-projects-model_MonkiProjectsModel"
+            BlueprintIdentifier = "MonkiProjectsModel"
+            BuildableName = "MonkiProjectsModel"
+            BlueprintName = "MonkiProjectsModel"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
