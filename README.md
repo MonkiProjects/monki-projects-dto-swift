@@ -4,7 +4,7 @@ This package contains the definitions for models used across Monki Projects' app
 
 ## Documentation page
 
-All the documentation is available at [monkiprojects.github.io/MonkiProjectsModel](https://monkiprojects.github.io/MonkiProjectsModel/)
+All the documentation is available at [monkiprojects.github.io/monki-projects-model](https://monkiprojects.github.io/monki-projects-model/)
 
 ## Supported languages
 
