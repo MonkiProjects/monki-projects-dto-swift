@@ -15,13 +15,13 @@ extension MPUser {
 		public struct Small: Codable, Hashable {
 			
 			public let id: UUID
-			public let username: String
-			public let displayName: String
+			public var username: String
+			public var displayName: String
 			public let url: URL
-			public let avatar: AvatarSource?
-			public let country: String?
+			public var avatar: AvatarSource?
+			public var country: String?
 			public let type: MPUserType
-			public let updatedAt: Date
+			public var updatedAt: Date
 			
 			public init(
 				id: UUID = UUID(),
@@ -52,19 +52,19 @@ extension MPUser {
 		public struct Full: Codable, Hashable {
 			
 			public let id: UUID
-			public let username: String
-			public let displayName: String
-			public let bio: String?
+			public var username: String
+			public var displayName: String
+			public var bio: String?
 			public let url: URL
 			public let htmlUrl: URL
-			public let avatar: AvatarSource?
-			public let experience: [Sport: SportLevel]
-			public let country: String?
-			public let location: String?
-			public let socials: [SocialNetwork: URL]
+			public var avatar: AvatarSource?
+			public var experience: [Sport: SportLevel]
+			public var country: String?
+			public var location: String?
+			public var socials: [SocialNetwork: URL]
 			public let type: MPUserType
 			public let createdAt: Date
-			public let updatedAt: Date
+			public var updatedAt: Date
 			
 			public init(
 				id: UUID = UUID(),
