@@ -33,5 +33,13 @@ public enum SocialNetwork: String, Codable, Hashable {
 	
 }
 
+extension SocialNetwork: Comparable {
+	
+	public static func < (lhs: SocialNetwork, rhs: SocialNetwork) -> Bool {
+		allCases.firstIndex(of: lhs)! < allCases.firstIndex(of: rhs)!
+	}
+	
+}
+
 /// Extend for testing purposes
 extension SocialNetwork: CaseIterable {}

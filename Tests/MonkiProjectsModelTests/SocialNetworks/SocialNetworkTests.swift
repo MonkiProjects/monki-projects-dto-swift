@@ -32,8 +32,14 @@ final class SocialNetworkTests: XCTestCase {
 		}
 	}
 	
+	func testSortedOrder() {
+		let expected: [SocialNetwork] = [.instagram, .youTube, .vimeo, .facebook, .twitter, .messenger, .tikTok]
+		XCTAssertEqual(SocialNetwork.allCases.sorted(), expected)
+	}
+	
 	static var allTests = [
 		("testDefaultTranslation", testDefaultTranslation),
+		("testSortedOrder", testSortedOrder),
 	]
 	
 }
