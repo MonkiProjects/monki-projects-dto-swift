@@ -33,5 +33,13 @@ public enum Sport: String, Codable, Hashable {
 	
 }
 
+extension Sport: Comparable {
+	
+	public static func < (lhs: Sport, rhs: Sport) -> Bool {
+		allCases.firstIndex(of: lhs)! < allCases.firstIndex(of: rhs)!
+	}
+	
+}
+
 /// Extend for testing purposes
 extension Sport: CaseIterable {}
