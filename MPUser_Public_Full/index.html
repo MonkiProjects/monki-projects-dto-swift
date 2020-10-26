@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonkiProjectsModel - MPUser.Public.Full</title>
+    <link rel="stylesheet" type="text/css" href="/monki-projects-model/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/monki-projects-model/">
+            <strong>
+                MonkiProjectsModel
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Member Of</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#mpuser.public.full.init(id:username:displayname:bio:url:htmlurl:avatar:experience:country:location:socials:type:createdat:updatedat:)">init(id:​username:​display​Name:​bio:​url:​html​Url:​avatar:​experience:​country:​location:​socials:​type:​created​At:​updated​At:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#mpuser.public.full.id">id</a></li><li class="variable"><a href="#mpuser.public.full.username">username</a></li><li class="variable"><a href="#mpuser.public.full.displayname">display​Name</a></li><li class="variable"><a href="#mpuser.public.full.bio">bio</a></li><li class="variable"><a href="#mpuser.public.full.url">url</a></li><li class="variable"><a href="#mpuser.public.full.htmlurl">html​Url</a></li><li class="variable"><a href="#mpuser.public.full.avatar">avatar</a></li><li class="variable"><a href="#mpuser.public.full.experience">experience</a></li><li class="variable"><a href="#mpuser.public.full.country">country</a></li><li class="variable"><a href="#mpuser.public.full.location">location</a></li><li class="variable"><a href="#mpuser.public.full.socials">socials</a></li><li class="variable"><a href="#mpuser.public.full.type">type</a></li><li class="variable"><a href="#mpuser.public.full.createdat">created​At</a></li><li class="variable"><a href="#mpuser.public.full.updatedat">updated​At</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#mpuser.public.full.==(lhs:rhs:)">==(lhs:​rhs:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">MPUser.​Public.​Full</code>
+</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Full</span>: <span class="type">Codable</span>, <span class="type">Hashable</span></code></pre></body></html>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        <figure>
+    
+
+    <figcaption hidden>Inheritance graph for MPUser.Public.Full.</figcaption>
+</figure>
+        <h3>Member Of</h3>
+<dl>
+    <dt class="enumeration"><code><a href="/monki-projects-model/MPUser_Public">MPUser.Public</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Conforms To</h3>
+<dl>
+    <dt class="unknown"><code>Codable</code></dt>
+<dt class="unknown"><code>Hashable</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="mpuser.public.full.init(id:username:displayname:bio:url:htmlurl:avatar:experience:country:location:socials:type:createdat:updatedat:)">
+    <h3>
+        <code>init(id:​username:​display​Name:​bio:​url:​html​Url:​avatar:​experience:​country:​location:​socials:​type:​created​At:​updated​At:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">id</span>: <span class="type">UUID</span> = <span class="variable">UUID</span>(), <span class="variable">username</span>: <span class="type">String</span>, <span class="variable">displayName</span>: <span class="type">String</span>, <span class="variable">bio</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">url</span>: <span class="type">URL</span>, <span class="variable">htmlUrl</span>: <span class="type">URL</span>, <span class="variable">avatar</span>: <a href="/monki-projects-model/AvatarSource"><span class="type">AvatarSource</span></a>? = <span class="keyword">nil</span>, <span class="variable">experience</span>: [<a href="/monki-projects-model/Sport"><span class="type">Sport</span></a>: <a href="/monki-projects-model/SportLevel"><span class="type">SportLevel</span></a>] = [:], <span class="variable">country</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">location</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">socials</span>: [<a href="/monki-projects-model/SocialNetwork"><span class="type">SocialNetwork</span></a>: <span class="type">URL</span>] = [:], <span class="variable">type</span>: <a href="/monki-projects-model/MPUserType"><span class="type">MPUserType</span></a> = .<span class="variable">user</span>, <span class="variable">createdAt</span>: <span class="type">Date</span> = <span class="variable">Date</span>(), <span class="variable">updatedAt</span>: <span class="type">Date</span> = <span class="variable">Date</span>())</code></pre></body></html>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="mpuser.public.full.id">
+    <h3>
+        <code>id</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">id</span>: <span class="type">UUID</span></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.username">
+    <h3>
+        <code>username</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">username</span>: <span class="type">String</span></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.displayname">
+    <h3>
+        <code>display​Name</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">displayName</span>: <span class="type">String</span></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.bio">
+    <h3>
+        <code>bio</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">bio</span>: <span class="type">String</span>?</code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.url">
+    <h3>
+        <code>url</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">url</span>: <span class="type">URL</span></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.htmlurl">
+    <h3>
+        <code>html​Url</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">htmlUrl</span>: <span class="type">URL</span></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.avatar">
+    <h3>
+        <code>avatar</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">avatar</span>: <a href="/monki-projects-model/AvatarSource"><span class="type">AvatarSource</span></a>?</code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.experience">
+    <h3>
+        <code>experience</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">experience</span>: [<a href="/monki-projects-model/Sport"><span class="type">Sport</span></a>: <a href="/monki-projects-model/SportLevel"><span class="type">SportLevel</span></a>]</code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.country">
+    <h3>
+        <code>country</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">country</span>: <span class="type">String</span>?</code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.location">
+    <h3>
+        <code>location</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">location</span>: <span class="type">String</span>?</code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.socials">
+    <h3>
+        <code>socials</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">socials</span>: [<a href="/monki-projects-model/SocialNetwork"><span class="type">SocialNetwork</span></a>: <span class="type">URL</span>]</code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.type">
+    <h3>
+        <code>type</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">type</span>: <a href="/monki-projects-model/MPUserType"><span class="type">MPUserType</span></a></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.createdat">
+    <h3>
+        <code>created​At</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">createdAt</span>: <span class="type">Date</span></code></pre></body></html>
+</div>
+<div role="article" class="variable" id="mpuser.public.full.updatedat">
+    <h3>
+        <code>updated​At</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">updatedAt</span>: <span class="type">Date</span></code></pre></body></html>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="mpuser.public.full.==(lhs:rhs:)">
+    <h3>
+        <code>==(lhs:​rhs:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> ==(<span class="variable">lhs</span>: <span class="keyword">Self</span>, <span class="variable">rhs</span>: <span class="keyword">Self</span>) -&gt; <span class="type">Bool</span></code></pre></body></html>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-10-26T15:04:10+0000">October 26, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>
