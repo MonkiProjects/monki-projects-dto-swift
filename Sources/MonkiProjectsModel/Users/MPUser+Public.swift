@@ -61,7 +61,7 @@ extension MPUser {
 			public var experience: [Sport: SportLevel]
 			public var country: String?
 			public var location: String?
-			public var socials: [SocialNetwork: URL]
+			public var socialUsernames: [SocialNetwork: String]
 			public let type: MPUserType
 			public let createdAt: Date
 			public var updatedAt: Date
@@ -77,7 +77,7 @@ extension MPUser {
 				experience: [Sport: SportLevel] = [:],
 				country: String? = nil,
 				location: String? = nil,
-				socials: [SocialNetwork: URL] = [:],
+				socialUsernames: [SocialNetwork: String] = [:],
 				type: MPUserType = .user,
 				createdAt: Date = Date(),
 				updatedAt: Date = Date()
@@ -92,7 +92,7 @@ extension MPUser {
 				self.experience = experience
 				self.country = country
 				self.location = location
-				self.socials = socials
+				self.socialUsernames = socialUsernames
 				self.type = type
 				self.createdAt = createdAt
 				self.updatedAt = updatedAt
