@@ -43,10 +43,6 @@ extension MPUser {
 				self.updatedAt = updatedAt
 			}
 			
-			public static func == (lhs: Self, rhs: Self) -> Bool {
-				return lhs.id == rhs.id
-			}
-			
 		}
 		
 		public struct Full: Codable, Hashable {
@@ -96,10 +92,6 @@ extension MPUser {
 				self.type = type
 				self.createdAt = createdAt
 				self.updatedAt = updatedAt
-			}
-			
-			public static func == (lhs: Self, rhs: Self) -> Bool {
-				return lhs.id == rhs.id
 			}
 			
 		}
