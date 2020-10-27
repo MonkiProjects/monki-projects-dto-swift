@@ -19,11 +19,11 @@ extension MPUser {
 		public var confirmPassword: String
 		
 		public init(
-			email: String,
-			username: String,
-			displayName: String,
-			password: String,
-			confirmPassword: String
+			email: String = "",
+			username: String = "",
+			displayName: String = "",
+			password: String = "",
+			confirmPassword: String = ""
 		) {
 			self.email = email
 			self.username = username
