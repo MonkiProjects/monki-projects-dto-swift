@@ -9,6 +9,7 @@
 #if canImport(SwiftUI)
 import SwiftUI
 
+#warning("Refactor SwiftUI code in different package")
 @available(iOS 13.0, *)
 @available(OSX 10.15, *)
 extension SocialNetwork {
