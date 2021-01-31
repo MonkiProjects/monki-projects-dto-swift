@@ -14,19 +14,19 @@ let package = Package(
 	products: [
 		.library(
 			name: "MonkiProjectsModel",
-			targets: ["MonkiProjectsModel"]
+			targets: ["Model"]
 		),
 	],
 	targets: [
 		.target(
-			name: "MonkiProjectsModel",
+			name: "Model",
 			resources: [
 				.process("Resources/Strings"),
 			]
 		),
 		.testTarget(
-			name: "MonkiProjectsModelTests",
-			dependencies: ["MonkiProjectsModel"]
+			name: "ModelTests",
+			dependencies: ["Model"]
 		),
 	]
 )

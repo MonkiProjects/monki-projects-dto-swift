@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import MonkiProjectsModel
+@testable import Model
 
 final class SportLevelTests: XCTestCase {
 	
