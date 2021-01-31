@@ -1,5 +1,5 @@
 //
-//  AvatarSourceTests.swift
+//  MPUser+CreateTests.swift
 //  MonkiProjectsModelTests
 //
 //  Created by BARDON Rémi on 21/09/2020.
@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import Model
+@testable import MonkiProjectsModel
 
-final class AvatarSourceTests: XCTestCase {
+final class MPUserCreateTests: XCTestCase {
 	
 	func testExample() throws {
 		throw XCTSkip("Example")

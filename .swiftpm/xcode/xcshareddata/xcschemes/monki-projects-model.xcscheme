@@ -34,20 +34,6 @@
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Model"
-               BuildableName = "Model"
-               BlueprintName = "Model"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -75,16 +61,6 @@
                BlueprintIdentifier = "MonkiProjectsModelTests"
                BuildableName = "MonkiProjectsModelTests"
                BlueprintName = "MonkiProjectsModelTests"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ModelTests"
-               BuildableName = "ModelTests"
-               BlueprintName = "ModelTests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
