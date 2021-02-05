@@ -17,9 +17,9 @@ public enum MPUserType: String, Codable, Hashable, DefaultCaseDecodable {
 	public var title: String {
 		switch self {
 		case .user:
-			return NSLocalizedString("USER_TYPE_USER", bundle: .module, comment: "")
+			return NSLocalizedString("USER_TYPE_USER", bundle: .fixedModule, comment: "")
 		case .bot:
-			return NSLocalizedString("USER_TYPE_BOT", bundle: .module, comment: "")
+			return NSLocalizedString("USER_TYPE_BOT", bundle: .fixedModule, comment: "")
 		}
 	}
 	

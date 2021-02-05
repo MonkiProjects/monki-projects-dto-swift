@@ -18,19 +18,19 @@ extension SocialNetwork {
 	public var color: Color {
 		switch self {
 		case .instagram:
-			return Color("instagram", bundle: .module)
+			return Color("instagram", bundle: .fixedModule)
 		case .youTube:
-			return Color("youtube", bundle: .module)
+			return Color("youtube", bundle: .fixedModule)
 		case .vimeo:
-			return Color("vimeo", bundle: .module)
+			return Color("vimeo", bundle: .fixedModule)
 		case .facebook:
-			return Color("facebook", bundle: .module)
+			return Color("facebook", bundle: .fixedModule)
 		case .twitter:
-			return Color("twitter", bundle: .module)
+			return Color("twitter", bundle: .fixedModule)
 		case .messenger:
-			return Color("messenger-2", bundle: .module)
+			return Color("messenger-2", bundle: .fixedModule)
 		case .tikTok:
-			return Color("tiktok-2", bundle: .module)
+			return Color("tiktok-2", bundle: .fixedModule)
 		}
 	}
 	
@@ -38,19 +38,19 @@ extension SocialNetwork {
 	public var icon: Image {
 		switch self {
 		case .instagram:
-			return Image("icons8-instagram", bundle: .module)
+			return Image("icons8-instagram", bundle: .fixedModule)
 		case .youTube:
-			return Image("icons8-youtube", bundle: .module)
+			return Image("icons8-youtube", bundle: .fixedModule)
 		case .vimeo:
-			return Image("icons8-vimeo", bundle: .module)
+			return Image("icons8-vimeo", bundle: .fixedModule)
 		case .facebook:
-			return Image("icons8-facebook", bundle: .module)
+			return Image("icons8-facebook", bundle: .fixedModule)
 		case .twitter:
-			return Image("icons8-twitter", bundle: .module)
+			return Image("icons8-twitter", bundle: .fixedModule)
 		case .messenger:
-			return Image("icons8-facebook_messenger", bundle: .module)
+			return Image("icons8-facebook_messenger", bundle: .fixedModule)
 		case .tikTok:
-			return Image("icons8-tiktok", bundle: .module)
+			return Image("icons8-tiktok", bundle: .fixedModule)
 		}
 	}
 	
