@@ -10,6 +10,8 @@
 
 public protocol WithGlyph {
 	
+	static var imageBundle: Bundle { get }
+	
 	var glyphName: String? { get }
 	
 }
@@ -25,7 +27,7 @@ extension WithGlyph {
 	@available(iOS 13.0, *)
 	public var uiGlyph: UIImage? {
 		if let imageName = self.glyphName {
-			return UIImage(named: imageName, in: .fixedModule, compatibleWith: nil)
+			return UIImage(named: imageName, in: Self.imageBundle, compatibleWith: nil)
 		} else {
 			return nil
 		}
@@ -45,7 +47,7 @@ extension WithGlyph {
 	@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 	public var glyph: Image? {
 		if let imageName = self.glyphName {
-			return Image(imageName, bundle: .fixedModule)
+			return Image(imageName, bundle: Self.imageBundle)
 		} else {
 			return nil
 		}

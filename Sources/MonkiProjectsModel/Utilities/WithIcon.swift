@@ -10,6 +10,8 @@
 
 public protocol WithIcon {
 	
+	static var imageBundle: Bundle { get }
+	
 	var iconName: String? { get }
 	
 }
@@ -25,7 +27,7 @@ extension WithIcon {
 	@available(iOS 13.0, *)
 	public var uiIcon: UIImage? {
 		if let imageName = self.iconName {
-			return UIImage(named: imageName, in: .fixedModule, compatibleWith: nil)
+			return UIImage(named: imageName, in: Self.imageBundle, compatibleWith: nil)
 		} else {
 			return nil
 		}
@@ -45,7 +47,7 @@ extension WithIcon {
 	@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 	public var icon: Image? {
 		if let imageName = self.iconName {
-			return Image(imageName, bundle: .fixedModule)
+			return Image(imageName, bundle: Self.imageBundle)
 		} else {
 			return nil
 		}
