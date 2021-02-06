@@ -1,5 +1,5 @@
 //
-//  WithIcon.swift
+//  WithGlyph.swift
 //  MonkiProjectsModel
 //
 //  Created by Rémi Bardon on 01/10/2020.
@@ -8,9 +8,9 @@
 
 // MARK: - Protocol
 
-public protocol WithIcon {
+public protocol WithGlyph {
 	
-	var iconName: String? { get }
+	var glyphName: String? { get }
 	
 }
 
@@ -19,12 +19,12 @@ public protocol WithIcon {
 #if canImport(UIKit)
 import UIKit
 
-extension WithIcon {
+extension WithGlyph {
 	
 	/// Icons from [Icons8](https://icons8.com)
 	@available(iOS 13.0, *)
-	public var uiIcon: UIImage? {
-		if let imageName = self.iconName {
+	public var uiGlyph: UIImage? {
+		if let imageName = self.glyphName {
 			return UIImage(named: imageName, in: .fixedModule, compatibleWith: nil)
 		} else {
 			return nil
@@ -39,12 +39,12 @@ extension WithIcon {
 #if canImport(SwiftUI)
 import SwiftUI
 
-extension WithIcon {
+extension WithGlyph {
 	
 	/// Icons from [Icons8](https://icons8.com)
 	@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-	public var icon: Image? {
-		if let imageName = self.iconName {
+	public var glyph: Image? {
+		if let imageName = self.glyphName {
 			return Image(imageName, bundle: .fixedModule)
 		} else {
 			return nil
