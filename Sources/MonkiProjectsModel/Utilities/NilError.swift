@@ -12,6 +12,10 @@ public struct NilError: Error, CustomStringConvertible {
 	
 	public let description: String
 	
+	public init(custom description: String) {
+		self.description = description
+	}
+	
 	public init<T>(_ value: T) {
 		self.description = "\(type(of: value)) is nil"
 	}
