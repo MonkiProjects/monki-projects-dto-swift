@@ -12,11 +12,8 @@ extension User {
 	
 	public struct Create: Codable, Hashable {
 		
-		public var email: String
-		public var username: String
-		public var displayName: String
-		public var password: String
-		public var confirmPassword: String
+		public var email, username, displayName: String
+		public var password, confirmPassword: String
 		
 		public init(
 			email: String = "",

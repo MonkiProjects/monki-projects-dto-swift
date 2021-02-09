@@ -8,9 +8,9 @@
 
 import Foundation
 
-public extension User {
+extension User {
 	
-	enum Kind: String, Codable, Hashable, DefaultCaseDecodable {
+	public enum Kind: String, Codable, Hashable, DefaultCaseDecodable {
 		
 		public static let defaultCase: Self = .user
 		

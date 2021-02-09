@@ -12,11 +12,10 @@ extension User {
 	
 	public enum Public {
 		
-		public struct Small: Codable, Hashable {
+		public struct Small: Codable, Hashable, Identifiable {
 			
 			public let id: UUID
-			public var username: String
-			public var displayName: String
+			public var username, displayName: String
 			public let url: URL
 			public var avatar: AvatarSource?
 			public var country: String?
@@ -24,7 +23,7 @@ extension User {
 			public var updatedAt: Date
 			
 			public init(
-				id: UUID = UUID(),
+				id: ID = UUID(),
 				username: String,
 				displayName: String,
 				url: URL,
@@ -45,25 +44,22 @@ extension User {
 			
 		}
 		
-		public struct Full: Codable, Hashable {
+		public struct Full: Codable, Hashable, Identifiable {
 			
 			public let id: UUID
-			public var username: String
-			public var displayName: String
+			public var username, displayName: String
 			public var bio: String?
-			public let url: URL
-			public let htmlUrl: URL
+			public let url, htmlUrl: URL
 			public var avatar: AvatarSource?
 			public var experience: [Sport: SportLevel]
-			public var country: String?
-			public var location: String?
+			public var country, location: String?
 			public var socialUsernames: [SocialNetwork: String]
 			public let type: User.Kind
 			public let createdAt: Date
 			public var updatedAt: Date
 			
 			public init(
-				id: UUID = UUID(),
+				id: ID = UUID(),
 				username: String,
 				displayName: String,
 				bio: String? = nil,

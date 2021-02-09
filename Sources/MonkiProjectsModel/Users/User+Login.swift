@@ -12,8 +12,7 @@ extension User {
 	
 	public struct Login: Codable, Hashable {
 		
-		public var username: String
-		public var password: String
+		public var username, password: String
 		
 		public init(username: String, password: String) {
 			self.username = username
