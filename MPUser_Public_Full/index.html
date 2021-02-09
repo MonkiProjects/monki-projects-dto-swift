@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonkiProjectsModel - MPUser.Public.Full</title>
-    <link rel="stylesheet" type="text/css" href="/monki-projects-model/all.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/monki-projects-model-swift/all.css" media="all" />
 </head>
 <body>
     <header>
-        <a href="/monki-projects-model/">
+        <a href="/monki-projects-model-swift/">
             <strong>
                 MonkiProjectsModel
             </strong>
@@ -55,7 +55,7 @@
 <!-- MPUser.Public.Full -->
 <g id="node1" class="node structure current">
 <title>MPUser.Public.Full</title>
-<g id="a_node1"><a xlink:href="/monki-projects-model/MPUser_Public_Full" xlink:title="MPUser.Public.Full">
+<g id="a_node1"><a xlink:href="/monki-projects-model-swift/MPUser_Public_Full" xlink:title="MPUser.Public.Full">
 <path fill="none" stroke="#000000" stroke-width="3" d="M528,-108C528,-108 336,-108 336,-108 330,-108 324,-102 324,-96 324,-96 324,-84 324,-84 324,-78 330,-72 336,-72 336,-72 528,-72 528,-72 534,-72 540,-78 540,-84 540,-84 540,-96 540,-96 540,-102 534,-108 528,-108"/>
 <text text-anchor="middle" x="432" y="-86.3" font-family="Menlo" font-size="14.00" fill="#000000">MPUser.Public.Full</text>
 </a>
@@ -68,7 +68,7 @@
 <text text-anchor="middle" x="207" y="-14.3" font-family="Menlo" font-size="14.00" fill="#000000">Hashable</text>
 </g>
 <!-- MPUser.Public.Full&#45;&gt;Hashable -->
-<g id="edge1" class="edge conformsTo">
+<g id="edge2" class="edge conformsTo">
 <title>MPUser.Public.Full&#45;&gt;Hashable</title>
 <path fill="none" stroke="#000000" d="M375.5134,-71.9243C344.4871,-61.9959 305.8297,-49.6255 273.3694,-39.2382"/>
 <polygon fill="#000000" stroke="#000000" points="274.1008,-35.7975 263.5098,-36.0831 271.9673,-42.4645 274.1008,-35.7975"/>
@@ -80,7 +80,7 @@
 <text text-anchor="middle" x="657" y="-14.3" font-family="Menlo" font-size="14.00" fill="#000000">Codable</text>
 </g>
 <!-- MPUser.Public.Full&#45;&gt;Codable -->
-<g id="edge2" class="edge conformsTo">
+<g id="edge1" class="edge conformsTo">
 <title>MPUser.Public.Full&#45;&gt;Codable</title>
 <path fill="none" stroke="#000000" d="M488.4866,-71.9243C519.5129,-61.9959 558.1703,-49.6255 590.6306,-39.2382"/>
 <polygon fill="#000000" stroke="#000000" points="592.0327,-42.4645 600.4902,-36.0831 589.8992,-35.7975 592.0327,-42.4645"/>
@@ -93,7 +93,7 @@
 </figure>
         <h3>Member Of</h3>
 <dl>
-    <dt class="enumeration"><code><a href="/monki-projects-model/MPUser_Public">MPUser.Public</a></code></dt>
+    <dt class="enumeration"><code><a href="/monki-projects-model-swift/MPUser_Public">MPUser.Public</a></code></dt>
 <dd></dd>
 </dl>
 <h3>Conforms To</h3>
@@ -109,7 +109,7 @@
     <h3>
         <code>init(id:​username:​display​Name:​bio:​url:​html​Url:​avatar:​experience:​country:​location:​social​Usernames:​type:​created​At:​updated​At:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">id</span>: <span class="type">UUID</span> = <span class="variable">UUID</span>(), <span class="variable">username</span>: <span class="type">String</span>, <span class="variable">displayName</span>: <span class="type">String</span>, <span class="variable">bio</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">url</span>: <span class="type">URL</span>, <span class="variable">htmlUrl</span>: <span class="type">URL</span>, <span class="variable">avatar</span>: <a href="/monki-projects-model/AvatarSource"><span class="type">AvatarSource</span></a>? = <span class="keyword">nil</span>, <span class="variable">experience</span>: [<a href="/monki-projects-model/Sport"><span class="type">Sport</span></a>: <a href="/monki-projects-model/SportLevel"><span class="type">SportLevel</span></a>] = [:], <span class="variable">country</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">location</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">socialUsernames</span>: [<a href="/monki-projects-model/SocialNetwork"><span class="type">SocialNetwork</span></a>: <span class="type">String</span>] = [:], <span class="variable">type</span>: <a href="/monki-projects-model/MPUserType"><span class="type">MPUserType</span></a> = .<span class="variable">user</span>, <span class="variable">createdAt</span>: <span class="type">Date</span> = <span class="variable">Date</span>(), <span class="variable">updatedAt</span>: <span class="type">Date</span> = <span class="variable">Date</span>())</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">id</span>: <span class="type">UUID</span> = <span class="variable">UUID</span>(), <span class="variable">username</span>: <span class="type">String</span>, <span class="variable">displayName</span>: <span class="type">String</span>, <span class="variable">bio</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">url</span>: <span class="type">URL</span>, <span class="variable">htmlUrl</span>: <span class="type">URL</span>, <span class="variable">avatar</span>: <a href="/monki-projects-model-swift/AvatarSource"><span class="type">AvatarSource</span></a>? = <span class="keyword">nil</span>, <span class="variable">experience</span>: [<a href="/monki-projects-model-swift/Sport"><span class="type">Sport</span></a>: <a href="/monki-projects-model-swift/SportLevel"><span class="type">SportLevel</span></a>] = [:], <span class="variable">country</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">location</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">socialUsernames</span>: [<a href="/monki-projects-model-swift/SocialNetwork"><span class="type">SocialNetwork</span></a>: <span class="type">String</span>] = [:], <span class="variable">type</span>: <a href="/monki-projects-model-swift/MPUserType"><span class="type">MPUserType</span></a> = .<span class="variable">user</span>, <span class="variable">createdAt</span>: <span class="type">Date</span> = <span class="variable">Date</span>(), <span class="variable">updatedAt</span>: <span class="type">Date</span> = <span class="variable">Date</span>())</code></pre></body></html>
 </div>
     </section>
     <section id="properties">
@@ -155,13 +155,13 @@
     <h3>
         <code>avatar</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">avatar</span>: <a href="/monki-projects-model/AvatarSource"><span class="type">AvatarSource</span></a>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">avatar</span>: <a href="/monki-projects-model-swift/AvatarSource"><span class="type">AvatarSource</span></a>?</code></pre></body></html>
 </div>
 <div role="article" class="variable" id="mpuser.public.full.experience">
     <h3>
         <code>experience</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">experience</span>: [<a href="/monki-projects-model/Sport"><span class="type">Sport</span></a>: <a href="/monki-projects-model/SportLevel"><span class="type">SportLevel</span></a>]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">experience</span>: [<a href="/monki-projects-model-swift/Sport"><span class="type">Sport</span></a>: <a href="/monki-projects-model-swift/SportLevel"><span class="type">SportLevel</span></a>]</code></pre></body></html>
 </div>
 <div role="article" class="variable" id="mpuser.public.full.country">
     <h3>
@@ -179,13 +179,13 @@
     <h3>
         <code>social​Usernames</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">socialUsernames</span>: [<a href="/monki-projects-model/SocialNetwork"><span class="type">SocialNetwork</span></a>: <span class="type">String</span>]</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">socialUsernames</span>: [<a href="/monki-projects-model-swift/SocialNetwork"><span class="type">SocialNetwork</span></a>: <span class="type">String</span>]</code></pre></body></html>
 </div>
 <div role="article" class="variable" id="mpuser.public.full.type">
     <h3>
         <code>type</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">type</span>: <a href="/monki-projects-model/MPUserType"><span class="type">MPUserType</span></a></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">type</span>: <a href="/monki-projects-model-swift/MPUserType"><span class="type">MPUserType</span></a></code></pre></body></html>
 </div>
 <div role="article" class="variable" id="mpuser.public.full.createdat">
     <h3>
@@ -208,7 +208,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-02-09T22:02:29+0000">February 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-02-09T22:06:39+0000">February 9, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
 </p>
     </footer>
 </body>
