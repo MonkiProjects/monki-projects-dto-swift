@@ -1,5 +1,5 @@
 //
-//  MPUserTypeTests.swift
+//  UserKindTests.swift
 //  MonkiProjectsModelTests
 //
 //  Created by BARDON Rémi on 21/09/2020.
@@ -9,16 +9,16 @@
 import XCTest
 @testable import MonkiProjectsModel
 
-final class MPUserTypeTests: XCTestCase {
+final class UserKindTests: XCTestCase {
 	
-	private let translations: [MPUserType: String] = [
+	private let translations: [User.Kind: String] = [
 		.user: "User",
 		.bot: "Bot",
 	]
 	
 	func testDefaultTranslation() {
 		XCTAssert(
-			MPUserType.allCases.allSatisfy({ translations[$0] != nil }),
+			User.Kind.allCases.allSatisfy({ translations[$0] != nil }),
 			"Missing key in Dictionary"
 		)
 		
@@ -26,9 +26,5 @@ final class MPUserTypeTests: XCTestCase {
 			XCTAssertEqual(type.title, title)
 		}
 	}
-	
-	static var allTests = [
-		("testDefaultTranslation", testDefaultTranslation),
-	]
 	
 }

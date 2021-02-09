@@ -1,5 +1,5 @@
 //
-//  MPUser+PublicTests.swift
+//  User+LoginTests.swift
 //  MonkiProjectsModelTests
 //
 //  Created by BARDON Rémi on 21/09/2020.
@@ -9,14 +9,10 @@
 import XCTest
 @testable import MonkiProjectsModel
 
-final class MPUserPublicTests: XCTestCase {
+final class UserLoginTests: XCTestCase {
 	
 	func testExample() throws {
 		throw XCTSkip("Example")
 	}
-	
-	static var allTests = [
-		("testExample", testExample),
-	]
 	
 }

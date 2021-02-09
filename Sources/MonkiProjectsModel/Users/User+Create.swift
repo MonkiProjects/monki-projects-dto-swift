@@ -1,5 +1,5 @@
 //
-//  MPUser+Create.swift
+//  User+Create.swift
 //  MonkiProjectsModel
 //
 //  Created by BARDON Rémi on 08/06/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension MPUser {
+extension User {
 	
 	public struct Create: Codable, Hashable {
 		

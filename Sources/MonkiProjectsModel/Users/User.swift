@@ -1,5 +1,5 @@
 //
-//  MPUser.swift
+//  User.swift
 //  MonkiProjectsModel
 //
 //  Created by BARDON Rémi on 08/06/2020.
@@ -8,4 +8,4 @@
 
 import Foundation
 
-public enum MPUser {}
+public enum User {}

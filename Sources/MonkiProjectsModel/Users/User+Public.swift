@@ -1,5 +1,5 @@
 //
-//  MPUser+Public.swift
+//  User+Public.swift
 //  MonkiProjectsModel
 //
 //  Created by BARDON Rémi on 08/06/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension MPUser {
+extension User {
 	
 	public enum Public {
 		
@@ -20,7 +20,7 @@ extension MPUser {
 			public let url: URL
 			public var avatar: AvatarSource?
 			public var country: String?
-			public let type: MPUserType
+			public let type: User.Kind
 			public var updatedAt: Date
 			
 			public init(
@@ -30,7 +30,7 @@ extension MPUser {
 				url: URL,
 				avatar: AvatarSource? = nil,
 				country: String? = nil,
-				type: MPUserType = .user,
+				type: User.Kind = .user,
 				updatedAt: Date = Date()
 			) {
 				self.id = id
@@ -58,7 +58,7 @@ extension MPUser {
 			public var country: String?
 			public var location: String?
 			public var socialUsernames: [SocialNetwork: String]
-			public let type: MPUserType
+			public let type: User.Kind
 			public let createdAt: Date
 			public var updatedAt: Date
 			
@@ -74,7 +74,7 @@ extension MPUser {
 				country: String? = nil,
 				location: String? = nil,
 				socialUsernames: [SocialNetwork: String] = [:],
-				type: MPUserType = .user,
+				type: User.Kind = .user,
 				createdAt: Date = Date(),
 				updatedAt: Date = Date()
 			) {
