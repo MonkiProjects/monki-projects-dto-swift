@@ -18,6 +18,10 @@ public protocol UserPublicSmallProtocol {
 	var updatedAt: Date { get set }
 }
 
+public protocol UserPublicFullProtocol: UserPublicSmallProtocol {
+	var details: User.Details { get set }
+}
+
 extension User {
 	
 	public enum Public {
@@ -51,7 +55,7 @@ extension User {
 			
 		}
 		
-		public struct Full: Codable, Hashable, Identifiable, UserPublicSmallProtocol {
+		public struct Full: Codable, Hashable, Identifiable, UserPublicFullProtocol {
 			
 			public let id: UUID
 			public var username, displayName: String
@@ -75,25 +79,28 @@ extension User {
 				self.id = id
 				self.username = username
 				self.displayName = displayName
-				self.details = details
 				self.avatar = avatar
 				self.country = country
 				self.type = type
 				self.updatedAt = updatedAt
+				
+				self.details = details
 			}
 			
 			public init(
 				_ small: UserPublicSmallProtocol,
 				with details: Details = Details()
 			) {
-				self.id = small.id
-				self.username = small.username
-				self.displayName = small.displayName
-				self.details = details
-				self.avatar = small.avatar
-				self.country = small.country
-				self.type = small.type
-				self.updatedAt = small.updatedAt
+				self.init(
+					id: small.id,
+					username: small.username,
+					displayName: small.displayName,
+					avatar: small.avatar,
+					country: small.country,
+					type: small.type,
+					updatedAt: small.updatedAt,
+					details: details
+				)
 			}
 			
 		}
