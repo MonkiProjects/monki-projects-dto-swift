@@ -1,8 +1,9 @@
 //
-//  File.swift
-//  
+//  SocialProfile.swift
+//  MonkiProjectsModel
 //
 //  Created by BARDON Rémi on 21/09/2020.
+//  Copyright © 2020 Monki Projects. All rights reserved.
 //
 
 import Foundation
