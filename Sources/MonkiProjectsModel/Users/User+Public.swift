@@ -8,15 +8,24 @@
 
 import Foundation
 
+public protocol UserPublicSmallProtocol {
+	var id: UUID { get }
+	var username: String { get set }
+	var displayName: String { get set }
+	var avatar: AvatarSource? { get set }
+	var country: String? { get set }
+	var type: User.Kind { get }
+	var updatedAt: Date { get set }
+}
+
 extension User {
 	
 	public enum Public {
 		
-		public struct Small: Codable, Hashable, Identifiable {
+		public struct Small: Codable, Hashable, Identifiable, UserPublicSmallProtocol {
 			
 			public let id: UUID
 			public var username, displayName: String
-			public let url: URL
 			public var avatar: AvatarSource?
 			public var country: String?
 			public let type: User.Kind
@@ -26,7 +35,6 @@ extension User {
 				id: ID = UUID(),
 				username: String,
 				displayName: String,
-				url: URL,
 				avatar: AvatarSource? = nil,
 				country: String? = nil,
 				type: User.Kind = .user,
@@ -35,7 +43,6 @@ extension User {
 				self.id = id
 				self.username = username
 				self.displayName = displayName
-				self.url = url
 				self.avatar = avatar
 				self.country = country
 				self.type = type
@@ -44,50 +51,49 @@ extension User {
 			
 		}
 		
-		public struct Full: Codable, Hashable, Identifiable {
+		public struct Full: Codable, Hashable, Identifiable, UserPublicSmallProtocol {
 			
 			public let id: UUID
 			public var username, displayName: String
-			public var bio: String?
-			public let url, htmlUrl: URL
 			public var avatar: AvatarSource?
-			public var experience: [Sport: SportLevel]
-			public var country, location: String?
-			public var socialUsernames: [SocialNetwork: String]
+			public var country: String?
 			public let type: User.Kind
-			public let createdAt: Date
 			public var updatedAt: Date
+			
+			public var details: Details
 			
 			public init(
 				id: ID = UUID(),
 				username: String,
 				displayName: String,
-				bio: String? = nil,
-				url: URL,
-				htmlUrl: URL,
 				avatar: AvatarSource? = nil,
-				experience: [Sport: SportLevel] = [:],
 				country: String? = nil,
-				location: String? = nil,
-				socialUsernames: [SocialNetwork: String] = [:],
 				type: User.Kind = .user,
-				createdAt: Date = Date(),
-				updatedAt: Date = Date()
+				updatedAt: Date = Date(),
+				details: Details = Details()
 			) {
 				self.id = id
 				self.username = username
 				self.displayName = displayName
-				self.bio = bio
-				self.url = url
-				self.htmlUrl = htmlUrl
+				self.details = details
 				self.avatar = avatar
-				self.experience = experience
 				self.country = country
-				self.location = location
-				self.socialUsernames = socialUsernames
 				self.type = type
-				self.createdAt = createdAt
 				self.updatedAt = updatedAt
+			}
+			
+			public init(
+				_ small: UserPublicSmallProtocol,
+				with details: Details = Details()
+			) {
+				self.id = small.id
+				self.username = small.username
+				self.displayName = small.displayName
+				self.details = details
+				self.avatar = small.avatar
+				self.country = small.country
+				self.type = small.type
+				self.updatedAt = small.updatedAt
 			}
 			
 		}
