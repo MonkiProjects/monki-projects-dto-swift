@@ -6,6 +6,8 @@
 //  Copyright © 2020 Monki Projects. All rights reserved.
 //
 
+import Foundation
+
 // MARK: - Protocol
 
 public protocol WithGlyph {
