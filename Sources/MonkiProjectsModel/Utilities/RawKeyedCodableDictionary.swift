@@ -53,3 +53,13 @@ public struct RawKeyedCodableDictionary<Key, Value>: Codable
 	}
 	
 }
+
+extension RawKeyedCodableDictionary: Equatable where Value: Equatable {
+	
+	public static func == (lhs: Self<Key, Value>, rhs: Self<Key, Value>) -> Bool {
+		return lhs.wrappedValue == rhs.wrappedValue
+	}
+	
+}
+
+extension RawKeyedCodableDictionary: Hashable where Value: Hashable {}
