@@ -14,7 +14,7 @@ public protocol UserPublicSmallProtocol {
 	var displayName: String { get set }
 	var avatar: AvatarSource? { get set }
 	var country: String? { get set }
-	var type: User.Kind { get }
+	var kind: User.Kind { get }
 	var updatedAt: Date { get set }
 }
 
@@ -32,7 +32,7 @@ extension User {
 			public var username, displayName: String
 			public var avatar: AvatarSource?
 			public var country: String?
-			public let type: User.Kind
+			public let kind: User.Kind
 			public var updatedAt: Date
 			
 			public init(
@@ -41,7 +41,7 @@ extension User {
 				displayName: String,
 				avatar: AvatarSource? = nil,
 				country: String? = nil,
-				type: User.Kind = .user,
+				kind: User.Kind = .user,
 				updatedAt: Date = Date()
 			) {
 				self.id = id
@@ -49,7 +49,7 @@ extension User {
 				self.displayName = displayName
 				self.avatar = avatar
 				self.country = country
-				self.type = type
+				self.kind = kind
 				self.updatedAt = updatedAt
 			}
 			
@@ -61,7 +61,7 @@ extension User {
 			public var username, displayName: String
 			public var avatar: AvatarSource?
 			public var country: String?
-			public let type: User.Kind
+			public let kind: User.Kind
 			public var updatedAt: Date
 			
 			public var details: Details
@@ -72,7 +72,7 @@ extension User {
 				displayName: String,
 				avatar: AvatarSource? = nil,
 				country: String? = nil,
-				type: User.Kind = .user,
+				kind: User.Kind = .user,
 				updatedAt: Date = Date(),
 				details: Details = Details()
 			) {
@@ -81,7 +81,7 @@ extension User {
 				self.displayName = displayName
 				self.avatar = avatar
 				self.country = country
-				self.type = type
+				self.kind = kind
 				self.updatedAt = updatedAt
 				
 				self.details = details
@@ -97,7 +97,7 @@ extension User {
 					displayName: small.displayName,
 					avatar: small.avatar,
 					country: small.country,
-					type: small.type,
+					kind: small.kind,
 					updatedAt: small.updatedAt,
 					details: details
 				)

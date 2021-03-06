@@ -15,9 +15,9 @@
 "LEVEL_ADVANCED" 		= "Advanced";
 "LEVEL_PROFESSIONAL" 	= "Professional";
 
-// User types
-"USER_TYPE_USER" 	= "User";
-"USER_TYPE_BOT" 	= "Bot";
+// User kinds
+"USER_KIND_USER" 	= "User";
+"USER_KIND_BOT" 	= "Bot";
 
 // Sports
 "SPORT_PARKOUR" 		= "Parkour / AOM";

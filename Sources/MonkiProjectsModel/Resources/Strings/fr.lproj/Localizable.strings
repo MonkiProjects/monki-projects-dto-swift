@@ -16,8 +16,8 @@
 "LEVEL_PROFESSIONAL" 	= "Professionnel.le";
 
 // Types d'utilisateurs
-"USER_TYPE_USER" 	= "Utilisateur";
-"USER_TYPE_BOT" 	= "Bot";
+"USER_KIND_USER" 	= "Utilisateur";
+"USER_KIND_BOT" 	= "Bot";
 
 // Sports
 "SPORT_PARKOUR" 		= "Parkour / ADD";

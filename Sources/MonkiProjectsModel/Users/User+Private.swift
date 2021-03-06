@@ -16,7 +16,7 @@ extension User {
 		public var username, displayName: String
 		public var avatar: AvatarSource?
 		public var country: String?
-		public let type: User.Kind
+		public let kind: User.Kind
 		public var updatedAt: Date
 		
 		public var details: Details
@@ -29,7 +29,7 @@ extension User {
 			displayName: String,
 			avatar: AvatarSource? = nil,
 			country: String? = nil,
-			type: User.Kind = .user,
+			kind: User.Kind = .user,
 			updatedAt: Date = Date(),
 			details: Details = Details(),
 			email: String
@@ -39,7 +39,7 @@ extension User {
 			self.displayName = displayName
 			self.avatar = avatar
 			self.country = country
-			self.type = type
+			self.kind = kind
 			self.updatedAt = updatedAt
 			self.details = details
 			
@@ -56,7 +56,7 @@ extension User {
 				displayName: full.displayName,
 				avatar: full.avatar,
 				country: full.country,
-				type: full.type,
+				kind: full.kind,
 				updatedAt: full.updatedAt,
 				details: full.details,
 				email: email

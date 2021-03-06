@@ -19,9 +19,9 @@ extension User {
 		public var title: String {
 			switch self {
 			case .user:
-				return NSLocalizedString("USER_TYPE_USER", bundle: .fixedModule, comment: "")
+				return NSLocalizedString("USER_KIND_USER", bundle: .fixedModule, comment: "")
 			case .bot:
-				return NSLocalizedString("USER_TYPE_BOT", bundle: .fixedModule, comment: "")
+				return NSLocalizedString("USER_KIND_BOT", bundle: .fixedModule, comment: "")
 			}
 		}
 		

@@ -22,8 +22,8 @@ final class UserKindTests: XCTestCase {
 			"Missing key in Dictionary"
 		)
 		
-		for (type, title) in translations {
-			XCTAssertEqual(type.title, title)
+		for (kind, title) in translations {
+			XCTAssertEqual(kind.title, title)
 		}
 	}
 	
