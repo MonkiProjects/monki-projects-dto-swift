@@ -6,30 +6,31 @@ on:
 
 jobs:
   publish:
-    name: Publish ${{ matrix.docs.target }}
+    name: Publish ${{ matrix.docs.product }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
         docs:
-          - target: MonkiProjectsModel
-            url: /monki-projects-model
-          - target: MonkiMapModel
-            url: /monki-map-model
+          - product: MonkiProjectsModel
+            target-folder: monki-projects-model
+          - product: MonkiMapModel
+            target-folder: monki-map-model
     steps:
       - uses: actions/checkout@v2
       - name: Generate Documentation
         uses: SwiftDocOrg/swift-doc@master
         with:
-          base-url: /models/${{ matrix.docs.url }}/swift
+          base-url: /models/swift
           format: html
-          inputs: Sources/${{ matrix.docs.target }}
-          module-name: ${{ matrix.docs.target }}
+          inputs: Sources/${{ matrix.docs.product }}
+          module-name: ${{ matrix.docs.product }}
           output: Documentation
       - name: Update Permissions
         run: 'sudo chown --recursive $USER Documentation'
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          ACCESS_TOKEN: ${{ secrets.SWIFT_DOC_ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: Documentation
+          token: ${{ secrets.SWIFT_DOC_ACCESS_TOKEN }}
+          branch: gh-pages
+          folder: Documentation
+          target-folder: ${{ matrix.docs.target-folder }}
