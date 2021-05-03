@@ -36,7 +36,14 @@ public enum Sport: String, Codable, Hashable {
 extension Sport: Comparable {
 	
 	public static func < (lhs: Sport, rhs: Sport) -> Bool {
-		allCases.firstIndex(of: lhs)! < allCases.firstIndex(of: rhs)!
+		guard let lhsIndex = allCases.firstIndex(of: lhs) else {
+			fatalError("`Sport.allCases` doesn't contain \(lhs)")
+		}
+		guard let rhsIndex = allCases.firstIndex(of: rhs) else {
+			fatalError("`Sport.allCases` doesn't contain \(rhs)")
+		}
+		
+		return lhsIndex < rhsIndex
 	}
 	
 }

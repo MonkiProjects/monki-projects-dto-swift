@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Placemark.Kind {
+extension Placemark.Kind {
 	
 	/// A localized `Placemark.Kind`.
 	/// It's used by APIs to return localized content.

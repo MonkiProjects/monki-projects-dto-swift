@@ -6,8 +6,8 @@
 //  Copyright © 2021 Monki Projects. All rights reserved.
 //
 
-public extension Placemark {
+extension Placemark {
 	
-	enum Location {}
+	public enum Location {}
 	
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Placemark.Property {
+extension Placemark.Property {
 	
 	/// A localized `Placemark.Property`.
 	/// It's used by APIs to return localized content.
@@ -21,7 +21,7 @@ public extension Placemark.Property {
 	///     "kind": "feature"
 	/// }
 	/// ```
-	struct Localized: Codable, Hashable, Identifiable {
+	public struct Localized: Codable, Hashable, Identifiable {
 		
 		public let id: String
 		public let title: String
@@ -43,14 +43,14 @@ public extension Placemark.Property {
 			.require()
 	}
 	
-	func title(in locale: Locale? = nil) throws -> String {
+	public func title(in locale: Locale? = nil) throws -> String {
 		let locale = locale ?? .default
 		return try self.id == "unknown" // Unsafe but we cannot use .unknown here
 			? Strings.unknown(in: locale)
 			: self.internal(in: locale).title
 	}
 	
-	func localized(in locale: Locale? = nil) throws -> Localized {
+	public func localized(in locale: Locale? = nil) throws -> Localized {
 		let locale = locale ?? .default
 		return Localized(id: self.id, title: try self.title(in: locale), kind: self.kind)
 	}

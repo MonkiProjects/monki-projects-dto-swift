@@ -17,7 +17,7 @@ extension Placemark {
 		public var latitude, longitude: Double
 		public var kind: Kind
 		public var caption: String
-		public var images: [URL]?
+		public var images: [URL]
 		@RawKeyedCodableDictionary
 		public var properties: [Property.Kind: [String]]
 		
@@ -27,7 +27,7 @@ extension Placemark {
 			longitude: Double,
 			kind: Kind,
 			caption: String = "",
-			images: [URL]? = nil,
+			images: [URL] = [],
 			properties: [Property.Kind: [String]] = [:]
 		) {
 			self.name = name

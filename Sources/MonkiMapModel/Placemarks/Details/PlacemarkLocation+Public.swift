@@ -8,9 +8,9 @@
 
 import Foundation
 
-public extension Placemark.Location {
+extension Placemark.Location {
 	
-	struct Public: Codable, Hashable {
+	public struct Public: Codable, Hashable {
 		
 		public let city, country: String
 		

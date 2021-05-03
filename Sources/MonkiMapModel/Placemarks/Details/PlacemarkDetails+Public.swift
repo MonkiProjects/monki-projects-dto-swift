@@ -9,9 +9,9 @@
 import Foundation
 import MonkiProjectsModel
 
-public extension Placemark.Details {
+extension Placemark.Details {
 	
-	struct Public: Codable, Hashable {
+	public struct Public: Codable, Hashable {
 		
 		public typealias Properties = [Placemark.Property.Localized]
 		

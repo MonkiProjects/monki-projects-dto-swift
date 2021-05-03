@@ -9,9 +9,9 @@
 import XCTest
 @testable import MonkiMapModel
 
-final class PlacemarkPropertyLocalizedTests: XCTestCase {
+internal final class PlacemarkPropertyLocalizedTests: XCTestCase {
 	
-	typealias Property = Placemark.Property
+	private typealias Property = Placemark.Property
 	
 	// MARK: - Valid Domain
 	

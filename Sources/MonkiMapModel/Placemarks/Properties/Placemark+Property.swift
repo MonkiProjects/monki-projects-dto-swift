@@ -9,10 +9,10 @@
 import Foundation
 import MonkiProjectsModel
 
-public extension Placemark {
+extension Placemark {
 	
 	// A property a placemark could have
-	struct Property: Hashable, Identifiable {
+	public struct Property: Hashable, Identifiable {
 		public let id: String
 		public let kind: Kind
 	}

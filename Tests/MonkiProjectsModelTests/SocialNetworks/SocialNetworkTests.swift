@@ -9,7 +9,7 @@
 import XCTest
 @testable import MonkiProjectsModel
 
-final class SocialNetworkTests: XCTestCase {
+internal final class SocialNetworkTests: XCTestCase {
 	
 	private let translations: [SocialNetwork: String] = [
 		.instagram: "Instagram",
@@ -36,10 +36,5 @@ final class SocialNetworkTests: XCTestCase {
 		let expected: [SocialNetwork] = [.instagram, .youTube, .vimeo, .facebook, .twitter, .messenger, .tikTok]
 		XCTAssertEqual(SocialNetwork.allCases.sorted(), expected)
 	}
-	
-	static var allTests = [
-		("testDefaultTranslation", testDefaultTranslation),
-		("testSortedOrder", testSortedOrder),
-	]
 	
 }

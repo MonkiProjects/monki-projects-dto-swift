@@ -15,10 +15,9 @@ import Foundation
 /// - <https://bugs.swift.org/browse/SR-7788>
 @propertyWrapper
 public struct RawKeyedCodableDictionary<Key, Value>: Codable
-	where Key: Hashable & RawRepresentable,
-		  Key.RawValue: Codable & Hashable,
-		  Value: Codable
-{
+where Key: Hashable & RawRepresentable,
+	  Key.RawValue: Codable & Hashable, // swiftlint:disable:this indentation_width
+	  Value: Codable { 					// swiftlint:disable:this indentation_width
 	
 	public var wrappedValue: [Key: Value]
 	
@@ -39,7 +38,8 @@ public struct RawKeyedCodableDictionary<Key, Value>: Codable
 			guard let key = Key(rawValue: rawKey) else {
 				throw DecodingError.dataCorruptedError(
 					in: container,
-					debugDescription: "Invalid key: cannot initalize \(Key.self) from invalid \(Key.RawValue.self) value \(rawKey)"
+					// swiftlint:disable:next line_length
+					debugDescription: "Invalid key: cannot initialize \(Key.self) from invalid \(Key.RawValue.self) value \(rawKey)"
 				)
 			}
 			self.wrappedValue[key] = value
@@ -57,7 +57,7 @@ public struct RawKeyedCodableDictionary<Key, Value>: Codable
 extension RawKeyedCodableDictionary: Equatable where Value: Equatable {
 	
 	public static func == (lhs: Self<Key, Value>, rhs: Self<Key, Value>) -> Bool {
-		return lhs.wrappedValue == rhs.wrappedValue
+		lhs.wrappedValue == rhs.wrappedValue
 	}
 	
 }

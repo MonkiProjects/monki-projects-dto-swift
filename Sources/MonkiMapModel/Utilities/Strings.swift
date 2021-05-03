@@ -9,9 +9,8 @@
 import Foundation
 import MonkiProjectsModel
 
-enum Strings {
+internal enum Strings {
 	
-	// swiftlint:disable line_length
 	/// Translation of the word `"Unknown"`.
 	///
 	/// - Parameters:
@@ -55,6 +54,5 @@ enum Strings {
 		}
 		return localizedBundle.localizedString(forKey: "UNKNOWN", value: nil, table: nil)
 	}
-	// swiftlint:enable line_length
 	
 }

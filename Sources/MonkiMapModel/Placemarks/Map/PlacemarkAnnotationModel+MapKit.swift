@@ -9,10 +9,10 @@
 #if canImport(MapKit)
 import MapKit
 
-public extension PlacemarkAnnotationModel {
+extension PlacemarkAnnotationModel {
 	
 	var mkAnnotation: MKAnnotation {
-		return PlacemarkMapAnnotation(model: self)
+		PlacemarkMapAnnotation(model: self)
 	}
 	
 }

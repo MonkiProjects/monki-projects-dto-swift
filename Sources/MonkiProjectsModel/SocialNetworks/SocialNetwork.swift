@@ -36,7 +36,14 @@ public enum SocialNetwork: String, Codable, Hashable {
 extension SocialNetwork: Comparable {
 	
 	public static func < (lhs: SocialNetwork, rhs: SocialNetwork) -> Bool {
-		allCases.firstIndex(of: lhs)! < allCases.firstIndex(of: rhs)!
+		guard let lhsIndex = allCases.firstIndex(of: lhs) else {
+			fatalError("`SocialNetwork.allCases` doesn't contain \(lhs)")
+		}
+		guard let rhsIndex = allCases.firstIndex(of: rhs) else {
+			fatalError("`SocialNetwork.allCases` doesn't contain \(rhs)")
+		}
+		
+		return lhsIndex < rhsIndex
 	}
 	
 }

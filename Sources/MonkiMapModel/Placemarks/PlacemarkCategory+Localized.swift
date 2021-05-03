@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Placemark.Category {
+extension Placemark.Category {
 	
 	/// A localized `Placemark.Category`.
 	/// It's used by APIs to return localized content.

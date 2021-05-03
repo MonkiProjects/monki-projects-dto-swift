@@ -8,17 +8,7 @@
 
 import Foundation
 
-extension String {
-	
-	func validate(with predicate: NSPredicate) throws {
-		guard predicate.evaluate(with: self) else {
-			throw StringValidationError(string: self, predicate: predicate)
-		}
-	}
-	
-}
-
-struct StringValidationError: Error, CustomStringConvertible {
+internal struct StringValidationError: Error, CustomStringConvertible {
 	
 	let description: String
 	
@@ -28,6 +18,16 @@ struct StringValidationError: Error, CustomStringConvertible {
 	
 	init(string: String, predicate: NSPredicate) {
 		self.description = "String '\(string)' contains invalid characters (predicate: '\(predicate)')."
+	}
+	
+}
+
+extension String {
+	
+	func validate(with predicate: NSPredicate) throws {
+		guard predicate.evaluate(with: self) else {
+			throw StringValidationError(string: self, predicate: predicate)
+		}
 	}
 	
 }

@@ -10,8 +10,7 @@
 import SwiftUI
 
 #warning("Refactor SwiftUI code in different package")
-@available(iOS 13.0, *)
-@available(OSX 10.15, *)
+@available(iOS 13.0, macOS 10.15, *)
 extension SocialNetwork {
 	
 	/// Colors from [SchemeColor](https://schemecolor.com)

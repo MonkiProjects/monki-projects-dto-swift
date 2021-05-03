@@ -10,7 +10,6 @@ import Foundation
 
 extension NSRegularExpression {
 	
-	// swiftlint:disable line_length
 	/// Tests if a `String` matches the regular expression.
 	///
 	/// - Parameters:
@@ -29,13 +28,11 @@ extension NSRegularExpression {
 		let range = NSRange(location: 0, length: string.utf16.count)
 		return firstMatch(in: string, options: [], range: range) != nil
 	}
-	// swiftlint:enable line_length
 	
 }
 
 extension String {
 	
-	// swiftlint:disable line_length
 	///
 	///
 	/// - Parameters:
@@ -55,6 +52,5 @@ extension String {
 		let range = NSRange(location: 0, length: lhs.utf16.count)
 		return regex.firstMatch(in: lhs, options: [], range: range) != nil
 	}
-	// swiftlint:enable line_length
 	
 }

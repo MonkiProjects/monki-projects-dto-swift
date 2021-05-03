@@ -8,10 +8,10 @@
 
 import Foundation
 
-public extension Placemark.Property {
+extension Placemark.Property {
 	
 	/// The kind of a placemark property.
-	enum Kind: String, Codable, Hashable, CaseIterable {
+	public enum Kind: String, Codable, Hashable, CaseIterable {
 		
 		/// A feature you might find on a placemark.
 		case feature
@@ -28,19 +28,19 @@ public extension Placemark.Property {
 	}
 	
 	static func feature(_ feature: ID) -> Self {
-		return .init(id: feature, kind: .feature)
+		.init(id: feature, kind: .feature)
 	}
 	
 	static func technique(_ technique: ID) -> Self {
-		return .init(id: technique, kind: .technique)
+		.init(id: technique, kind: .technique)
 	}
 	
 	static func benefit(_ benefit: ID) -> Self {
-		return .init(id: benefit, kind: .benefit)
+		.init(id: benefit, kind: .benefit)
 	}
 	
 	static func hazard(_ hazard: ID) -> Self {
-		return .init(id: hazard, kind: .hazard)
+		.init(id: hazard, kind: .hazard)
 	}
 	
 }

@@ -9,7 +9,7 @@
 import XCTest
 @testable import MonkiProjectsModel
 
-final class SportLevelTests: XCTestCase {
+internal final class SportLevelTests: XCTestCase {
 	
 	private let translations: [SportLevel: String] = [
 		.neverTried: "Never tried",
@@ -29,9 +29,5 @@ final class SportLevelTests: XCTestCase {
 			XCTAssertEqual(level.title, title)
 		}
 	}
-	
-	static var allTests = [
-		("testDefaultTranslation", testDefaultTranslation),
-	]
 	
 }

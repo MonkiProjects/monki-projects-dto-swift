@@ -8,10 +8,10 @@
 
 import Foundation
 
-public extension Placemark {
+extension Placemark {
 	
 	/// Model of a placemark used in APIs responses.
-	struct Public: Codable, Hashable, Identifiable {
+	public struct Public: Codable, Hashable, Identifiable {
 		
 		public let id: UUID
 		public let name: String

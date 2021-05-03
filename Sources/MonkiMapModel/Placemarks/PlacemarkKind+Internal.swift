@@ -56,19 +56,19 @@ extension Placemark.Kind {
 		private let features, goodForTraining, benefits, hazards: [String]
 		
 		var allowedFeatures: [Property] {
-			return features.map(Property.feature)
+			features.map(Property.feature)
 		}
 		
 		var allowedTechniques: [Property] {
-			return goodForTraining.map(Property.technique)
+			goodForTraining.map(Property.technique)
 		}
 		
 		var allowedBenefits: [Property] {
-			return benefits.map(Property.benefit)
+			benefits.map(Property.benefit)
 		}
 		
 		var allowedHazards: [Property] {
-			return hazards.map(Property.hazard)
+			hazards.map(Property.hazard)
 		}
 		
 	}

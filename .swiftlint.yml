@@ -6,6 +6,7 @@ included:
   - Tests
 
 disabled_rules:
+  - deployment_target 							# lint
   - todo 										# lint
 opt_in_rules:
   - anyobject_protocol 							# lint
@@ -140,7 +141,7 @@ file_header:
   required_pattern: |
     \/\/
     \/\/  .*?\.swift
-    \/\/  (App|Run|Helpers|Models|Migrations|DTOs|Repositories|APIs|Jobs)(Tests)?
+    \/\/  (MonkiProjects|MonkiMap)Model(Tests)?
     \/\/
     \/\/  Created by .*? on \d{2}\/\d{2}\/\d{4}\.
     \/\/  Copyright (©|\(c\)) \d{4} Monki Projects\. All rights reserved\.
@@ -174,7 +175,7 @@ trailing_comma:
   mandatory_comma: true
 deployment_target:
   iOS_deployment_target: 13.0
-  macOS_deployment_target: 10.15
+  macOS_deployment_target: 10.10
   watchOS_deployment_target: 6.0
   tvOS_deployment_target: 13.0
 file_name_no_space:

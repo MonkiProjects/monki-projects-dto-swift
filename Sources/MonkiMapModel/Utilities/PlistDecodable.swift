@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PlistDecodable: Decodable {
+internal protocol PlistDecodable: Decodable {
 	
 	static var fileName: String { get }
 	

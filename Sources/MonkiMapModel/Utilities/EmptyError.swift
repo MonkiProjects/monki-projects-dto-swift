@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct EmptyError: Error, CustomStringConvertible {
+internal struct EmptyError: Error, CustomStringConvertible {
 	
 	let description: String
 	

@@ -9,7 +9,7 @@
 import XCTest
 @testable import MonkiProjectsModel
 
-final class SportTests: XCTestCase {
+internal final class SportTests: XCTestCase {
 	
 	private let translations: [Sport: String] = [
 		.parkour: "Parkour / AOM",
@@ -31,9 +31,5 @@ final class SportTests: XCTestCase {
 			XCTAssertEqual(sport.name, name)
 		}
 	}
-	
-	static var allTests = [
-		("testDefaultTranslation", testDefaultTranslation),
-	]
 	
 }

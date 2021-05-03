@@ -9,7 +9,7 @@
 import XCTest
 @testable import MonkiProjectsModel
 
-final class UserKindTests: XCTestCase {
+internal final class UserKindTests: XCTestCase {
 	
 	private let translations: [User.Kind: String] = [
 		.user: "User",

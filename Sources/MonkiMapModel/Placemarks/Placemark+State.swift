@@ -9,10 +9,10 @@
 import Foundation
 import MonkiProjectsModel
 
-public extension Placemark {
+extension Placemark {
 	
 	// The state in which a placemark is.
-	enum State: String, Hashable, Codable, DefaultCaseDecodable {
+	public enum State: String, Hashable, Codable, DefaultCaseDecodable {
 		
 		public static var defaultCase: Self = .unknown
 		
@@ -38,7 +38,7 @@ public extension Placemark {
 		case rejected
 		
 		public var isLocal: Bool {
-			return [.draft, .local].contains(self)
+			[.draft, .local].contains(self)
 		}
 		
 	}

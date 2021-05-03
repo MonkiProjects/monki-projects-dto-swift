@@ -8,9 +8,9 @@
 
 import Foundation
 
-public extension Optional {
+extension Optional {
 	
-	func require() throws -> Wrapped {
+	public func require() throws -> Wrapped {
 		switch self {
 		case .some(let wrapped):
 			return wrapped

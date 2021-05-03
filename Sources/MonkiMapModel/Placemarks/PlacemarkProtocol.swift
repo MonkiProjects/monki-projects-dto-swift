@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PlacemarkProtocol {
+public protocol PlacemarkProtocol {
 	
 	var id: UUID { get }
 	var state: Placemark.State { get }
@@ -20,7 +20,7 @@ protocol PlacemarkProtocol {
 
 extension Placemark.Public: PlacemarkProtocol {
 	
-	var kindId: Placemark.Kind { kind }
-	var categoryId: Placemark.Category { category }
+	public var kindId: Placemark.Kind { kind }
+	public var categoryId: Placemark.Category { category }
 	
 }

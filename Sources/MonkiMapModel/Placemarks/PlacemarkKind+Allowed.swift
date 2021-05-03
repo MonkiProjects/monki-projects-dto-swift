@@ -11,7 +11,7 @@ import Foundation
 extension Placemark.Kind {
 	
 	public static func allowed(for category: Placemark.Category) -> [Self] {
-		return Internal.all()
+		Internal.all()
 			.filter { $0.category == category }
 			.map(\.id)
 	}

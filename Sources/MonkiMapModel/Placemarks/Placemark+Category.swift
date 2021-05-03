@@ -9,11 +9,11 @@
 import Foundation
 import MonkiProjectsModel
 
-public extension Placemark {
+extension Placemark {
 	
 	/// The category of a placemark.
 	/// It impacts its color and/or shape on the map.
-	enum Category: String, Codable, Hashable, Identifiable, DefaultCaseDecodable {
+	public enum Category: String, Codable, Hashable, Identifiable, DefaultCaseDecodable {
 		
 		case unknown
 		case spot

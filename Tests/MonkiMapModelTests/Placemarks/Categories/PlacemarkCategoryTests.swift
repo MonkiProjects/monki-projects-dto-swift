@@ -9,7 +9,7 @@
 import XCTest
 @testable import MonkiMapModel
 
-final class PlacemarkCategoryTests: XCTestCase {
+internal final class PlacemarkCategoryTests: XCTestCase {
 	
 	// MARK: - Valid Domain
 	

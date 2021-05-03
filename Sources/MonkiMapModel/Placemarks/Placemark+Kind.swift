@@ -9,11 +9,11 @@
 import Foundation
 import MonkiProjectsModel
 
-public extension Placemark {
+extension Placemark {
 	
 	/// The kind of a placemark.
 	/// It impacts its icon on a map marker.
-	enum Kind: String, Codable, Hashable, Identifiable, DefaultCaseDecodable {
+	public enum Kind: String, Codable, Hashable, Identifiable, DefaultCaseDecodable {
 		
 		case unknown
 		case trainingSpot = "training_spot"
