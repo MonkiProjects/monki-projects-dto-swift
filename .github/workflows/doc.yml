@@ -6,17 +6,24 @@ on:
 
 jobs:
   publish:
+    name: Publish ${{ matrix.docs.target }}
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        docs:
+          - target: MonkiProjectsModel
+            url: /monki-projects-model
+          - target: MonkiMapModel
+            url: /monki-map-model
     steps:
       - uses: actions/checkout@v2
       - name: Generate Documentation
         uses: SwiftDocOrg/swift-doc@master
         with:
-          base-url: /monki-projects-model-swift/
+          base-url: /models/${{ matrix.docs.url }}/swift
           format: html
-          inputs: Sources/MonkiProjectsModel
-          module-name: MonkiProjectsModel
+          inputs: Sources/${{ matrix.docs.target }}
+          module-name: ${{ matrix.docs.target }}
           output: Documentation
       - name: Update Permissions
         run: 'sudo chown --recursive $USER Documentation'
