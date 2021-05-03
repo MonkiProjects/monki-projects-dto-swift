@@ -22,4 +22,4 @@ jobs:
       with:
         swift-version: ${{ matrix.swift }}
     - name: Run tests
-      run: swift test
+      run: swift test --enable-test-discovery
