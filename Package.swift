@@ -16,8 +16,13 @@ let package = Package(
 			name: "MonkiProjectsModel",
 			targets: ["MonkiProjectsModel"]
 		),
+		.library(
+			name: "MonkiMapModel",
+			targets: ["MonkiMapModel"]
+		),
 	],
 	targets: [
+		// Monki Projects Core Models
 		.target(
 			name: "MonkiProjectsModel",
 			resources: [
@@ -27,6 +32,18 @@ let package = Package(
 		.testTarget(
 			name: "MonkiProjectsModelTests",
 			dependencies: ["MonkiProjectsModel"]
+		),
+		// Monki Map Models
+		.target(
+			name: "MonkiMapModel",
+			dependencies: ["MonkiProjectsModel"],
+			resources: [
+				.process("Resources/Strings"),
+			]
+		),
+		.testTarget(
+			name: "MonkiMapModelTests",
+			dependencies: ["MonkiMapModel"]
 		),
 	]
 )

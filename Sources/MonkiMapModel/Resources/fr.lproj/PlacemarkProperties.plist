@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<string>small_wall</string>
+		<key>title</key>
+		<string>Petit mur</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>medium_wall</string>
+		<key>title</key>
+		<string>Mur moyen</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>big_wall</string>
+		<key>title</key>
+		<string>Grand mur</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>railing</string>
+		<key>title</key>
+		<string>Barrière</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>stairs</string>
+		<key>title</key>
+		<string>Escalier</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>bar</string>
+		<key>title</key>
+		<string>Barre</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>parallel_bars</string>
+		<key>title</key>
+		<string>Barres parallèles</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>ladder</string>
+		<key>title</key>
+		<string>Échelle</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>grass</string>
+		<key>title</key>
+		<string>Herbe</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>sand</string>
+		<key>title</key>
+		<string>Sable</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>water</string>
+		<key>title</key>
+		<string>Eau</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>tree</string>
+		<key>title</key>
+		<string>Arbre</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>tree_trunk</string>
+		<key>title</key>
+		<string>Tronc d&apos;arbre</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>small_rocks</string>
+		<key>title</key>
+		<string>Petits cailloux</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>medium_rocks</string>
+		<key>title</key>
+		<string>Cailloux moyens</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>big_rocks</string>
+		<key>title</key>
+		<string>Gros cailloux</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>trampoline</string>
+		<key>title</key>
+		<string>Trampoline</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>foam_pit</string>
+		<key>title</key>
+		<string>Bac à mousse</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>airbag</string>
+		<key>title</key>
+		<string>Airbag</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>ninja_warrior_area</string>
+		<key>title</key>
+		<string>Zone Ninja Warrior</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>ninja_warrior_wall</string>
+		<key>title</key>
+		<string>Mur de Ninja Warrior</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>chase_tag_setup</string>
+		<key>title</key>
+		<string>Installation de Chase Tag</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>1_floor</string>
+		<key>title</key>
+		<string>1 étage</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>2_floors</string>
+		<key>title</key>
+		<string>2 étages</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>3_floors</string>
+		<key>title</key>
+		<string>3 étages</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>4_floors</string>
+		<key>title</key>
+		<string>4 étages</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>5_floors</string>
+		<key>title</key>
+		<string>5 étages</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>6_floors</string>
+		<key>title</key>
+		<string>6 étages</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>7_floors</string>
+		<key>title</key>
+		<string>7 étages</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>7+_floors</string>
+		<key>title</key>
+		<string>7+ étages</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>bench</string>
+		<key>title</key>
+		<string>Banc</string>
+		<key>kind</key>
+		<string>feature</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>precision_jump</string>
+		<key>title</key>
+		<string>Saut de précision</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>kong</string>
+		<key>title</key>
+		<string>Saut de chat</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>double_kong</string>
+		<key>title</key>
+		<string>Double saut de chat</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>triple_kong</string>
+		<key>title</key>
+		<string>Triple saut de chat</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>cat_leap</string>
+		<key>title</key>
+		<string>Saut de bras</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>180_cat_leap</string>
+		<key>title</key>
+		<string>Saut de bras retourné</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>small_drop</string>
+		<key>title</key>
+		<string>Petit saut de fond</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>medium_drop</string>
+		<key>title</key>
+		<string>Saut de fond moyen</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>high_drop</string>
+		<key>title</key>
+		<string>Grand saut de fond</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>flips</string>
+		<key>title</key>
+		<string>Flips</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>ninja_warrior</string>
+		<key>title</key>
+		<string>Ninja Warrior</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>chase_tag</string>
+		<key>title</key>
+		<string>Chase Tag</string>
+		<key>kind</key>
+		<string>technique</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>drinking_fountain</string>
+		<key>title</key>
+		<string>Fontaine à eau</string>
+		<key>kind</key>
+		<string>benefit</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>covered_area</string>
+		<key>title</key>
+		<string>Espace couvert</string>
+		<key>kind</key>
+		<string>benefit</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>hooks</string>
+		<key>title</key>
+		<string>Points d&apos;accroche</string>
+		<key>kind</key>
+		<string>benefit</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>changing_room</string>
+		<key>title</key>
+		<string>Vestiaire</string>
+		<key>kind</key>
+		<string>benefit</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>coaching</string>
+		<key>title</key>
+		<string>Coaching</string>
+		<key>kind</key>
+		<string>benefit</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>well_known</string>
+		<key>title</key>
+		<string>Très connu</string>
+		<key>kind</key>
+		<string>benefit</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>equipment_rental</string>
+		<key>title</key>
+		<string>Location d&apos;équipement</string>
+		<key>kind</key>
+		<string>benefit</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>shop</string>
+		<key>title</key>
+		<string>Magasin</string>
+		<key>kind</key>
+		<string>benefit</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>security</string>
+		<key>title</key>
+		<string>Sécurité</string>
+		<key>kind</key>
+		<string>hazard</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>security_cam</string>
+		<key>title</key>
+		<string>Caméra de sécurité</string>
+		<key>kind</key>
+		<string>hazard</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>slippery_surface</string>
+		<key>title</key>
+		<string>Surface glissante</string>
+		<key>kind</key>
+		<string>hazard</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>high_drop</string>
+		<key>title</key>
+		<string>Grande chute</string>
+		<key>kind</key>
+		<string>hazard</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>uneasy_access</string>
+		<key>title</key>
+		<string>Accès difficile</string>
+		<key>kind</key>
+		<string>hazard</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>locked_door</string>
+		<key>title</key>
+		<string>Porte fermée</string>
+		<key>kind</key>
+		<string>hazard</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>alarm</string>
+		<key>title</key>
+		<string>Alarme</string>
+		<key>kind</key>
+		<string>hazard</string>
+	</dict>
+	<dict>
+		<key>id</key>
+		<string>death_drop</string>
+		<key>title</key>
+		<string>Chute mortelle</string>
+		<key>kind</key>
+		<string>hazard</string>
+	</dict>
+</array>
+</plist>

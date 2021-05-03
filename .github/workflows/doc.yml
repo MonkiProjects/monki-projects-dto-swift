@@ -1,9 +1,11 @@
 name: Documentation
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     steps:

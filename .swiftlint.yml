@@ -1,34 +1,185 @@
 # For more information, visit https://github.com/realm/SwiftLint
+# and https://realm.github.io/SwiftLint/rule-directory.html
+
+included:
+  - Sources
+  - Tests
 
 disabled_rules:
-  nesting
+  - todo 										# lint
 opt_in_rules:
-  - trailing_comma
-  
-included:
-  - .
-excluded:
-  - .gitignore
-  - .build
-  - .swiftlint.yml
+  - anyobject_protocol 							# lint
+  - array_init 									# lint
+  - attributes 									# style
+  - closure_body_length 						# metrics
+  - closure_end_indentation 					# style
+  - closure_spacing 							# style
+  - collection_alignment 						# style
+  - contains_over_filter_count 					# performance
+  - contains_over_filter_is_empty 				# performance
+  - contains_over_first_not_nil 				# performance
+  - contains_over_range_nil_comparison 			# performance
+  - convenience_type 							# idiomatic
+# - discouraged_assert 							# idiomatic
+  - discouraged_object_literal 					# idiomatic
+  - discouraged_optional_boolean 				# idiomatic
+  - discouraged_optional_collection 			# idiomatic
+  - empty_collection_literal 					# performance
+  - empty_count 								# performance
+  - empty_string 								# performance
+  - empty_xctest_method 						# lint
+  - enum_case_associated_values_count 			# metrics
+  - expiring_todo 								# lint
+# - explicit_acl 								# idiomatic
+  - explicit_init 								# idiomatic
+  - explicit_self 								# style
+  - explicit_top_level_acl 						# idiomatic
+  - fallthrough 								# idiomatic
+  - fatal_error_message 						# idiomatic
+  - file_header 								# style
+  - file_name_no_space 							# idiomatic
+  - file_types_order 							# style
+# - first_where 								# performance
+  - flatmap_over_map_reduce 					# performance
+  - for_where 									# idiomatic
+  - force_unwrapping 							# idiomatic
+  - identical_operands 							# lint
+  - implicit_return 							# style
+  - implicitly_unwrapped_optional 				# idiomatic
+  - indentation_width 							# style
+  - joined_default_parameter 					# idiomatic
+# - last_where 									# performance
+  - legacy_constant 							# idiomatic
+  - legacy_constructor 							# idiomatic
+  - legacy_hashing 								# idiomatic
+  - legacy_multiple 							# idiomatic
+# - legacy_objc_type 							# idiomatic
+  - legacy_random 								# idiomatic
+  - line_length 								# metrics
+  - literal_expression_end_indentation 			# style
+  - lower_acl_than_parent 						# lint
+  - mark 										# lint
+# - missing_docs 								# lint
+  - modifier_order 								# style
+  - multiline_arguments_brackets 				# style
+  - multiline_function_chains 					# style
+  - multiline_literal_brackets 					# style
+  - multiline_parameters 						# style
+  - multiline_parameters_brackets 				# style
+  - nesting 									# metrics
+  - no_extension_access_modifier 				# idiomatic
+  - no_fallthrough_only 						# idiomatic
+  - no_space_in_method_call 					# style
+  - notification_center_detachment 				# lint
+  - nslocalizedstring_key 						# lint
+  - nslocalizedstring_require_bundle 			# lint
+  - number_separator 							# style
+  - opening_brace 								# style
+  - operator_usage_whitespace 					# style
+  - operator_whitespace 						# style
+  - overridden_super_call 						# lint
+  - override_in_extension 						# lint
+  - pattern_matching_keywords 					# idiomatic
+  - prefer_self_type_over_type_of_self 			# style
+  - prefer_zero_over_explicit_init 				# idiomatic
+  - private_action 								# lint
+  - private_outlet 								# lint
+  - private_over_fileprivate 					# idiomatic
+# - private_subject 							# lint
+  - private_unit_test 							# lint
+  - prohibited_interface_builder 				# lint
+  - prohibited_super_call 						# lint
+  - protocol_property_accessors_order 			# style
+  - reduce_boolean 								# performance
+  - reduce_into 								# performance
+  - redundant_discardable_let 					# style
+  - redundant_nil_coalescing 					# idiomatic
+  - redundant_optional_initialization 			# idiomatic
+  - redundant_set_access_control 				# idiomatic
+  - redundant_string_enum_value 				# idiomatic
+  - redundant_type_annotation 					# idiomatic
+  - redundant_void_return 						# idiomatic
+# - required_deinit 							# lint
+  - return_arrow_whitespace 					# style
+  - shorthand_operator 							# style
+  - single_test_class 							# style
+  - sorted_first_last 							# performance
+  - statement_position 							# style
+  - static_operator 							# idiomatic
+  - switch_case_alignment 						# style
+  - switch_case_on_newline 						# style
+  - syntactic_sugar 							# idiomatic
+  - test_case_accessibility 					# lint
+  - toggle_bool 								# idiomatic
+  - trailing_comma 								# style
+  - trailing_newline 							# style
+  - trailing_semicolon 							# idiomatic
+  - type_body_length 							# metrics
+  - type_contents_order 						# style
+  - type_name 									# idiomatic
+  - unneeded_break_in_switch 					# idiomatic
+  - unneeded_parentheses_in_closure_argument 	# style
+  - unavailable_function 						# idiomatic
+  - unowned_variable_capture 					# lint
+  - untyped_error_in_catch 						# idiomatic
+  - unused_capture_list 						# lint
+  - unused_control_flow_label 					# lint
+  - unused_closure_parameter 					# lint
+  - unused_declaration 							# lint
+  - unused_enumerated 							# idiomatic
+  - unused_import 								# lint
+  - unused_optional_binding 					# style
+  - vertical_whitespace 						# style
+  - void_return 								# style
+  - weak_delegate 								# lint
+  - xct_specific_matcher 						# idiomatic
+  - xctfail_message 							# idiomatic
+  - yoda_condition 								# lint
 
-line_length: 110
+file_header:
+  required_pattern: |
+    \/\/
+    \/\/  .*?\.swift
+    \/\/  (App|Run|Helpers|Models|Migrations|DTOs|Repositories|APIs|Jobs)(Tests)?
+    \/\/
+    \/\/  Created by .*? on \d{2}\/\d{2}\/\d{4}\.
+    \/\/  Copyright (©|\(c\)) \d{4} Monki Projects\. All rights reserved\.
+    \/\/
+
+line_length:
+  warning: 110
+  ignores_urls: true
+nesting:
+  type_level: 6
 type_body_length:
   warning: 300
   error: 400
 file_length:
   warning: 500
   error: 1200
+  ignore_comment_only_lines: true
 identifier_name:
   excluded:
     - id
     - url
-    - bio
     - lhs
     - rhs
-    - bot
+    - en
+    - fr
+    - v1
+    - n
 trailing_whitespace:
   ignores_empty_lines: true
 trailing_comma:
   mandatory_comma: true
-reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown, github-actions-logging)
+deployment_target:
+  iOS_deployment_target: 13.0
+  macOS_deployment_target: 10.15
+  watchOS_deployment_target: 6.0
+  tvOS_deployment_target: 13.0
+file_name_no_space:
+  severity: error
+force_unwrapping: error
+indentation_width:
+  include_comments: false
+reporter: emoji # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown, github-actions-logging)
