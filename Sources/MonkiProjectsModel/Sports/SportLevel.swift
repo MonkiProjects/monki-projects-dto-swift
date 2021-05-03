@@ -19,15 +19,15 @@ public enum SportLevel: UInt8, Codable, Hashable {
 	public var title: String {
 		switch self {
 		case .neverTried:
-			return NSLocalizedString("LEVEL_NEVER_TRIED", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("LEVEL_NEVER_TRIED", bundle: .module, comment: "")
 		case .beginner:
-			return NSLocalizedString("LEVEL_BEGINNER", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("LEVEL_BEGINNER", bundle: .module, comment: "")
 		case .intermediate:
-			return NSLocalizedString("LEVEL_INTERMEDIATE", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("LEVEL_INTERMEDIATE", bundle: .module, comment: "")
 		case .advanced:
-			return NSLocalizedString("LEVEL_ADVANCED", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("LEVEL_ADVANCED", bundle: .module, comment: "")
 		case .professional:
-			return NSLocalizedString("LEVEL_PROFESSIONAL", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("LEVEL_PROFESSIONAL", bundle: .module, comment: "")
 		}
 	}
 	

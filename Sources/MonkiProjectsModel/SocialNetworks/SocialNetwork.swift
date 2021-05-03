@@ -15,19 +15,19 @@ public enum SocialNetwork: String, Codable, Hashable {
 	public var name: String {
 		switch self {
 		case .instagram:
-			return NSLocalizedString("APP_INSTAGRAM", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("APP_INSTAGRAM", bundle: .module, comment: "")
 		case .youTube:
-			return NSLocalizedString("APP_YOUTUBE", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("APP_YOUTUBE", bundle: .module, comment: "")
 		case .vimeo:
-			return NSLocalizedString("APP_VIMEO", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("APP_VIMEO", bundle: .module, comment: "")
 		case .facebook:
-			return NSLocalizedString("APP_FACEBOOK", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("APP_FACEBOOK", bundle: .module, comment: "")
 		case .twitter:
-			return NSLocalizedString("APP_TWITTER", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("APP_TWITTER", bundle: .module, comment: "")
 		case .messenger:
-			return NSLocalizedString("APP_MESSENGER", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("APP_MESSENGER", bundle: .module, comment: "")
 		case .tikTok:
-			return NSLocalizedString("APP_TIKTOK", bundle: .fixedModule, comment: "")
+			return NSLocalizedString("APP_TIKTOK", bundle: .module, comment: "")
 		}
 	}
 	

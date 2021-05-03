@@ -18,19 +18,19 @@ extension SocialNetwork {
 		
 		switch self {
 		case .instagram:
-			namedColor = UIColor(named: "instagram", in: .fixedModule, compatibleWith: nil)
+			namedColor = UIColor(named: "instagram", in: .module, compatibleWith: nil)
 		case .youTube:
-			namedColor = UIColor(named: "youtube", in: .fixedModule, compatibleWith: nil)
+			namedColor = UIColor(named: "youtube", in: .module, compatibleWith: nil)
 		case .vimeo:
-			namedColor = UIColor(named: "vimeo", in: .fixedModule, compatibleWith: nil)
+			namedColor = UIColor(named: "vimeo", in: .module, compatibleWith: nil)
 		case .facebook:
-			namedColor = UIColor(named: "facebook", in: .fixedModule, compatibleWith: nil)
+			namedColor = UIColor(named: "facebook", in: .module, compatibleWith: nil)
 		case .twitter:
-			namedColor = UIColor(named: "twitter", in: .fixedModule, compatibleWith: nil)
+			namedColor = UIColor(named: "twitter", in: .module, compatibleWith: nil)
 		case .messenger:
-			namedColor = UIColor(named: "messenger-2", in: .fixedModule, compatibleWith: nil)
+			namedColor = UIColor(named: "messenger-2", in: .module, compatibleWith: nil)
 		case .tikTok:
-			namedColor = UIColor(named: "tiktok-2", in: .fixedModule, compatibleWith: nil)
+			namedColor = UIColor(named: "tiktok-2", in: .module, compatibleWith: nil)
 		}
 		
 		return namedColor ?? UIColor.systemBlue
@@ -42,19 +42,19 @@ extension SocialNetwork {
 		
 		switch self {
 		case .instagram:
-			namedImage = UIImage(named: "icons8-instagram", in: .fixedModule, compatibleWith: nil)
+			namedImage = UIImage(named: "icons8-instagram", in: .module, compatibleWith: nil)
 		case .youTube:
-			namedImage = UIImage(named: "icons8-youtube", in: .fixedModule, compatibleWith: nil)
+			namedImage = UIImage(named: "icons8-youtube", in: .module, compatibleWith: nil)
 		case .vimeo:
-			namedImage = UIImage(named: "icons8-vimeo", in: .fixedModule, compatibleWith: nil)
+			namedImage = UIImage(named: "icons8-vimeo", in: .module, compatibleWith: nil)
 		case .facebook:
-			namedImage = UIImage(named: "icons8-facebook", in: .fixedModule, compatibleWith: nil)
+			namedImage = UIImage(named: "icons8-facebook", in: .module, compatibleWith: nil)
 		case .twitter:
-			namedImage = UIImage(named: "icons8-twitter", in: .fixedModule, compatibleWith: nil)
+			namedImage = UIImage(named: "icons8-twitter", in: .module, compatibleWith: nil)
 		case .messenger:
-			namedImage = UIImage(named: "icons8-facebook_messenger", in: .fixedModule, compatibleWith: nil)
+			namedImage = UIImage(named: "icons8-facebook_messenger", in: .module, compatibleWith: nil)
 		case .tikTok:
-			namedImage = UIImage(named: "icons8-tiktok", in: .fixedModule, compatibleWith: nil)
+			namedImage = UIImage(named: "icons8-tiktok", in: .module, compatibleWith: nil)
 		}
 		
 		return namedImage ?? UIImage()
