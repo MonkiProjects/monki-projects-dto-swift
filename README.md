@@ -1,7 +1,8 @@
 # MonkiProjectsModel
 
-![Swift](https://github.com/MonkiProjects/monki-projects-model-swift/workflows/Swift/badge.svg)
-![Documentation](https://github.com/MonkiProjects/monki-projects-model-swift/workflows/Documentation/badge.svg)
+[![Tests](https://github.com/MonkiProjects/monki-projects-model-swift/actions/workflows/test.yml/badge.svg)](https://github.com/MonkiProjects/monki-projects-model-swift/actions/workflows/test.yml)
+[![Documentation](https://github.com/MonkiProjects/monki-projects-model-swift/actions/workflows/doc.yml/badge.svg)](https://github.com/MonkiProjects/monki-projects-model-swift/actions/workflows/doc.yml)
+[![Lint](https://github.com/MonkiProjects/monki-projects-model-swift/actions/workflows/lint.yml/badge.svg)](https://github.com/MonkiProjects/monki-projects-model-swift/actions/workflows/lint.yml)
 
 This package contains the definitions for models used across Monki Projects' apps.
 
