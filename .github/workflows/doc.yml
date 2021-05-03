@@ -9,6 +9,9 @@ jobs:
     name: Publish ${{ matrix.docs.product }}
     runs-on: ubuntu-latest
     strategy:
+      # We need to checkout and publish to another branch,
+      # to avoid conflicts, run everything in serial mode.
+      max-parallel: 1
       matrix:
         docs:
           - product: MonkiProjectsModel
