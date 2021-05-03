@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#requirements">Requirements</a><ul><li class="variable"><a href="#withglyph.imagebundle">image​Bundle</a></li><li class="variable"><a href="#withglyph.glyphname">glyph​Name</a></li></ul></li></ol>
+            <ol><li><a href="#default implementations">Default Implementations</a><ul><li class="variable"><a href="#withglyph.uiglyph">ui​Glyph</a></li><li class="variable"><a href="#withglyph.glyph">glyph</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="variable"><a href="#withglyph.imagebundle">image​Bundle</a></li><li class="variable"><a href="#withglyph.glyphname">glyph​Name</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -37,9 +37,40 @@
     <code class="name">With​Glyph</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">WithGlyph</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">WithGlyph</span> </code></pre>
+</div>
 
+    <section id="default implementations">
+        <h2>Default Implementations</h2>
 
+        <div role="article" class="variable" id="withglyph.uiglyph">
+    <h3>
+        <code>ui​Glyph</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(<span class="keyword">iOS</span> <span class="number literal">13.0</span>, *)
+	<span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">uiGlyph</span>: <span class="type">UIImage</span>? </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Icons from <a href="https://icons8.com">Icons8</a></p>
+
+</div>
+</div>
+<div role="article" class="variable" id="withglyph.glyph">
+    <h3>
+        <code>glyph</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">available</span>(<span class="keyword">iOS</span> <span class="number literal">13.0</span>, <span class="keyword">macOS</span> <span class="number literal">10.15</span>, <span class="keyword">tvOS</span> <span class="number literal">13.0</span>, <span class="keyword">watchOS</span> <span class="number literal">6.0</span>, *)
+	<span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">glyph</span>: <span class="type">Image</span>? </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Icons from <a href="https://icons8.com">Icons8</a></p>
+
+</div>
+</div>
+    </section>
 
 
     <section id="requirements">
@@ -49,13 +80,17 @@
     <h3>
         <code>image​Bundle</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">imageBundle</span>: <span class="type">Bundle</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">imageBundle</span>: <span class="type">Bundle</span> </code></pre>
+</div>
 </div>
 <div role="article" class="variable" id="withglyph.glyphname">
     <h3>
         <code>glyph​Name</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">glyphName</span>: <span class="type">String</span>?</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">var</span> <span class="variable">glyphName</span>: <span class="type">String</span>? </code></pre>
+</div>
 </div>
     </section>
         </article>
@@ -63,7 +98,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-03-06T09:50:40+0000">March 6, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-05-03T17:42:40+0000">May 3, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>

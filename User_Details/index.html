@@ -37,7 +37,9 @@
     <code class="name">User.​Details</code>
 </h1>
 
-<html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Details</span>: <span class="type">Codable</span>, <span class="type">Hashable</span></code></pre></body></html>
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">Details</span>: <span class="type">Codable</span>, <span class="type">Hashable</span> </code></pre>
+</div>
 <section id="relationships">
     <h2 hidden>Relationships</h2>
         <figure>
@@ -68,7 +70,7 @@
 <text text-anchor="middle" x="207" y="-14.3" font-family="Menlo" font-size="14.00" fill="#000000">Codable</text>
 </g>
 <!-- User.Details&#45;&gt;Codable -->
-<g id="edge2" class="edge conformsTo">
+<g id="edge1" class="edge conformsTo">
 <title>User.Details&#45;&gt;Codable</title>
 <path fill="none" stroke="#000000" d="M375.5134,-71.9243C344.4871,-61.9959 305.8297,-49.6255 273.3694,-39.2382"/>
 <polygon fill="#000000" stroke="#000000" points="274.1008,-35.7975 263.5098,-36.0831 271.9673,-42.4645 274.1008,-35.7975"/>
@@ -80,7 +82,7 @@
 <text text-anchor="middle" x="657" y="-14.3" font-family="Menlo" font-size="14.00" fill="#000000">Hashable</text>
 </g>
 <!-- User.Details&#45;&gt;Hashable -->
-<g id="edge1" class="edge conformsTo">
+<g id="edge2" class="edge conformsTo">
 <title>User.Details&#45;&gt;Hashable</title>
 <path fill="none" stroke="#000000" d="M488.4866,-71.9243C519.5129,-61.9959 558.1703,-49.6255 590.6306,-39.2382"/>
 <polygon fill="#000000" stroke="#000000" points="592.0327,-42.4645 600.4902,-36.0831 589.8992,-35.7975 592.0327,-42.4645"/>
@@ -109,7 +111,15 @@
     <h3>
         <code>init(bio:​location:​experience:​social​Usernames:​created​At:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">bio</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">location</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">experience</span>: [<a href="/monki-projects-model-swift/Sport"><span class="type">Sport</span></a>: <a href="/monki-projects-model-swift/SportLevel"><span class="type">SportLevel</span></a>] = [:], <span class="variable">socialUsernames</span>: [<a href="/monki-projects-model-swift/SocialNetwork"><span class="type">SocialNetwork</span></a>: <span class="type">String</span>] = [:], <span class="variable">createdAt</span>: <span class="type">Date</span> = <span class="variable">Date</span>())</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(
+			<span class="variable">bio</span>: <span class="type">String</span>? = <span class="keyword">nil</span>,
+			<span class="variable">location</span>: <span class="type">String</span>? = <span class="keyword">nil</span>,
+			<span class="variable">experience</span>: [<span class="type">Sport</span>: <span class="type">SportLevel</span>] = [:],
+			<span class="variable">socialUsernames</span>: [<span class="type">SocialNetwork</span>: <span class="type">String</span>] = [:],
+			<span class="variable">createdAt</span>: <span class="type">Date</span> = <span class="variable">Date</span>()
+		) </code></pre>
+</div>
 </div>
     </section>
     <section id="properties">
@@ -119,31 +129,41 @@
     <h3>
         <code>bio</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">bio</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">bio</span>, <span class="variable">location</span>: <span class="type">String</span>?</code></pre>
+</div>
 </div>
 <div role="article" class="variable" id="user.details.location">
     <h3>
         <code>location</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">location</span>: <span class="type">String</span>?</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">bio</span>, <span class="variable">location</span>: <span class="type">String</span>?</code></pre>
+</div>
 </div>
 <div role="article" class="variable" id="user.details.experience">
     <h3>
         <code>experience</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">experience</span>: [<a href="/monki-projects-model-swift/Sport"><span class="type">Sport</span></a>: <a href="/monki-projects-model-swift/SportLevel"><span class="type">SportLevel</span></a>]</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">experience</span>: [<span class="type">Sport</span>: <span class="type">SportLevel</span>]</code></pre>
+</div>
 </div>
 <div role="article" class="variable" id="user.details.socialusernames">
     <h3>
         <code>social​Usernames</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">socialUsernames</span>: [<a href="/monki-projects-model-swift/SocialNetwork"><span class="type">SocialNetwork</span></a>: <span class="type">String</span>]</code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">socialUsernames</span>: [<span class="type">SocialNetwork</span>: <span class="type">String</span>]</code></pre>
+</div>
 </div>
 <div role="article" class="variable" id="user.details.createdat">
     <h3>
         <code>created​At</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">createdAt</span>: <span class="type">Date</span></code></pre></body></html>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">createdAt</span>: <span class="type">Date</span></code></pre>
+</div>
 </div>
     </section>
 
@@ -154,7 +174,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-03-06T09:50:40+0000">March 6, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+    Generated on <time datetime="2021-05-03T17:42:39+0000">May 3, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.6</span>.
 </p>
     </footer>
 </body>
