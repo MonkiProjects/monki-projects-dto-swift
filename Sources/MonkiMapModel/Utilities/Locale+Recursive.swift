@@ -13,6 +13,7 @@ extension Locale {
 	/// Raw value of `CFLocaleKey.languageCode`.
 	/// Returned as a plain string because `CoreFoundation` isn't available on Linux.
 	static var languageCodeKey: String { "kCFLocaleLanguageCodeKey" }
+	
 	/// Raw value of `CFLocaleKey.countryCode`.
 	/// Returned as a plain string because `CoreFoundation` isn't available on Linux.
 	static var countryCodeKey: String { "kCFLocaleCountryCodeKey" }
@@ -27,20 +28,20 @@ extension Locale {
 		].compactMapValues({ $0 })
 		
 		// `Locale` from components constructor
-		let locale: () -> Locale = {
+		var locale: Locale {
 			Locale(identifier: Locale.identifier(fromComponents: components))
 		}
 		
 		// Try with language and country codes
 		do {
-			return try function(locale())
+			return try function(locale)
 		} catch {}
 		
 		// Remove country code
 		components.removeValue(forKey: Self.countryCodeKey)
 		
 		// Try again with only language code
-		return try function(locale())
+		return try function(locale)
 	}
 	
 }
