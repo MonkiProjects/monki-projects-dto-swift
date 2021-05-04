@@ -27,19 +27,19 @@ extension Placemark.Property {
 		
 	}
 	
-	static func feature(_ feature: ID) -> Self {
+	public static func feature(_ feature: ID) -> Self {
 		.init(id: feature, kind: .feature)
 	}
 	
-	static func technique(_ technique: ID) -> Self {
+	public static func technique(_ technique: ID) -> Self {
 		.init(id: technique, kind: .technique)
 	}
 	
-	static func benefit(_ benefit: ID) -> Self {
+	public static func benefit(_ benefit: ID) -> Self {
 		.init(id: benefit, kind: .benefit)
 	}
 	
-	static func hazard(_ hazard: ID) -> Self {
+	public static func hazard(_ hazard: ID) -> Self {
 		.init(id: hazard, kind: .hazard)
 	}
 	
