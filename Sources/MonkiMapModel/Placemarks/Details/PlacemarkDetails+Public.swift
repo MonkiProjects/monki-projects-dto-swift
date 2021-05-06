@@ -13,14 +13,11 @@ extension Placemark.Details {
 	
 	public struct Public: Codable, Hashable {
 		
-		public typealias Properties = [Placemark.Property.Localized]
-		
 		public let caption: String
 		public let satelliteImage: URL
 		public let images: [URL]
 		public let location: Placemark.Location.Public?
-		@RawKeyedCodableDictionary
-		public var properties: [Placemark.Property.Kind: Properties]
+		public var properties: [Placemark.Property.Localized]
 		
 		public var allImages: [URL] { images + [satelliteImage] }
 		
@@ -29,7 +26,7 @@ extension Placemark.Details {
 			satelliteImage: URL,
 			images: [URL] = [],
 			location: Placemark.Location.Public? = nil,
-			properties: [Placemark.Property.Kind: Properties]
+			properties: [Placemark.Property.Localized]
 		) {
 			self.caption = caption
 			self.satelliteImage = satelliteImage
