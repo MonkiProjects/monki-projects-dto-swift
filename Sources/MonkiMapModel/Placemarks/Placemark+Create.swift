@@ -18,8 +18,7 @@ extension Placemark {
 		public var kind: Kind
 		public var caption: String
 		public var images: [URL]
-		@RawKeyedCodableDictionary
-		public var properties: [Property.Kind: [String]]
+		public var properties: [Property]
 		
 		public init(
 			name: String = "",
@@ -28,7 +27,7 @@ extension Placemark {
 			kind: Kind,
 			caption: String = "",
 			images: [URL] = [],
-			properties: [Property.Kind: [String]] = [:]
+			properties: [Property] = []
 		) {
 			self.name = name
 			self.latitude = latitude

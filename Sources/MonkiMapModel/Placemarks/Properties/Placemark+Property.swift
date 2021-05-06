@@ -12,7 +12,7 @@ import MonkiProjectsModel
 extension Placemark {
 	
 	// A property a placemark could have
-	public struct Property: Hashable, Identifiable {
+	public struct Property: Codable, Hashable, Identifiable {
 		public let id: String
 		public let kind: Kind
 	}
