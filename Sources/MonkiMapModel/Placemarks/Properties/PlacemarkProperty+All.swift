@@ -13,14 +13,14 @@ extension Placemark.Property {
 	public static func all(in locale: Locale? = nil) -> [Self] {
 		let locale = locale ?? .default
 		return Internal.all(in: locale)
-			.map { Self(id: $0.id, kind: $0.kind) }
+			.map { Self(kind: $0.kind, id: $0.id) }
 	}
 	
 	public static func all(kind: Kind, in locale: Locale? = nil) -> [Self] {
 		let locale = locale ?? .default
 		return Internal.all(in: locale)
 			.filter { $0.kind == kind }
-			.map { Self(id: $0.id, kind: $0.kind) }
+			.map { Self(kind: $0.kind, id: $0.id) }
 	}
 	
 }

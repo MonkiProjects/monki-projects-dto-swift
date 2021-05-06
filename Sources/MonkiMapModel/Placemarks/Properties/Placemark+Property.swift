@@ -13,8 +13,15 @@ extension Placemark {
 	
 	// A property a placemark could have
 	public struct Property: Codable, Hashable, Identifiable {
-		public let id: String
+		
 		public let kind: Kind
+		public let id: String
+		
+		public init(kind: Kind, id: String) {
+			self.kind = kind
+			self.id = id
+		}
+		
 	}
 	
 }
