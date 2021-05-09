@@ -13,7 +13,9 @@ extension User {
 	public struct Details: Codable, Hashable {
 		
 		public var bio, location: String?
+		@RawKeyedCodableDictionary
 		public var experience: [Sport: SportLevel]
+		@RawKeyedCodableDictionary
 		public var socialUsernames: [SocialNetwork: String]
 		public let createdAt: Date
 		
