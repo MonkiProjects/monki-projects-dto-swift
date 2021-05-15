@@ -64,3 +64,26 @@ public struct PageMetadata: Codable {
 	}
 	
 }
+
+/// Represents information needed to generate a `Page` from the full result set.
+///
+/// Comes from [Fluent](https://github.com/vapor/fluent-kit/blob/9d47c328bf83999968c12a3bc94ead1d706ad4a9/Sources/FluentKit/Query/Builder/QueryBuilder+Paginate.swift)
+public struct PageRequest: Encodable {
+	
+	/// Page number to request. Starts at `1`.
+	public let page: Int
+	
+	/// Max items per page.
+	public let per: Int
+	
+	/// Creates a new `PageRequest`
+	///
+	/// - Parameters:
+	///   - page: Page number to request. Starts at `1`.
+	///   - per: Max items per page.
+	public init(page: Int, per: Int) {
+		self.page = page
+		self.per = per
+	}
+	
+}
