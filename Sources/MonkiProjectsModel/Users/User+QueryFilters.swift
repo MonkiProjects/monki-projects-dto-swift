@@ -14,6 +14,11 @@ extension User {
 		
 		public var username, displayName: String?
 		
+		public var isEmpty: Bool {
+			self.username == nil
+				&& self.displayName == nil
+		}
+		
 		public init(
 			username: String? = nil,
 			displayName: String? = nil
