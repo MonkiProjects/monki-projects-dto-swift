@@ -27,6 +27,11 @@ extension User {
 			self.displayName = displayName
 		}
 		
+		public init(fromDict dict: [String: String]) {
+			self.username = dict["username"]
+			self.displayName = dict["display_name"]
+		}
+		
 	}
 	
 }
