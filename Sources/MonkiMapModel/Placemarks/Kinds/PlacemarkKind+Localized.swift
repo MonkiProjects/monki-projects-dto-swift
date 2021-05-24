@@ -20,7 +20,7 @@ extension Placemark.Kind {
 	///     "title": "Training Spot"
 	/// }
 	/// ```
-	struct Localized: Codable, Hashable, Identifiable {
+	struct Localized: Hashable, Identifiable {
 		
 		public let id: Placemark.Kind
 		public let title: String
@@ -35,6 +35,14 @@ extension Placemark.Kind {
 	func localized(in locale: Locale? = nil) throws -> Localized {
 		let locale = locale ?? .default
 		return Localized(id: self, title: try self.title(in: locale))
+	}
+	
+}
+
+extension Placemark.Kind.Localized: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case id, title
 	}
 	
 }

@@ -22,7 +22,7 @@ extension Placemark.Category {
 	///     <string>Spot</string>
 	/// </dict>
 	/// ```
-	struct Internal: Codable, Hashable, Identifiable, PlistDecodable {
+	struct Internal: Hashable, Identifiable, PlistDecodable {
 		
 		static let fileName = "PlacemarkCategories"
 		
@@ -47,6 +47,14 @@ extension Placemark.Category {
 		return try self == .unknown
 			? Strings.unknown(in: locale)
 			: self.internal(in: locale).title
+	}
+	
+}
+
+extension Placemark.Category.Internal: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case id, title
 	}
 	
 }

@@ -36,7 +36,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>precision_jump</string>
 				<string>kong</string>
@@ -90,7 +90,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>kong</string>
 				<string>double_kong</string>
@@ -140,7 +140,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>double_kong</string>
 				<string>triple_kong</string>
@@ -186,7 +186,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>triple_kong</string>
 				<string>cat_leap</string>
@@ -229,7 +229,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>cat_leap</string>
 				<string>180_cat_leap</string>
@@ -269,7 +269,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>180_cat_leap</string>
 				<string>small_drop</string>
@@ -305,7 +305,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>small_drop</string>
 				<string>medium_drop</string>
@@ -338,7 +338,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>medium_drop</string>
 				<string>high_drop</string>
@@ -369,7 +369,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>high_drop</string>
 				<string>flips</string>
@@ -398,7 +398,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array>
 				<string>flips</string>
 			</array>
@@ -425,7 +425,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array/>
 			<key>benefits</key>
 			<array/>
@@ -449,7 +449,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array/>
 			<key>benefits</key>
 			<array/>
@@ -472,7 +472,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array/>
 			<key>benefits</key>
 			<array/>
@@ -494,7 +494,7 @@ Copyright (c) 2020 Monki Projects. All rights reserved.
 				<string>trampoline</string>
 				<string>bench</string>
 			</array>
-			<key>goodForTraining</key>
+			<key>good_for_training</key>
 			<array/>
 			<key>benefits</key>
 			<array/>

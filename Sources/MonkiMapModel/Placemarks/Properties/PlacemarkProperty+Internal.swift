@@ -34,3 +34,11 @@ extension Placemark.Property {
 	}
 	
 }
+
+extension Placemark.Property.Internal: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case id, title, kind
+	}
+	
+}

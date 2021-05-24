@@ -26,17 +26,7 @@ extension User {
 	
 	public enum Public {
 		
-		public struct Small: Codable, Hashable, Identifiable, UserPublicSmallProtocol {
-			
-			public enum CodingKeys: String, CodingKey {
-				case id
-				case username
-				case displayName = "display_name"
-				case avatar
-				case country
-				case kind
-				case updatedAt = "updated_at"
-			}
+		public struct Small: Hashable, Identifiable, UserPublicSmallProtocol {
 			
 			public let id: UUID
 			public var username, displayName: String
@@ -65,18 +55,7 @@ extension User {
 			
 		}
 		
-		public struct Full: Codable, Hashable, Identifiable, UserPublicFullProtocol {
-			
-			public enum CodingKeys: String, CodingKey {
-				case id
-				case username
-				case displayName = "display_name"
-				case avatar
-				case country
-				case kind
-				case updatedAt = "updated_at"
-				case details
-			}
+		public struct Full: Hashable, Identifiable, UserPublicFullProtocol {
 			
 			public let id: UUID
 			public var username, displayName: String
@@ -126,6 +105,35 @@ extension User {
 			
 		}
 		
+	}
+	
+}
+
+extension User.Public.Small: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case id
+		case username
+		case displayName = "display_name"
+		case avatar
+		case country
+		case kind
+		case updatedAt = "updated_at"
+	}
+	
+}
+
+extension User.Public.Full: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case id
+		case username
+		case displayName = "display_name"
+		case avatar
+		case country
+		case kind
+		case updatedAt = "updated_at"
+		case details
 	}
 	
 }

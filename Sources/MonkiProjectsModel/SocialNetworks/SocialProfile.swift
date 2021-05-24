@@ -8,11 +8,7 @@
 
 import Foundation
 
-public struct SocialProfile: Codable, Hashable {
-	
-	public enum CodingKeys: String, CodingKey {
-		case network, url
-	}
+public struct SocialProfile: Hashable {
 	
 	public let network: SocialNetwork
 	public var url: URL
@@ -20,6 +16,14 @@ public struct SocialProfile: Codable, Hashable {
 	public init(_ url: URL, for network: SocialNetwork) {
 		self.network = network
 		self.url = url
+	}
+	
+}
+
+extension SocialProfile: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case network, url
 	}
 	
 }

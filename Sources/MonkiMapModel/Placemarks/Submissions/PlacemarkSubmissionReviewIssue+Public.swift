@@ -11,14 +11,7 @@ import MonkiProjectsModel
 
 extension Placemark.Submission.Review.Issue {
 	
-	public struct Public: Codable, Hashable, Identifiable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case id
-			case placemark
-			case issuer, reason, comment, state
-			case createdAt = "created_at"
-		}
+	public struct Public: Hashable, Identifiable {
 		
 		public let id: UUID
 		public let placemark: Placemark.Public.ID
@@ -46,6 +39,17 @@ extension Placemark.Submission.Review.Issue {
 			self.createdAt = createdAt
 		}
 		
+	}
+	
+}
+
+extension Placemark.Submission.Review.Issue.Public: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case id
+		case placemark
+		case issuer, reason, comment, state
+		case createdAt = "created_at"
 	}
 	
 }

@@ -10,18 +10,7 @@ import Foundation
 
 extension Placemark.Submission {
 	
-	public struct Public: Codable, Hashable, Identifiable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case id
-			case placemark
-			case state
-			case reviews
-			case positiveReviews = "positive_reviews"
-			case negativeReviews = "negative_reviews"
-			case createdAt = "created_at"
-			case updatedAt = "updated_at"
-		}
+	public struct Public: Hashable, Identifiable {
 		
 		public let id: UUID
 		public let placemark: Placemark.Public.ID
@@ -50,6 +39,21 @@ extension Placemark.Submission {
 			self.updatedAt = updatedAt
 		}
 		
+	}
+	
+}
+
+extension Placemark.Submission.Public: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case id
+		case placemark
+		case state
+		case reviews
+		case positiveReviews = "positive_reviews"
+		case negativeReviews = "negative_reviews"
+		case createdAt = "created_at"
+		case updatedAt = "updated_at"
 	}
 	
 }

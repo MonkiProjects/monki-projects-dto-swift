@@ -12,11 +12,7 @@ import MonkiProjectsModel
 extension Placemark {
 	
 	// A property a placemark could have
-	public struct Property: Codable, Hashable, Identifiable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case kind, id
-		}
+	public struct Property: Hashable, Identifiable {
 		
 		public let kind: Kind
 		public let id: String
@@ -26,6 +22,14 @@ extension Placemark {
 			self.id = id
 		}
 		
+	}
+	
+}
+
+extension Placemark.Property: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case kind, id
 	}
 	
 }

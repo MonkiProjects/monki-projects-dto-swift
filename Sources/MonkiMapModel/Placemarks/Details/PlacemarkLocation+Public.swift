@@ -10,11 +10,7 @@ import Foundation
 
 extension Placemark.Location {
 	
-	public struct Public: Codable, Hashable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case city, country
-		}
+	public struct Public: Hashable {
 		
 		public let city, country: String
 		
@@ -23,6 +19,14 @@ extension Placemark.Location {
 			self.country = country
 		}
 		
+	}
+	
+}
+
+extension Placemark.Location.Public: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case city, country
 	}
 	
 }

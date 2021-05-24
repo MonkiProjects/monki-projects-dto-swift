@@ -10,11 +10,7 @@ import Foundation
 
 extension User {
 	
-	public struct Login: Codable, Hashable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case username, password
-		}
+	public struct Login: Hashable {
 		
 		public var username, password: String
 		
@@ -23,6 +19,14 @@ extension User {
 			self.password = password
 		}
 		
+	}
+	
+}
+
+extension User.Login: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case username, password
 	}
 	
 }

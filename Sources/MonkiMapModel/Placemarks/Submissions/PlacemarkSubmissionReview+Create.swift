@@ -10,11 +10,7 @@ import Foundation
 
 extension Placemark.Submission.Review {
 	
-	public struct Create: Codable, Hashable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case opinion, comment, issues
-		}
+	public struct Create: Hashable {
 		
 		public let opinion: Opinion
 		public let comment: String?
@@ -30,6 +26,14 @@ extension Placemark.Submission.Review {
 			self.issues = issues
 		}
 		
+	}
+	
+}
+
+extension Placemark.Submission.Review.Create: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case opinion, comment, issues
 	}
 	
 }

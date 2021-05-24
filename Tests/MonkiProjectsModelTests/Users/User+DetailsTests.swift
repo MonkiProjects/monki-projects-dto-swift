@@ -16,7 +16,7 @@ internal final class UserDetailsTests: XCTestCase {
 		let string = try XCTUnwrap(String(data: data, encoding: .utf8))
 		
 		XCTAssert(string.contains("\"experience\":{}"), string)
-		XCTAssert(string.contains("\"socialUsernames\":{}"), string)
+		XCTAssert(string.contains("\"social_usernames\":{}"), string)
 	}
 	
 	func testDictionariesJSONEncoding() throws {
@@ -29,7 +29,7 @@ internal final class UserDetailsTests: XCTestCase {
 		let string = try XCTUnwrap(String(data: data, encoding: .utf8))
 		
 		XCTAssert(string.contains("\"experience\":{\"parkour\":1}"), string)
-		XCTAssert(string.contains("\"socialUsernames\":{\"instagram\":\"monki_projects\"}"), string)
+		XCTAssert(string.contains("\"social_usernames\":{\"instagram\":\"monki_projects\"}"), string)
 	}
 	
 }

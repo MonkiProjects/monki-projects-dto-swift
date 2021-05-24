@@ -10,12 +10,7 @@ import Foundation
 
 extension User {
 	
-	public struct Update: Codable, Hashable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case username
-			case displayName = "display_name"
-		}
+	public struct Update: Hashable {
 		
 		public var username, displayName: String?
 		
@@ -27,6 +22,15 @@ extension User {
 			self.displayName = displayName
 		}
 		
+	}
+	
+}
+
+extension User.Update: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case username
+		case displayName = "display_name"
 	}
 	
 }

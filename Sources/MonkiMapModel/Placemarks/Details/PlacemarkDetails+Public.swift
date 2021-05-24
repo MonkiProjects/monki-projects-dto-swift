@@ -11,15 +11,7 @@ import MonkiProjectsModel
 
 extension Placemark.Details {
 	
-	public struct Public: Codable, Hashable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case caption
-			case satelliteImage = "satellite_image"
-			case images
-			case location
-			case properties
-		}
+	public struct Public: Hashable {
 		
 		public let caption: String
 		public let satelliteImage: URL
@@ -43,6 +35,18 @@ extension Placemark.Details {
 			self.properties = properties
 		}
 		
+	}
+	
+}
+
+extension Placemark.Details.Public: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case caption
+		case satelliteImage = "satellite_image"
+		case images
+		case location
+		case properties
 	}
 	
 }

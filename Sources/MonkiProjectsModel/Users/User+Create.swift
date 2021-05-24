@@ -10,15 +10,7 @@ import Foundation
 
 extension User {
 	
-	public struct Create: Codable, Hashable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case email
-			case username
-			case displayName = "display_name"
-			case password
-			case confirmPassword = "confirm_password"
-		}
+	public struct Create: Hashable {
 		
 		public var email, username, displayName: String
 		public var password, confirmPassword: String
@@ -37,6 +29,18 @@ extension User {
 			self.confirmPassword = confirmPassword
 		}
 		
+	}
+	
+}
+
+extension User.Create: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case email
+		case username
+		case displayName = "display_name"
+		case password
+		case confirmPassword = "confirm_password"
 	}
 	
 }

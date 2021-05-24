@@ -27,7 +27,7 @@ extension Placemark.Kind {
 	///         <string>small_wall</string>
 	///         <string>medium_wall</string>
 	///     </array>
-	///     <key>goodForTraining</key>
+	///     <key>good_for_training</key>
 	///     <array>
 	///         <string>precision_jump</string>
 	///         <string>kong</string>
@@ -44,7 +44,7 @@ extension Placemark.Kind {
 	///     </array>
 	/// </dict>
 	/// ```
-	struct Internal: Codable, Hashable, Identifiable, PlistDecodable {
+	struct Internal: Hashable, Identifiable, PlistDecodable {
 		
 		typealias Property = Placemark.Property
 		
@@ -89,6 +89,19 @@ extension Placemark.Kind {
 		return try self == .unknown
 			? Strings.unknown(in: locale)
 			: self.internal(in: locale).title
+	}
+	
+}
+
+extension Placemark.Kind.Internal: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case id
+		case title, category
+		case features
+		case goodForTraining = "good_for_training"
+		case benefits
+		case hazards
 	}
 	
 }

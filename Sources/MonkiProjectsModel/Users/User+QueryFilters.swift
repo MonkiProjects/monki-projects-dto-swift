@@ -10,12 +10,7 @@ import Foundation
 
 extension User {
 	
-	public struct QueryFilters: Codable, Hashable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case username
-			case displayName = "display_name"
-		}
+	public struct QueryFilters: Hashable {
 		
 		public var username, displayName: String?
 		
@@ -32,6 +27,15 @@ extension User {
 			self.displayName = displayName
 		}
 		
+	}
+	
+}
+
+extension User.QueryFilters: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case username
+		case displayName = "display_name"
 	}
 	
 }

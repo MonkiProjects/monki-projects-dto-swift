@@ -10,19 +10,7 @@ import Foundation
 
 extension User {
 	
-	public struct Private: Codable, Hashable, Identifiable, UserPublicFullProtocol {
-		
-		public enum CodingKeys: String, CodingKey {
-			case id
-			case username
-			case displayName = "display_name"
-			case avatar
-			case country
-			case kind
-			case updatedAt = "updated_at"
-			case details
-			case email
-		}
+	public struct Private: Hashable, Identifiable, UserPublicFullProtocol {
 		
 		public let id: UUID
 		public var username, displayName: String
@@ -75,6 +63,22 @@ extension User {
 			)
 		}
 		
+	}
+	
+}
+
+extension User.Private: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case id
+		case username
+		case displayName = "display_name"
+		case avatar
+		case country
+		case kind
+		case updatedAt = "updated_at"
+		case details
+		case email
 	}
 	
 }

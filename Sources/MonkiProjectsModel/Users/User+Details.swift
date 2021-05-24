@@ -10,15 +10,7 @@ import Foundation
 
 extension User {
 	
-	public struct Details: Codable, Hashable {
-		
-		public enum CodingKeys: String, CodingKey {
-			case bio
-			case location
-			case experience
-			case socialUsernames = "social_usernames"
-			case createdAt = "created_at"
-		}
+	public struct Details: Hashable {
 		
 		public var bio, location: String?
 		@RawKeyedCodableDictionary
@@ -41,6 +33,18 @@ extension User {
 			self.createdAt = createdAt
 		}
 		
+	}
+	
+}
+
+extension User.Details: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case bio
+		case location
+		case experience
+		case socialUsernames = "social_usernames"
+		case createdAt = "created_at"
 	}
 	
 }

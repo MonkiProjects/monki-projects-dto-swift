@@ -12,13 +12,7 @@ extension User {
 	
 	public enum Token {
 		
-		public struct Private: Codable, Hashable {
-			
-			public enum CodingKeys: String, CodingKey {
-				case value
-				case expiresAt = "expires_at"
-				case createdAt = "created_at"
-			}
+		public struct Private: Hashable {
 			
 			public let value: String
 			public let expiresAt: Date?
@@ -32,6 +26,16 @@ extension User {
 			
 		}
 		
+	}
+	
+}
+
+extension User.Token.Private: Codable {
+	
+	internal enum CodingKeys: String, CodingKey {
+		case value
+		case expiresAt = "expires_at"
+		case createdAt = "created_at"
 	}
 	
 }
