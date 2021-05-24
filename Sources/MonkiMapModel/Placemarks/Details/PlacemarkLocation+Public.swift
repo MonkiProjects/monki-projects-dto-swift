@@ -12,6 +12,10 @@ extension Placemark.Location {
 	
 	public struct Public: Codable, Hashable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case city, country
+		}
+		
 		public let city, country: String
 		
 		public init(city: String, country: String) {

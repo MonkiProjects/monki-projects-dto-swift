@@ -10,6 +10,10 @@ import Foundation
 
 public struct SocialProfile: Codable, Hashable {
 	
+	public enum CodingKeys: String, CodingKey {
+		case network, url
+	}
+	
 	public let network: SocialNetwork
 	public var url: URL
 	

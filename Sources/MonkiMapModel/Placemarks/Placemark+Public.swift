@@ -13,6 +13,18 @@ extension Placemark {
 	/// Model of a placemark used in APIs responses.
 	public struct Public: Codable, Hashable, Identifiable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case id
+			case name
+			case latitude, longitude
+			case kind, category
+			case state
+			case creator
+			case details
+			case createdAt = "created_at"
+			case updatedAt = "updated_at"
+		}
+		
 		public let id: UUID
 		public let name: String
 		public let latitude, longitude: Double

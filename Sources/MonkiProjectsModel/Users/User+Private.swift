@@ -12,6 +12,18 @@ extension User {
 	
 	public struct Private: Codable, Hashable, Identifiable, UserPublicFullProtocol {
 		
+		public enum CodingKeys: String, CodingKey {
+			case id
+			case username
+			case displayName = "display_name"
+			case avatar
+			case country
+			case kind
+			case updatedAt = "updated_at"
+			case details
+			case email
+		}
+		
 		public let id: UUID
 		public var username, displayName: String
 		public var avatar: AvatarSource?

@@ -12,6 +12,14 @@ extension User {
 	
 	public struct Details: Codable, Hashable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case bio
+			case location
+			case experience
+			case socialUsernames = "social_usernames"
+			case createdAt = "created_at"
+		}
+		
 		public var bio, location: String?
 		@RawKeyedCodableDictionary
 		public var experience: [Sport: SportLevel]

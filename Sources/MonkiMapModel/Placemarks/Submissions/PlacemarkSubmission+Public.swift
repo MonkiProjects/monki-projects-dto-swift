@@ -12,6 +12,17 @@ extension Placemark.Submission {
 	
 	public struct Public: Codable, Hashable, Identifiable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case id
+			case placemark
+			case state
+			case reviews
+			case positiveReviews = "positive_reviews"
+			case negativeReviews = "negative_reviews"
+			case createdAt = "created_at"
+			case updatedAt = "updated_at"
+		}
+		
 		public let id: UUID
 		public let placemark: Placemark.Public.ID
 		public let state: State

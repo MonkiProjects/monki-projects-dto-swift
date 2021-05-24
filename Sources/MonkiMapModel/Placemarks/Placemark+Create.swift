@@ -13,6 +13,13 @@ extension Placemark {
 	
 	public struct Create: Codable, Hashable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case name
+			case latitude, longitude
+			case kind
+			case caption, images, properties
+		}
+		
 		public var name: String
 		public var latitude, longitude: Double
 		public var kind: Kind

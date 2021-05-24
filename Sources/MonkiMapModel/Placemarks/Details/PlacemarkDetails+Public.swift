@@ -13,6 +13,14 @@ extension Placemark.Details {
 	
 	public struct Public: Codable, Hashable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case caption
+			case satelliteImage = "satellite_image"
+			case images
+			case location
+			case properties
+		}
+		
 		public let caption: String
 		public let satelliteImage: URL
 		public let images: [URL]
@@ -26,7 +34,7 @@ extension Placemark.Details {
 			satelliteImage: URL,
 			images: [URL] = [],
 			location: Placemark.Location.Public? = nil,
-			properties: [Placemark.Property.Localized]
+			properties: [Placemark.Property.Localized] = []
 		) {
 			self.caption = caption
 			self.satelliteImage = satelliteImage

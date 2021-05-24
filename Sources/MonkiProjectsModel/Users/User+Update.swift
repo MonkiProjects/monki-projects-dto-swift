@@ -12,6 +12,11 @@ extension User {
 	
 	public struct Update: Codable, Hashable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case username
+			case displayName = "display_name"
+		}
+		
 		public var username, displayName: String?
 		
 		public init(

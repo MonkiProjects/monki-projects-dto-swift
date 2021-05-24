@@ -10,7 +10,10 @@ import Foundation
 
 public enum Sport: String, Codable, Hashable {
 	
-	case parkour, freerunning, tricking, chaseTag, ninjaWarrior, bouldering, gymnastics
+	case parkour, freerunning, tricking
+	case chaseTag = "chase_tag"
+	case ninjaWarrior = "ninja_warrior"
+	case bouldering, gymnastics
 	
 	public var name: String {
 		switch self {

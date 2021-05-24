@@ -12,6 +12,10 @@ extension User {
 	
 	public struct Login: Codable, Hashable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case username, password
+		}
+		
 		public var username, password: String
 		
 		public init(username: String, password: String) {

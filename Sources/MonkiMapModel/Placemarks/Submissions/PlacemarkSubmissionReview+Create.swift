@@ -12,6 +12,10 @@ extension Placemark.Submission.Review {
 	
 	public struct Create: Codable, Hashable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case opinion, comment, issues
+		}
+		
 		public let opinion: Opinion
 		public let comment: String?
 		public let issues: [Issue.Create]

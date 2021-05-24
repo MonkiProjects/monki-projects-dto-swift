@@ -12,6 +12,14 @@ extension User {
 	
 	public struct Create: Codable, Hashable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case email
+			case username
+			case displayName = "display_name"
+			case password
+			case confirmPassword = "confirm_password"
+		}
+		
 		public var email, username, displayName: String
 		public var password, confirmPassword: String
 		

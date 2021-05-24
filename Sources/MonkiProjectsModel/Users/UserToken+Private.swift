@@ -14,6 +14,12 @@ extension User {
 		
 		public struct Private: Codable, Hashable {
 			
+			public enum CodingKeys: String, CodingKey {
+				case value
+				case expiresAt = "expires_at"
+				case createdAt = "created_at"
+			}
+			
 			public let value: String
 			public let expiresAt: Date?
 			public let createdAt: Date

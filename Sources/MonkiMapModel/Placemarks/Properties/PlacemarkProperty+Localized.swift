@@ -23,6 +23,10 @@ extension Placemark.Property {
 	/// ```
 	public struct Localized: Codable, Hashable, Identifiable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case id, title, kind
+		}
+		
 		public let id: String
 		public let title: String
 		public let kind: Kind

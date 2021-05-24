@@ -11,7 +11,12 @@ import Foundation
 extension Placemark.Submission {
 	
 	public enum State: String, Codable, Hashable {
-		case waitingForReviews, needsChanges, waitingForChanges, accepted, rejected, moderated
+		case waitingForReviews = "waiting_for_reviews"
+		case needsChanges = "needs_changes"
+		case waitingForChanges = "waiting_for_changes"
+		case accepted
+		case rejected
+		case moderated
 	}
 	
 }

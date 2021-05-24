@@ -13,6 +13,13 @@ extension Placemark.Submission.Review.Issue {
 	
 	public struct Public: Codable, Hashable, Identifiable {
 		
+		public enum CodingKeys: String, CodingKey {
+			case id
+			case placemark
+			case issuer, reason, comment, state
+			case createdAt = "created_at"
+		}
+		
 		public let id: UUID
 		public let placemark: Placemark.Public.ID
 		public let issuer: User.Public.Small.ID

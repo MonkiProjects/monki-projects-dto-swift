@@ -10,6 +10,15 @@ import Foundation
 
 public struct PlacemarkAnnotationModel: Codable, Hashable, Identifiable {
 	
+	public enum CodingKeys: String, CodingKey {
+		case id
+		case title
+		case latitude, longitude
+		case state
+		case kind, category
+		case updatedAt = "updated_at"
+	}
+	
 	public let id: UUID
 	public var title: String
 	public var latitude, longitude: Double

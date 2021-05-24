@@ -28,6 +28,16 @@ extension User {
 		
 		public struct Small: Codable, Hashable, Identifiable, UserPublicSmallProtocol {
 			
+			public enum CodingKeys: String, CodingKey {
+				case id
+				case username
+				case displayName = "display_name"
+				case avatar
+				case country
+				case kind
+				case updatedAt = "updated_at"
+			}
+			
 			public let id: UUID
 			public var username, displayName: String
 			public var avatar: AvatarSource?
@@ -56,6 +66,17 @@ extension User {
 		}
 		
 		public struct Full: Codable, Hashable, Identifiable, UserPublicFullProtocol {
+			
+			public enum CodingKeys: String, CodingKey {
+				case id
+				case username
+				case displayName = "display_name"
+				case avatar
+				case country
+				case kind
+				case updatedAt = "updated_at"
+				case details
+			}
 			
 			public let id: UUID
 			public var username, displayName: String
