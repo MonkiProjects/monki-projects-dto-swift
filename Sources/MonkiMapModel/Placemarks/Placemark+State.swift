@@ -12,7 +12,7 @@ import MonkiProjectsModel
 extension Placemark {
 	
 	// The state in which a placemark is.
-	public enum State: String, Hashable, Codable, DefaultCaseDecodable {
+	public enum State: String, Codable, Hashable, DefaultCaseDecodable {
 		
 		public static var defaultCase: Self = .unknown
 		
