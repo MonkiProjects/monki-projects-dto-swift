@@ -26,6 +26,7 @@ extension User {
 	
 	public enum Public {
 		
+		/// Public informations about a user (only required ones).
 		public struct Small: Hashable, Identifiable, UserPublicSmallProtocol {
 			
 			public let id: User.ID
@@ -56,6 +57,7 @@ extension User {
 			
 		}
 		
+		/// Public informations about a user (including all details).
 		public struct Full: Hashable, Identifiable, UserPublicFullProtocol {
 			
 			public let id: User.ID

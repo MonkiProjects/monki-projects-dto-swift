@@ -10,6 +10,7 @@ import Foundation
 
 extension User {
 	
+	/// Private details about a user.
 	public struct Private: Hashable, Identifiable, UserPublicFullProtocol {
 		
 		public let id: User.ID

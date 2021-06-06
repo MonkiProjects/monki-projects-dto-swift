@@ -10,22 +10,23 @@ import Foundation
 
 extension User {
 	
+	/// Details about a user.
 	public struct Details: Hashable {
 		
 		public var bio: User.Bio?
 		public var location: User.Location?
 		@RawKeyedCodableDictionary
-		public var experience: [Sport: SportLevel]
+		public var experience: User.Experience
 		@RawKeyedCodableDictionary
-		public var socialUsernames: [SocialNetwork: String]
+		public var socialUsernames: User.SocialUsernames
 		public let createdAt: Date
 		
 		public init(
 			bio: User.Bio? = nil,
 			location: User.Location? = nil,
-			experience: [Sport: SportLevel] = [:],
-			socialUsernames: [SocialNetwork: String] = [:],
-			createdAt: Date = Date()
+			experience: User.Experience = .init(),
+			socialUsernames: User.SocialUsernames = .init(),
+			createdAt: Date = .init()
 		) {
 			self.bio = bio
 			self.location = location

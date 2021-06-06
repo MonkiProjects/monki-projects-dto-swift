@@ -1,5 +1,5 @@
 //
-//  EmailTypeAlias.swift
+//  TypeAliases.swift
 //  MonkiProjectsModel
 //
 //  Created by Rémi Bardon on 06/06/2021.
@@ -8,4 +8,12 @@
 
 import Foundation
 
+/// An email address.
 public typealias Email = String
+
+/// A password.
+///
+/// # Notes
+///
+/// 1. Length: `8...`
+public typealias Password = String

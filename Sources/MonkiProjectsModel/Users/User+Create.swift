@@ -10,23 +10,24 @@ import Foundation
 
 extension User {
 	
+	/// Informations required to create a user.
 	public struct Create: Hashable {
 		
-		public var email: Email
 		public var username: User.Username
 		public var displayName: User.DisplayName
-		public var password, confirmPassword: String
+		public var email: Email
+		public var password, confirmPassword: Password
 		
 		public init(
-			email: Email = .init(),
 			username: User.Username = .init(),
 			displayName: User.DisplayName = .init(),
-			password: String = .init(),
-			confirmPassword: String = .init()
+			email: Email = .init(),
+			password: Password = .init(),
+			confirmPassword: Password = .init()
 		) {
-			self.email = email
 			self.username = username
 			self.displayName = displayName
+			self.email = email
 			self.password = password
 			self.confirmPassword = confirmPassword
 		}
@@ -38,9 +39,9 @@ extension User {
 extension User.Create: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
-		case email
 		case username
 		case displayName = "display_name"
+		case email
 		case password
 		case confirmPassword = "confirm_password"
 	}

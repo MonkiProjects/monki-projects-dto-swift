@@ -13,9 +13,9 @@ extension User {
 	public struct Login: Hashable {
 		
 		public var username: User.Username
-		public var password: String
+		public var password: Password
 		
-		public init(username: User.Username, password: String) {
+		public init(username: User.Username, password: Password) {
 			self.username = username
 			self.password = password
 		}
