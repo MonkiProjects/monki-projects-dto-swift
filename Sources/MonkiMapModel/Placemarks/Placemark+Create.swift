@@ -13,21 +13,22 @@ extension Placemark {
 	
 	public struct Create: Hashable {
 		
-		public var name: String
-		public var latitude, longitude: Double
+		public var name: Placemark.Name
+		public var latitude: Latitude
+		public var longitude: Longitude
 		public var kind: Kind
-		public var caption: String
+		public var caption: Placemark.Caption
 		public var images: [URL]
 		public var properties: [Property]
 		
 		public init(
-			name: String = "",
-			latitude: Double,
-			longitude: Double,
+			name: Placemark.Name = .init(),
+			latitude: Latitude,
+			longitude: Longitude,
 			kind: Kind,
-			caption: String = "",
-			images: [URL] = [],
-			properties: [Property] = []
+			caption: Placemark.Caption = .init(),
+			images: [URL] = .init(),
+			properties: [Property] = .init()
 		) {
 			self.name = name
 			self.latitude = latitude

@@ -10,8 +10,8 @@ import Foundation
 
 public struct PlacemarkAnnotationModel: Hashable, Identifiable {
 	
-	public let id: UUID
-	public var title: String
+	public let id: Placemark.ID
+	public var name: Placemark.Name
 	public var latitude, longitude: Double
 	public var state: Placemark.State
 	public var kind: Placemark.Kind
@@ -20,17 +20,17 @@ public struct PlacemarkAnnotationModel: Hashable, Identifiable {
 	public var updatedAt: Date
 	
 	public init(
-		id: UUID = UUID(),
-		title: String,
-		latitude: Double,
-		longitude: Double,
+		id: Placemark.ID = .init(),
+		name: Placemark.Name,
+		latitude: Latitude,
+		longitude: Longitude,
 		state: Placemark.State = .local,
 		kind: Placemark.Kind = .defaultCase,
 		category: Placemark.Category = .defaultCase,
-		updatedAt: Date = Date()
+		updatedAt: Date = .init()
 	) {
 		self.id = id
-		self.title = title
+		self.name = name
 		self.latitude = latitude
 		self.longitude = longitude
 		self.state = state
@@ -52,7 +52,7 @@ extension PlacemarkAnnotationModel: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
 		case id
-		case title
+		case name
 		case latitude, longitude
 		case state
 		case kind, category

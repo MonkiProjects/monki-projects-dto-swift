@@ -7,31 +7,33 @@
 //
 
 import Foundation
+import MonkiProjectsModel
 
 extension Placemark {
 	
 	/// Model of a placemark used in APIs responses.
 	public struct Public: Hashable, Identifiable {
 		
-		public let id: UUID
-		public let name: String
-		public let latitude, longitude: Double
+		public let id: Placemark.ID
+		public let name: Placemark.Name
+		public let latitude: Latitude
+		public let longitude: Longitude
 		public let kind: Placemark.Kind
 		public let category: Placemark.Category
-		public let state: State
-		public let creator: UUID
+		public let state: Placemark.State
+		public let creator: User.ID
 		public let details: Details.Public
 		public let createdAt, updatedAt: Date
 		
 		public init(
-			id: UUID,
-			name: String,
-			latitude: Double,
-			longitude: Double,
+			id: Placemark.ID,
+			name: Placemark.Name,
+			latitude: Latitude,
+			longitude: Longitude,
 			kind: Placemark.Kind,
 			category: Placemark.Category,
-			state: State,
-			creator: UUID,
+			state: Placemark.State,
+			creator: User.ID,
 			details: Details.Public,
 			createdAt: Date,
 			updatedAt: Date

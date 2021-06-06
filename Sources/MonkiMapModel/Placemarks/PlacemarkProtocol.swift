@@ -10,7 +10,7 @@ import Foundation
 
 public protocol PlacemarkProtocol {
 	
-	var id: UUID { get }
+	var id: Placemark.ID { get }
 	var state: Placemark.State { get }
 	
 	var kindId: Placemark.Kind { get }

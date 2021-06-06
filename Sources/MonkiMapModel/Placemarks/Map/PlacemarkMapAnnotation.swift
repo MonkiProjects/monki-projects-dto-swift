@@ -28,7 +28,7 @@ public class PlacemarkMapAnnotation: MKPointAnnotation {
 			latitude: model.latitude,
 			longitude: model.longitude
 		)
-		title = model.title
+		title = model.name
 		subtitle = try? model.kind.title()
 	}
 	
