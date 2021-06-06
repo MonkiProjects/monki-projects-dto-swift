@@ -9,11 +9,11 @@
 import Foundation
 
 public protocol UserPublicSmallProtocol {
-	var id: UUID { get }
-	var username: String { get set }
-	var displayName: String { get set }
+	var id: User.ID { get }
+	var username: User.Username { get set }
+	var displayName: User.DisplayName { get set }
 	var avatar: AvatarSource? { get set }
-	var country: String? { get set }
+	var country: User.Country? { get set }
 	var kind: User.Kind { get }
 	var updatedAt: Date { get set }
 }
@@ -28,21 +28,22 @@ extension User {
 		
 		public struct Small: Hashable, Identifiable, UserPublicSmallProtocol {
 			
-			public let id: UUID
-			public var username, displayName: String
+			public let id: User.ID
+			public var username: User.Username
+			public var displayName: User.DisplayName
 			public var avatar: AvatarSource?
-			public var country: String?
+			public var country: User.Country?
 			public let kind: User.Kind
 			public var updatedAt: Date
 			
 			public init(
-				id: ID = UUID(),
-				username: String,
-				displayName: String,
+				id: User.ID = .init(),
+				username: User.Username,
+				displayName: User.DisplayName,
 				avatar: AvatarSource? = nil,
-				country: String? = nil,
+				country: User.Country? = nil,
 				kind: User.Kind = .user,
-				updatedAt: Date = Date()
+				updatedAt: Date = .init()
 			) {
 				self.id = id
 				self.username = username
@@ -57,24 +58,25 @@ extension User {
 		
 		public struct Full: Hashable, Identifiable, UserPublicFullProtocol {
 			
-			public let id: UUID
-			public var username, displayName: String
+			public let id: User.ID
+			public var username: User.Username
+			public var displayName: User.DisplayName
 			public var avatar: AvatarSource?
-			public var country: String?
+			public var country: User.Country?
 			public let kind: User.Kind
 			public var updatedAt: Date
 			
-			public var details: Details
+			public var details: User.Details
 			
 			public init(
-				id: ID = UUID(),
-				username: String,
-				displayName: String,
+				id: User.ID = .init(),
+				username: User.Username,
+				displayName: User.DisplayName,
 				avatar: AvatarSource? = nil,
-				country: String? = nil,
+				country: User.Country? = nil,
 				kind: User.Kind = .user,
-				updatedAt: Date = Date(),
-				details: Details = Details()
+				updatedAt: Date = .init(),
+				details: User.Details = .init()
 			) {
 				self.id = id
 				self.username = username
@@ -89,7 +91,7 @@ extension User {
 			
 			public init(
 				_ small: UserPublicSmallProtocol,
-				with details: Details = Details()
+				with details: User.Details = .init()
 			) {
 				self.init(
 					id: small.id,

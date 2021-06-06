@@ -12,7 +12,8 @@ extension User {
 	
 	public struct QueryFilters: Hashable {
 		
-		public var username, displayName: String?
+		public var username: User.Username?
+		public var displayName: User.DisplayName?
 		
 		public var isEmpty: Bool {
 			self.username == nil
@@ -20,8 +21,8 @@ extension User {
 		}
 		
 		public init(
-			username: String? = nil,
-			displayName: String? = nil
+			username: User.Username? = nil,
+			displayName: User.DisplayName? = nil
 		) {
 			self.username = username
 			self.displayName = displayName

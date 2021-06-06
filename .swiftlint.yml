@@ -160,15 +160,9 @@ file_length:
   error: 1200
   ignore_comment_only_lines: true
 identifier_name:
-  excluded:
-    - id
-    - url
-    - lhs
-    - rhs
-    - en
-    - fr
-    - v1
-    - n
+  excluded: [id, url, lhs, rhs, en, fr, v1, n]
+type_name:
+  excluded: [ID]
 trailing_whitespace:
   ignores_empty_lines: true
 trailing_comma:

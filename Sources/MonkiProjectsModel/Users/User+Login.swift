@@ -12,9 +12,10 @@ extension User {
 	
 	public struct Login: Hashable {
 		
-		public var username, password: String
+		public var username: User.Username
+		public var password: String
 		
-		public init(username: String, password: String) {
+		public init(username: User.Username, password: String) {
 			self.username = username
 			self.password = password
 		}

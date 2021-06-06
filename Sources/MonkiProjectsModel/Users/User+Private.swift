@@ -12,27 +12,28 @@ extension User {
 	
 	public struct Private: Hashable, Identifiable, UserPublicFullProtocol {
 		
-		public let id: UUID
-		public var username, displayName: String
+		public let id: User.ID
+		public var username: User.Username
+		public var displayName: User.DisplayName
 		public var avatar: AvatarSource?
-		public var country: String?
+		public var country: User.Country?
 		public let kind: User.Kind
 		public var updatedAt: Date
 		
 		public var details: Details
 		
-		public var email: String
+		public var email: Email
 		
 		public init(
-			id: ID = UUID(),
-			username: String,
-			displayName: String,
+			id: User.ID = .init(),
+			username: User.Username,
+			displayName: User.DisplayName,
 			avatar: AvatarSource? = nil,
-			country: String? = nil,
+			country: User.Country? = nil,
 			kind: User.Kind = .user,
-			updatedAt: Date = Date(),
-			details: Details = Details(),
-			email: String
+			updatedAt: Date = .init(),
+			details: Details = .init(),
+			email: Email
 		) {
 			self.id = id
 			self.username = username
@@ -48,7 +49,7 @@ extension User {
 		
 		public init(
 			_ full: UserPublicFullProtocol,
-			email: String
+			email: Email
 		) {
 			self.init(
 				id: full.id,

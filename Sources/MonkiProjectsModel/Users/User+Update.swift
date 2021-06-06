@@ -12,11 +12,12 @@ extension User {
 	
 	public struct Update: Hashable {
 		
-		public var username, displayName: String?
+		public var username: User.Username?
+		public var displayName: User.DisplayName?
 		
 		public init(
-			username: String? = nil,
-			displayName: String? = nil
+			username: User.Username? = nil,
+			displayName: User.DisplayName? = nil
 		) {
 			self.username = username
 			self.displayName = displayName

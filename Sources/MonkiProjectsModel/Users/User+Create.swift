@@ -12,15 +12,17 @@ extension User {
 	
 	public struct Create: Hashable {
 		
-		public var email, username, displayName: String
+		public var email: Email
+		public var username: User.Username
+		public var displayName: User.DisplayName
 		public var password, confirmPassword: String
 		
 		public init(
-			email: String = "",
-			username: String = "",
-			displayName: String = "",
-			password: String = "",
-			confirmPassword: String = ""
+			email: Email = .init(),
+			username: User.Username = .init(),
+			displayName: User.DisplayName = .init(),
+			password: String = .init(),
+			confirmPassword: String = .init()
 		) {
 			self.email = email
 			self.username = username
