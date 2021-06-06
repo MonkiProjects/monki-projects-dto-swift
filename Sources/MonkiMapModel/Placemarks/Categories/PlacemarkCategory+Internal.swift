@@ -26,14 +26,18 @@ extension Placemark.Category {
 		
 		static let fileName = "PlacemarkCategories"
 		
-		let id: Placemark.Category
-		let title: String
+		let id: Placemark.Category.ID
+		let title: Placemark.Category.Title
 		
 	}
 	
-	func `internal`(in locale: Locale? = nil) throws -> Internal {
+}
+
+extension Placemark.Category.ID {
+	
+	func `internal`(in locale: Locale? = nil) throws -> Placemark.Category.Internal {
 		let locale = locale ?? .default
-		let values = Internal.all(in: locale)
+		let values = Placemark.Category.Internal.all(in: locale)
 		guard let first = values.first(where: { $0.id == self }) else {
 			throw CustomError(
 				reason: "Could not find a '\(Self.self)' in locale '\(locale)' with id '\(self.rawValue)'."
@@ -42,7 +46,7 @@ extension Placemark.Category {
 		return first
 	}
 	
-	func title(in locale: Locale? = nil) throws -> String {
+	func title(in locale: Locale? = nil) throws -> Placemark.Category.Title {
 		let locale = locale ?? .default
 		return try self == .unknown
 			? Strings.unknown(in: locale)

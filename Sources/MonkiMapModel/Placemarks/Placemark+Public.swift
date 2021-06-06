@@ -18,8 +18,8 @@ extension Placemark {
 		public let name: Placemark.Name
 		public let latitude: Latitude
 		public let longitude: Longitude
-		public let kind: Placemark.Kind
-		public let category: Placemark.Category
+		public let kind: Placemark.Kind.ID
+		public let category: Placemark.Category.ID
 		public let state: Placemark.State
 		public let creator: User.ID
 		public let details: Details.Public
@@ -30,8 +30,8 @@ extension Placemark {
 			name: Placemark.Name,
 			latitude: Latitude,
 			longitude: Longitude,
-			kind: Placemark.Kind,
-			category: Placemark.Category,
+			kind: Placemark.Kind.ID,
+			category: Placemark.Category.ID,
 			state: Placemark.State,
 			creator: User.ID,
 			details: Details.Public,

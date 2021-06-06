@@ -13,7 +13,8 @@ extension Placemark.Kind {
 	/// The internal structure of `Placemark.Kind`.
 	/// It's used in localized `.plist` files.
 	///
-	/// # Example #
+	/// # Example
+	///
 	/// ```xml
 	/// <dict>
 	///     <key>id</key>
@@ -50,10 +51,10 @@ extension Placemark.Kind {
 		
 		static let fileName = "PlacemarkKinds"
 		
-		let id: Placemark.Kind
-		let title: String
-		let category: Placemark.Category
-		private let features, goodForTraining, benefits, hazards: [String]
+		let id: Placemark.Kind.ID
+		let title: Placemark.Kind.Title
+		let category: Placemark.Category.ID
+		private let features, goodForTraining, benefits, hazards: [Property.ID]
 		
 		var allowedFeatures: [Property] {
 			features.map(Property.feature)
@@ -73,9 +74,13 @@ extension Placemark.Kind {
 		
 	}
 	
-	func `internal`(in locale: Locale? = nil) throws -> Internal {
+}
+
+extension Placemark.Kind.ID {
+	
+	func `internal`(in locale: Locale? = nil) throws -> Placemark.Kind.Internal {
 		let locale = locale ?? .default
-		let values = Internal.all(in: locale)
+		let values = Placemark.Kind.Internal.all(in: locale)
 		guard let first = values.first(where: { $0.id == self }) else {
 			throw CustomError(
 				reason: "Could not find a '\(Self.self)' in locale '\(locale)' with id '\(self.rawValue)'."
@@ -84,7 +89,7 @@ extension Placemark.Kind {
 		return first
 	}
 	
-	func title(in locale: Locale? = nil) throws -> String {
+	func title(in locale: Locale? = nil) throws -> Placemark.Kind.Title {
 		let locale = locale ?? .default
 		return try self == .unknown
 			? Strings.unknown(in: locale)

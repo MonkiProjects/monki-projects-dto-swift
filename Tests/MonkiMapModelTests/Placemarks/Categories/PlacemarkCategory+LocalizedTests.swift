@@ -15,7 +15,7 @@ internal final class PlacemarkCategoryLocalizedTests: XCTestCase {
 	
 	// MARK: - Valid Domain
 	
-	private let translations: [Locale: [Placemark.Category: String]] = [
+	private let translations: [Locale: [Category.ID: String]] = [
 		.en: [
 			.unknown: "Unknown",
 			.spot: "Spot",
@@ -31,7 +31,7 @@ internal final class PlacemarkCategoryLocalizedTests: XCTestCase {
 	]
 	
 	func testTranslations() {
-		for category in Category.allCases {
+		for category in Category.ID.allCases {
 			for (locale, translations) in translations {
 				XCTAssert(
 					translations[category] != nil,
@@ -53,18 +53,18 @@ internal final class PlacemarkCategoryLocalizedTests: XCTestCase {
 	}
 	
 	func testLocalizedCategoryHasCorrectTitle() throws {
-		let id = Category.facility
+		let id = Category.ID.facility
 		
 		// Test English translation
 		do {
-			let result = try Category.facility.localized(in: Locale.en)
+			let result = try Category.ID.facility.localized(in: Locale.en)
 			XCTAssertEqual(result.id, id)
 			XCTAssertEqual(result.title, "Facility")
 		}
 		
 		// Test French translation
 		do {
-			let result = try Category.facility.localized(in: Locale.fr)
+			let result = try Category.ID.facility.localized(in: Locale.fr)
 			XCTAssertEqual(result.id, id)
 			XCTAssertEqual(result.title, "Salle")
 		}
@@ -77,7 +77,7 @@ internal final class PlacemarkCategoryLocalizedTests: XCTestCase {
 			// Test will also fail if too many cases are defined
 			XCTAssertEqual(
 				localized.count,
-				Category.allCases.count - 1, // - 1 because of .unknown case
+				Category.ID.allCases.count - 1, // - 1 because of .unknown case
 				localized.filter({ $0.id == .unknown }).map(\.title).description
 			)
 		}

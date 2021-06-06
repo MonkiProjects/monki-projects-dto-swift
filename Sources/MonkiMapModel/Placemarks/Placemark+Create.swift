@@ -16,7 +16,7 @@ extension Placemark {
 		public var name: Placemark.Name
 		public var latitude: Latitude
 		public var longitude: Longitude
-		public var kind: Kind
+		public var kind: Placemark.Kind.ID
 		public var caption: Placemark.Caption
 		public var images: [URL]
 		public var properties: [Property]
@@ -25,7 +25,7 @@ extension Placemark {
 			name: Placemark.Name = .init(),
 			latitude: Latitude,
 			longitude: Longitude,
-			kind: Kind,
+			kind: Placemark.Kind.ID,
 			caption: Placemark.Caption = .init(),
 			images: [URL] = .init(),
 			properties: [Property] = .init()

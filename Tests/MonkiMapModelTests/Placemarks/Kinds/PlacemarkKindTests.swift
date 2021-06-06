@@ -14,7 +14,7 @@ internal final class PlacemarkKindTests: XCTestCase {
 	// MARK: - Valid Domain
 	
 	func testRawValuesAreValid() {
-		for kind in Placemark.Kind.allCases {
+		for kind in Placemark.Kind.ID.allCases {
 			XCTAssertNoThrow(
 				try kind.rawValue.validate(with: __idPredicate),
 				"Invalid rawValue for '\(kind)' ('\(kind.rawValue)')."

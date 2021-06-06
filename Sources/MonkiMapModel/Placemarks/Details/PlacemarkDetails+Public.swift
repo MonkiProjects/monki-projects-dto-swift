@@ -13,7 +13,7 @@ extension Placemark.Details {
 	
 	public struct Public: Hashable {
 		
-		public let caption: String
+		public let caption: Placemark.Caption
 		public let satelliteImage: URL
 		public let images: [URL]
 		public let location: Placemark.Location.Public?
@@ -22,11 +22,11 @@ extension Placemark.Details {
 		public var allImages: [URL] { images + [satelliteImage] }
 		
 		public init(
-			caption: String,
+			caption: Placemark.Caption,
 			satelliteImage: URL,
-			images: [URL] = [],
+			images: [URL] = .init(),
 			location: Placemark.Location.Public? = nil,
-			properties: [Placemark.Property.Localized] = []
+			properties: [Placemark.Property.Localized] = .init()
 		) {
 			self.caption = caption
 			self.satelliteImage = satelliteImage

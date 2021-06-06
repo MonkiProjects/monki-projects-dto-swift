@@ -12,10 +12,11 @@ public struct PlacemarkAnnotationModel: Hashable, Identifiable {
 	
 	public let id: Placemark.ID
 	public var name: Placemark.Name
-	public var latitude, longitude: Double
+	public var latitude: Latitude
+	public var longitude: Longitude
 	public var state: Placemark.State
-	public var kind: Placemark.Kind
-	public var category: Placemark.Category
+	public var kind: Placemark.Kind.ID
+	public var category: Placemark.Category.ID
 	/// Used to update data client-side
 	public var updatedAt: Date
 	
@@ -25,8 +26,8 @@ public struct PlacemarkAnnotationModel: Hashable, Identifiable {
 		latitude: Latitude,
 		longitude: Longitude,
 		state: Placemark.State = .local,
-		kind: Placemark.Kind = .defaultCase,
-		category: Placemark.Category = .defaultCase,
+		kind: Placemark.Kind.ID = .defaultCase,
+		category: Placemark.Category.ID = .defaultCase,
 		updatedAt: Date = .init()
 	) {
 		self.id = id
@@ -43,8 +44,8 @@ public struct PlacemarkAnnotationModel: Hashable, Identifiable {
 
 extension PlacemarkAnnotationModel: PlacemarkProtocol {
 	
-	public var kindId: Placemark.Kind { kind }
-	public var categoryId: Placemark.Category { category }
+	public var kindId: Placemark.Kind.ID { kind }
+	public var categoryId: Placemark.Category.ID { category }
 	
 }
 

@@ -28,8 +28,9 @@ extension Placemark.Property {
 		
 		static let fileName = "PlacemarkProperties"
 		
-		let id, title: String
-		let kind: Kind
+		let id: Placemark.Property.ID
+		let title: Placemark.Property.Title
+		let kind: Placemark.Property.Kind.ID
 		
 	}
 	

@@ -12,9 +12,10 @@ extension Placemark.Location {
 	
 	public struct Public: Hashable {
 		
-		public let city, country: String
+		public let city: Placemark.City
+		public let country: Placemark.Country
 		
-		public init(city: String, country: String) {
+		public init(city: Placemark.City, country: Placemark.Country) {
 			self.city = city
 			self.country = country
 		}

@@ -13,7 +13,8 @@ extension Placemark.Category {
 	/// A localized `Placemark.Category`.
 	/// It's used by APIs to return localized content.
 	///
-	/// # Example #
+	/// # Example
+	///
 	/// ```json
 	/// {
 	///     "id": "spot",
@@ -22,19 +23,23 @@ extension Placemark.Category {
 	/// ```
 	struct Localized: Hashable, Identifiable {
 		
-		public let id: Placemark.Category
-		public let title: String
+		public let id: Placemark.Category.ID
+		public let title: Placemark.Category.Title
 		
-		fileprivate init(id: Placemark.Category, title: String) {
+		fileprivate init(id: Placemark.Category.ID, title: Placemark.Category.Title) {
 			self.id = id
 			self.title = title
 		}
 		
 	}
 	
-	func localized(in locale: Locale? = nil) throws -> Localized {
+}
+
+extension Placemark.Category.ID {
+	
+	func localized(in locale: Locale? = nil) throws -> Placemark.Category.Localized {
 		let locale = locale ?? .default
-		return Localized(id: self, title: try self.title(in: locale))
+		return Placemark.Category.Localized(id: self, title: try self.title(in: locale))
 	}
 	
 }

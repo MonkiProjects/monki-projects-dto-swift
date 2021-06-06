@@ -14,7 +14,7 @@ internal final class PlacemarkCategoryTests: XCTestCase {
 	// MARK: - Valid Domain
 	
 	func testRawValuesAreValid() {
-		for category in Placemark.Category.allCases {
+		for category in Placemark.Category.ID.allCases {
 			XCTAssertNoThrow(
 				try category.rawValue.validate(with: __idPredicate),
 				"Invalid rawValue for '\(category)' ('\(category.rawValue)')."

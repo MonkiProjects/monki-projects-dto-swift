@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension Placemark.Kind {
+extension Placemark.Kind.ID {
 	
-	public static func allowed(for category: Placemark.Category) -> [Self] {
-		Internal.all()
+	public static func allowed(for category: Placemark.Category.ID) -> [Self] {
+		Placemark.Kind.Internal.all()
 			.filter { $0.category == category }
 			.map(\.id)
 	}

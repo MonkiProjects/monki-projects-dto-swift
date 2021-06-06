@@ -13,7 +13,8 @@ extension Placemark.Kind {
 	/// A localized `Placemark.Kind`.
 	/// It's used by APIs to return localized content.
 	///
-	/// # Example #
+	/// # Example
+	///
 	/// ```json
 	/// {
 	///     "id": "training_spot",
@@ -22,19 +23,23 @@ extension Placemark.Kind {
 	/// ```
 	struct Localized: Hashable, Identifiable {
 		
-		public let id: Placemark.Kind
-		public let title: String
+		public let id: Placemark.Kind.ID
+		public let title: Placemark.Kind.Title
 		
-		fileprivate init(id: Placemark.Kind, title: String) {
+		fileprivate init(id: Placemark.Kind.ID, title: Placemark.Kind.Title) {
 			self.id = id
 			self.title = title
 		}
 		
 	}
 	
-	func localized(in locale: Locale? = nil) throws -> Localized {
+}
+
+extension Placemark.Kind.ID {
+	
+	func localized(in locale: Locale? = nil) throws -> Placemark.Kind.Localized {
 		let locale = locale ?? .default
-		return Localized(id: self, title: try self.title(in: locale))
+		return Placemark.Kind.Localized(id: self, title: try self.title(in: locale))
 	}
 	
 }

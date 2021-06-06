@@ -13,14 +13,14 @@ public protocol PlacemarkProtocol {
 	var id: Placemark.ID { get }
 	var state: Placemark.State { get }
 	
-	var kindId: Placemark.Kind { get }
-	var categoryId: Placemark.Category { get }
+	var kindId: Placemark.Kind.ID { get }
+	var categoryId: Placemark.Category.ID { get }
 	
 }
 
 extension Placemark.Public: PlacemarkProtocol {
 	
-	public var kindId: Placemark.Kind { kind }
-	public var categoryId: Placemark.Category { category }
+	public var kindId: Placemark.Kind.ID { kind }
+	public var categoryId: Placemark.Category.ID { category }
 	
 }
