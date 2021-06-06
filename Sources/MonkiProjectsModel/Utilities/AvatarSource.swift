@@ -8,6 +8,17 @@
 
 import Foundation
 
+/// An avatar source (`URL` or predefined asset).
+///
+/// # Example encoded values
+///
+/// ```json
+/// {"url":"https:\/\/monkiprojects.com"}
+/// ```
+///
+/// ```json
+/// {"asset":"person-1"}
+/// ```
 public enum AvatarSource: Hashable {
 	case url(URL), asset(String)
 }
