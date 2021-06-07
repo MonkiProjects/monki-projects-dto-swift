@@ -22,7 +22,7 @@ extension Placemark {
 		public let category: Placemark.Category.ID
 		public let state: Placemark.State
 		public let creator: User.ID
-		public let details: Details.Public
+		public let details: Placemark.Details.Public
 		public let createdAt, updatedAt: Date
 		
 		public init(
@@ -34,7 +34,7 @@ extension Placemark {
 			category: Placemark.Category.ID,
 			state: Placemark.State,
 			creator: User.ID,
-			details: Details.Public,
+			details: Placemark.Details.Public,
 			createdAt: Date,
 			updatedAt: Date
 		) {
