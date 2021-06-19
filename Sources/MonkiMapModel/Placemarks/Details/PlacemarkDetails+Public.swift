@@ -13,10 +13,10 @@ extension Placemark.Details {
 	
 	public struct Public: Hashable {
 		
-		public let caption: Placemark.Caption
-		public let satelliteImage: URL
-		public let images: [URL]
-		public let location: Placemark.Location.Public?
+		public var caption: Placemark.Caption
+		public var satelliteImage: URL
+		public var images: [URL]
+		public var location: Placemark.Location.Public?
 		public var properties: [Placemark.Property.Localized]
 		
 		public var allImages: [URL] { images + [satelliteImage] }

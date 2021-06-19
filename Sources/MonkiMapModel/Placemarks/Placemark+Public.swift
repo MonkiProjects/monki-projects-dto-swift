@@ -15,15 +15,16 @@ extension Placemark {
 	public struct Public: Hashable, Identifiable {
 		
 		public let id: Placemark.ID
-		public let name: Placemark.Name
-		public let latitude: Latitude
-		public let longitude: Longitude
-		public let kind: Placemark.Kind.ID
-		public let category: Placemark.Category.ID
-		public let state: Placemark.State
+		public var name: Placemark.Name
+		public var latitude: Latitude
+		public var longitude: Longitude
+		public var kind: Placemark.Kind.ID
+		public var category: Placemark.Category.ID
+		public var state: Placemark.State
 		public let creator: User.ID
-		public let details: Placemark.Details.Public
-		public let createdAt, updatedAt: Date
+		public var details: Placemark.Details.Public
+		public let createdAt: Date
+		public var updatedAt: Date
 		
 		public init(
 			id: Placemark.ID = .init(),
