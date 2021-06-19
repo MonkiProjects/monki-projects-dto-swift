@@ -26,17 +26,17 @@ extension Placemark {
 		public let createdAt, updatedAt: Date
 		
 		public init(
-			id: Placemark.ID,
+			id: Placemark.ID = .init(),
 			name: Placemark.Name,
 			latitude: Latitude,
 			longitude: Longitude,
-			kind: Placemark.Kind.ID,
-			category: Placemark.Category.ID,
-			state: Placemark.State,
+			kind: Placemark.Kind.ID = .trainingSpot,
+			category: Placemark.Category.ID = .spot,
+			state: Placemark.State = .draft,
 			creator: User.ID,
 			details: Placemark.Details.Public,
-			createdAt: Date,
-			updatedAt: Date
+			createdAt: Date = .init(),
+			updatedAt: Date = .init()
 		) {
 			self.id = id
 			self.name = name
