@@ -21,7 +21,7 @@ extension Placemark.Kind {
 	///     "title": "Training Spot"
 	/// }
 	/// ```
-	struct Localized: Hashable, Identifiable {
+	public struct Localized: Hashable, Identifiable {
 		
 		public let id: Placemark.Kind.ID
 		public let title: Placemark.Kind.Title
@@ -37,7 +37,7 @@ extension Placemark.Kind {
 
 extension Placemark.Kind.ID {
 	
-	func localized(in locale: Locale? = nil) throws -> Placemark.Kind.Localized {
+	public func localized(in locale: Locale? = nil) throws -> Placemark.Kind.Localized {
 		let locale = locale ?? .default
 		return Placemark.Kind.Localized(id: self, title: try self.title(in: locale))
 	}
