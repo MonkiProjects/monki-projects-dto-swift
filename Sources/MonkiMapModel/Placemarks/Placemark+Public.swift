@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if canImport(CoreLocation)
+import CoreLocation
+#endif
 import MonkiProjectsModel
 
 extension Placemark {
@@ -25,6 +28,12 @@ extension Placemark {
 		public var details: Placemark.Details.Public
 		public let createdAt: Date
 		public var updatedAt: Date
+		
+		#if canImport(CoreLocation)
+		public var coordinates: CLLocationCoordinate2D {
+			return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
+		}
+		#endif
 		
 		public init(
 			id: Placemark.ID = .init(),
