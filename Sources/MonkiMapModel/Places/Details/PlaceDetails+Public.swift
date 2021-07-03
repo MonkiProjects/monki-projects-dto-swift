@@ -23,7 +23,7 @@ extension Place.Details {
 		
 		public init(
 			caption: Place.Caption,
-			satelliteImage: URL,
+			satelliteImage: URL = .placeSatelliteImagePlaceholder,
 			images: [URL] = .init(),
 			location: Place.Location.Public? = nil,
 			properties: [Place.Property.Localized] = .init()
