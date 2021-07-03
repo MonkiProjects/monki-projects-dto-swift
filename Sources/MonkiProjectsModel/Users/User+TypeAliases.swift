@@ -7,10 +7,16 @@
 //
 
 import Foundation
+import PrefixedUUID
 
 extension User {
 	
-	public typealias ID = UUID
+	public struct UserIDPrefix: UUIDPrefix {
+		public static var uuidPrefix: String { "user_" }
+	}
+	
+	/// A unique user identifier.
+	public typealias ID = PrefixedUUID<UserIDPrefix>
 	
 	/// A username (`@`).
 	///

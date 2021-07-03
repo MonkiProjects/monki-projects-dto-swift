@@ -7,11 +7,16 @@
 //
 
 import Foundation
+import PrefixedUUID
 
 extension Place {
 	
+	public struct PlaceIDPrefix: UUIDPrefix {
+		public static var uuidPrefix: String { "place_" }
+	}
+	
 	/// A unique place identifier.
-	public typealias ID = UUID
+	public typealias ID = PrefixedUUID<PlaceIDPrefix>
 	
 	/// A place `name`.
 	///

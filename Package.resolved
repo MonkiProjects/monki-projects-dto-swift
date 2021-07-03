@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "swift-prefixed-uuid",
+        "repositoryURL": "https://github.com/RemiBardon/swift-prefixed-uuid",
+        "state": {
+          "branch": null,
+          "revision": "93e21694b11da9d9ff691f1cda7ac7d4c4bc361a",
+          "version": "1.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -14,7 +14,7 @@ internal final class PlaceSubmissionPublicTests: XCTestCase {
 	// MARK: - Valid Domain
 	
 	func testCodingKeysCasing() throws {
-		let data = Place.Submission.Public(place: UUID())
+		let data = Place.Submission.Public(place: .init())
 		let jsonObject = try String(data: JSONEncoder().encode(data), encoding: .utf8).require()
 		
 		XCTAssertTrue(jsonObject.contains("positive_reviews"), "Coding keys are misconfigured: \(jsonObject)")

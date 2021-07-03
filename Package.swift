@@ -21,10 +21,20 @@ let package = Package(
 			targets: ["MonkiMapModel"]
 		),
 	],
+	dependencies: [
+		.package(
+			name: "prefixed-uuid",
+			url: "https://github.com/RemiBardon/swift-prefixed-uuid",
+			.upToNextMajor(from: "1.0.0")
+		),
+	],
 	targets: [
 		// Monki Projects Core Models
 		.target(
 			name: "MonkiProjectsModel",
+			dependencies: [
+				.product(name: "PrefixedUUID", package: "prefixed-uuid"),
+			],
 			resources: [
 				.process("Resources/Strings"),
 			]
