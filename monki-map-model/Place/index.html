@@ -60,6 +60,8 @@
 <dt class="enumeration"><code><a href="/monki-projects-model-swift/monki-map-model/Place_State">Place.State</a></code></dt>
 <dd><p>The state in which a place is.</p>
 </dd>
+<dt class="structure"><code><a href="/monki-projects-model-swift/monki-map-model/Place_PlaceIDPrefix">Place.PlaceIDPrefix</a></code></dt>
+<dd></dd>
 <dt class="structure"><code><a href="/monki-projects-model-swift/monki-map-model/Place_Property">Place.Property</a></code></dt>
 <dd></dd>
 <dt class="enumeration"><code><a href="/monki-projects-model-swift/monki-map-model/Place_Submission">Place.Submission</a></code></dt>
@@ -74,7 +76,7 @@
         <code><a href="#place.id">ID</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">ID</span> = <span class="type">UUID</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">ID</span> = <span class="type">PrefixedUUID</span>&lt;<span class="type">PlaceIDPrefix</span>&gt;</body></html></code></pre>
 </div>
 <div class="summary" role="doc-abstract">
     <p>A unique place identifier.</p>
@@ -162,7 +164,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-30T20:30:18+0000">June 30, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-07-03T07:56:42+0000">July 3, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
