@@ -61,6 +61,8 @@
 <dd></dd>
 <dt class="structure"><code><a href="/monki-projects-model-swift/monki-projects-model/User_QueryFilters">User.QueryFilters</a></code></dt>
 <dd></dd>
+<dt class="structure"><code><a href="/monki-projects-model-swift/monki-projects-model/User_UserIDPrefix">User.UserIDPrefix</a></code></dt>
+<dd></dd>
 <dt class="structure"><code><a href="/monki-projects-model-swift/monki-projects-model/User_Update">User.Update</a></code></dt>
 <dd></dd>
 <dt class="enumeration"><code><a href="/monki-projects-model-swift/monki-projects-model/User_Token">User.Token</a></code></dt>
@@ -75,7 +77,11 @@
         <code><a href="#user.id">ID</a></code>
     </h3>
     <div class="declaration">
-<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">ID</span> = <span class="type">UUID</span></body></html></code></pre>
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">ID</span> = <span class="type">PrefixedUUID</span>&lt;<span class="type">UserIDPrefix</span>&gt;</body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>A unique user identifier.</p>
+
 </div>
 </div>
 <div role="article" class="typealias" id="user.username">
@@ -194,7 +200,7 @@
 
     <footer>
         <p>
-    Generated on <time datetime="2021-06-30T20:29:50+0000">June 30, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+    Generated on <time datetime="2021-07-03T07:56:08+0000">July 3, 2021</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
 </p>
     </footer>
 </body>
