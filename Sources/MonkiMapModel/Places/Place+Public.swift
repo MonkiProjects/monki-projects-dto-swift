@@ -32,7 +32,7 @@ extension Place {
 		#if canImport(CoreLocation)
 		public var coordinates: CLLocationCoordinate2D {
 			get {
-				return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
+				CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
 			}
 			set {
 				self.latitude = newValue.latitude

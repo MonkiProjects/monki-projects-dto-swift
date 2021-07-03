@@ -9,11 +9,11 @@
 import Foundation
 import PrefixedUUID
 
+public struct UserIDPrefix: UUIDPrefix {
+	public static var uuidPrefix: String { "user_" }
+}
+
 extension User {
-	
-	public struct UserIDPrefix: UUIDPrefix {
-		public static var uuidPrefix: String { "user_" }
-	}
 	
 	/// A unique user identifier.
 	public typealias ID = PrefixedUUID<UserIDPrefix>

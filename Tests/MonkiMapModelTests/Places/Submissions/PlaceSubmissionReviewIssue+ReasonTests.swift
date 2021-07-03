@@ -9,7 +9,6 @@
 import XCTest
 @testable import MonkiMapModel
 
-// swiftlint:disable:next type_name
 internal final class PlaceSubmissionReviewIssueReasonTests: XCTestCase {
 	
 	// MARK: - Valid Domain

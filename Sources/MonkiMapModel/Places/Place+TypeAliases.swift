@@ -9,11 +9,11 @@
 import Foundation
 import PrefixedUUID
 
+public struct PlaceIDPrefix: UUIDPrefix {
+	public static var uuidPrefix: String { "place_" }
+}
+
 extension Place {
-	
-	public struct PlaceIDPrefix: UUIDPrefix {
-		public static var uuidPrefix: String { "place_" }
-	}
 	
 	/// A unique place identifier.
 	public typealias ID = PrefixedUUID<PlaceIDPrefix>
