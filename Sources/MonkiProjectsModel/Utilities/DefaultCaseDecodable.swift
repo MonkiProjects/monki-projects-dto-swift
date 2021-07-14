@@ -29,4 +29,8 @@ extension DefaultCaseDecodable {
 		self = Self(rawValue: rawValue) ?? Self.defaultCase
 	}
 	
+	public static var nonDefaultCases: [Self] {
+		Self.allCases.filter { $0 != Self.defaultCase }
+	}
+	
 }
