@@ -47,10 +47,17 @@ extension Place.Category.ID {
 	}
 	
 	public func title(in locale: Locale? = nil) throws -> Place.Category.Title {
-		let locale = locale ?? .default
-		return try self == .unknown
-			? Strings.unknown(in: locale)
-			: self.internal(in: locale).title
+		switch self {
+		case .unknown:
+			return try Strings.unknown(in: locale)
+		default:
+			let locale = locale ?? .default
+			return try self.internal(in: locale).title
+		}
+	}
+	
+	public func optionalTitle(in locale: Locale? = nil) -> Place.Category.Title? {
+		return try? self.title(in: locale)
 	}
 	
 }
