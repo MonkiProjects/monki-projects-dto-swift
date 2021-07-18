@@ -36,7 +36,7 @@ let package = Package(
 				.product(name: "PrefixedUUID", package: "prefixed-uuid"),
 			],
 			resources: [
-				.process("Resources/Strings"),
+				.process("Resources"),
 			]
 		),
 		.testTarget(
@@ -48,7 +48,7 @@ let package = Package(
 			name: "MonkiMapModel",
 			dependencies: ["MonkiProjectsModel"],
 			resources: [
-				.process("Resources/Strings"),
+				.process("Resources"),
 			]
 		),
 		.testTarget(
