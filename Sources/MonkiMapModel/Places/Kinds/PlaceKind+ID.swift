@@ -13,7 +13,7 @@ extension Place.Kind {
 	
 	/// The kind of a place.
 	/// It impacts its icon on a map marker.
-	public enum ID: String, Codable, Hashable, Identifiable, DefaultCaseDecodable {
+	public enum ID: String, Codable, Hashable, Identifiable, CaseIterable, DefaultCaseDecodable {
 		
 		case unknown
 		case trainingSpot = "training_spot"
@@ -38,6 +38,3 @@ extension Place.Kind {
 	}
 	
 }
-
-/// Extend for testing purposes
-extension Place.Kind.ID: CaseIterable {}

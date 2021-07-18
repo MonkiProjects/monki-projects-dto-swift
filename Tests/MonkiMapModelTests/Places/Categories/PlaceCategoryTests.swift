@@ -15,10 +15,17 @@ internal final class PlaceCategoryTests: XCTestCase {
 	
 	func testRawValuesAreValid() {
 		for category in Place.Category.ID.allCases {
-			XCTAssertNoThrow(
-				try category.rawValue.validate(with: __idPredicate),
+			XCTAssertTrue(
+				category.rawValue.isValidId,
 				"Invalid rawValue for '\(category)' ('\(category.rawValue)')."
 			)
+		}
+	}
+	
+	func testsInitFromKindWorks() {
+		for kind in Place.Kind.ID.nonDefaultCases {
+			let result = Place.Category.ID(for: kind)
+			XCTAssertNotEqual(result, .unknown)
 		}
 	}
 	

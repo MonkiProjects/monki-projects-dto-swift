@@ -13,7 +13,7 @@ extension Place.Category {
 	
 	/// The category of a place.
 	/// It impacts its color and/or shape on the map.
-	public enum ID: String, Codable, Hashable, Identifiable, DefaultCaseDecodable {
+	public enum ID: String, Codable, Hashable, Identifiable, CaseIterable, DefaultCaseDecodable {
 		
 		case unknown
 		case spot
@@ -26,7 +26,7 @@ extension Place.Category {
 		
 		public init(for kindId: Place.Kind.ID) {
 			do {
-				self = try kindId.internal(in: Locale.en).category
+				self = try kindId.internal().category
 			} catch {
 				self = .unknown
 			}
@@ -35,6 +35,3 @@ extension Place.Category {
 	}
 	
 }
-
-/// Extend for testing purposes
-extension Place.Category.ID: CaseIterable {}
