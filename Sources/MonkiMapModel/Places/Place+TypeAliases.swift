@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import PrefixedUUID
+import Prefixed
 
-public struct PlaceIDPrefix: UUIDPrefix {
-	public static var uuidPrefix: String { "place_" }
+public struct PlaceIDPrefix: PrefixProtocol {
+	public static var prefix: String { "place_" }
 }
 
 extension Place {
