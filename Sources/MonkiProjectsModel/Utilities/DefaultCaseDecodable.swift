@@ -17,6 +17,10 @@ public protocol DefaultCaseDecodable: RawRepresentable, CaseIterable where RawVa
 
 extension DefaultCaseDecodable {
 	
+	public static var nonDefaultCases: [Self] {
+		Self.allCases.filter { $0 != Self.defaultCase }
+	}
+	
 	public init(rawValue: RawValue) {
 		let value = Self.allCases.first { $0.rawValue == rawValue }
 		self = value ?? Self.defaultCase
@@ -27,10 +31,6 @@ extension DefaultCaseDecodable {
 		
 		let rawValue = try container.decode(RawValue.self)
 		self = Self(rawValue: rawValue) ?? Self.defaultCase
-	}
-	
-	public static var nonDefaultCases: [Self] {
-		Self.allCases.filter { $0 != Self.defaultCase }
 	}
 	
 }

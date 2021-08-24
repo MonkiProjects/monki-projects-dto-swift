@@ -45,7 +45,7 @@ opt_in_rules:
   - for_where 									# idiomatic
   - force_unwrapping 							# idiomatic
   - identical_operands 							# lint
-  - implicit_return 							# style
+# - implicit_return 							# style
   - implicitly_unwrapped_optional 				# idiomatic
   - indentation_width 							# style
   - joined_default_parameter 					# idiomatic

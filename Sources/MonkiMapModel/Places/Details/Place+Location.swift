@@ -1,5 +1,5 @@
 //
-//  PlaceLocation.swift
+//  Place+Location.swift
 //  MonkiMapModel
 //
 //  Created by Rémi Bardon on 05/02/2021.

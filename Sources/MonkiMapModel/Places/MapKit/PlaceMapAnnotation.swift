@@ -24,10 +24,7 @@ public class PlaceMapAnnotation: MKPointAnnotation {
 	}
 	
 	private func update() {
-		coordinate = CLLocationCoordinate2D(
-			latitude: model.latitude,
-			longitude: model.longitude
-		)
+		coordinate = model.coordinate.clLocationCoordinate
 		title = model.name
 		subtitle = try? model.kind.title()
 	}

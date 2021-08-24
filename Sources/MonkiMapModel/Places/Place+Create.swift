@@ -13,26 +13,29 @@ extension Place {
 	
 	public struct Create: Hashable {
 		
+		public var id: Place.ID?
 		public var name: Place.Name
-		public var latitude: Latitude
-		public var longitude: Longitude
+		public var aliases: [Place.Name]
+		public var coordinate: Coordinate
 		public var kind: Place.Kind.ID
 		public var caption: Place.Caption
 		public var images: [URL]
 		public var properties: [Property]
 		
 		public init(
+			id: Place.ID? = nil,
 			name: Place.Name = .init(),
-			latitude: Latitude,
-			longitude: Longitude,
+			aliases: [Place.Name] = .init(),
+			coordinate: Coordinate,
 			kind: Place.Kind.ID,
 			caption: Place.Caption = .init(),
 			images: [URL] = .init(),
 			properties: [Property] = .init()
 		) {
+			self.id = id
 			self.name = name
-			self.latitude = latitude
-			self.longitude = longitude
+			self.aliases = aliases
+			self.coordinate = coordinate
 			self.kind = kind
 			self.caption = caption
 			self.images = images
@@ -46,8 +49,9 @@ extension Place {
 extension Place.Create: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
-		case name
-		case latitude, longitude
+		case id
+		case name, aliases
+		case coordinate
 		case kind
 		case caption, images, properties
 	}

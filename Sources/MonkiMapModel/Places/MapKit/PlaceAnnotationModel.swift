@@ -12,52 +12,36 @@ public struct PlaceAnnotationModel: Hashable, Identifiable {
 	
 	public let id: Place.ID
 	public var name: Place.Name
-	public var latitude: Latitude
-	public var longitude: Longitude
-	public var state: Place.State
+	public var coordinate: Coordinate
+	public var isDraft: Bool
 	public var kind: Place.Kind.ID
 	public var category: Place.Category.ID
-	/// Used to update data client-side
-	public var updatedAt: Date
 	
 	public init(
 		id: Place.ID = .init(),
 		name: Place.Name,
-		latitude: Latitude,
-		longitude: Longitude,
-		state: Place.State = .local,
+		coordinate: Coordinate,
+		isDraft: Bool,
 		kind: Place.Kind.ID = .defaultCase,
-		category: Place.Category.ID = .defaultCase,
-		updatedAt: Date = .init()
+		category: Place.Category.ID = .defaultCase
 	) {
 		self.id = id
 		self.name = name
-		self.latitude = latitude
-		self.longitude = longitude
-		self.state = state
+		self.coordinate = coordinate
+		self.isDraft = isDraft
 		self.kind = kind
 		self.category = category
-		self.updatedAt = updatedAt
 	}
-	
-}
-
-extension PlaceAnnotationModel: PlaceProtocol {
-	
-	public var kindId: Place.Kind.ID { kind }
-	public var categoryId: Place.Category.ID { category }
 	
 }
 
 extension PlaceAnnotationModel: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
-		case id
-		case name
-		case latitude, longitude
-		case state
+		case id, name
+		case coordinate
+		case isDraft = "is_draft"
 		case kind, category
-		case updatedAt = "updated_at"
 	}
 	
 }

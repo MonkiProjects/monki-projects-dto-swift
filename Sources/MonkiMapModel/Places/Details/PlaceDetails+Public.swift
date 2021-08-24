@@ -14,16 +14,16 @@ extension Place.Details {
 	public struct Public: Hashable {
 		
 		public var caption: Place.Caption
-		public var satelliteImage: URL
+		public var satelliteImage: URL?
 		public var images: [URL]
 		public var location: Place.Location.Public?
 		public var properties: [Place.Property.Localized]
 		
-		public var allImages: [URL] { images + [satelliteImage] }
+		public var allImages: [URL] { images + [satelliteImage].compactMap { $0 } }
 		
 		public init(
-			caption: Place.Caption,
-			satelliteImage: URL = .placeSatelliteImagePlaceholder,
+			caption: Place.Caption = "",
+			satelliteImage: URL? = nil,
 			images: [URL] = .init(),
 			location: Place.Location.Public? = nil,
 			properties: [Place.Property.Localized] = .init()

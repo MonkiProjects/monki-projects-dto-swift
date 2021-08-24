@@ -1,8 +1,8 @@
 //
-//  Place+Public.swift
+//  Place+Draft.swift
 //  MonkiMapModel
 //
-//  Created by Rémi Bardon on 09/01/2021.
+//  Created by Rémi Bardon on 24/08/2021.
 //  Copyright © 2021 Monki Projects. All rights reserved.
 //
 
@@ -11,25 +11,25 @@ import MonkiProjectsModel
 
 extension Place {
 	
-	/// Model of a place used in APIs responses.
-	public struct Public: Hashable, Identifiable {
+	/// Model of a place when it's still being created.
+	public struct Draft: Hashable, Identifiable {
 		
 		public let id: Place.ID
-		public var name: Place.Name
+		public var name: Place.Name?
 		public var aliases: [Place.Name]
-		public var coordinate: Coordinate
-		public var kind: Place.Kind.ID
-		public var category: Place.Category.ID
+		public var coordinate: Coordinate?
+		public var kind: Place.Kind.ID?
+		public var category: Place.Category.ID?
 		public var details: Place.Details.Public
 		public var metadata: Place.Metadata
 		
 		public init(
 			id: Place.ID = .init(),
-			name: Place.Name,
+			name: Place.Name? = nil,
 			aliases: [Place.Name] = .init(),
-			coordinate: Coordinate,
-			kind: Place.Kind.ID = .unknown,
-			category: Place.Category.ID = .unknown,
+			coordinate: Coordinate? = nil,
+			kind: Place.Kind.ID? = nil,
+			category: Place.Category.ID? = nil,
 			details: Place.Details.Public = .init(),
 			metadata: Place.Metadata = .init()
 		) {
@@ -47,7 +47,7 @@ extension Place {
 	
 }
 
-extension Place.Public: Codable {
+extension Place.Draft: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
 		case id, name, aliases
