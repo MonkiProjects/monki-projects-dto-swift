@@ -77,6 +77,22 @@ public struct Coordinate: Equatable, Hashable {
 	
 }
 
+extension Coordinate: GeographicNotation {
+	
+	public func ddNotation() -> String {
+		return "\(self.latitude.ddNotation()), \(self.longitude.ddNotation())"
+	}
+	
+	public func dmNotation(full: Bool = false) -> String {
+		return "\(self.latitude.dmNotation(full: full)), \(self.longitude.dmNotation(full: full))"
+	}
+	
+	public func dmsNotation(full: Bool = false) -> String {
+		return "\(self.latitude.dmsNotation(full: full)), \(self.longitude.dmsNotation(full: full))"
+	}
+	
+}
+
 #if canImport(CoreLocation)
 import CoreLocation
 

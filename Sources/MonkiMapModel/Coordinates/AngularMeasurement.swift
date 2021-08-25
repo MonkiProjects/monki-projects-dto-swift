@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol AngularMeasurement: Hashable, Codable {
+public protocol AngularMeasurement: Hashable, Codable, GeographicNotation {
 	
 	/// "N" or "E" depending on axis
 	static var positiveDirection: Character { get }
@@ -46,6 +46,12 @@ extension AngularMeasurement {
 		self.init(degrees: degrees, minutes: Double(minutes) + seconds / 60)
 	}
 	
+}
+
+// MARK: - GeographicNotation
+
+extension AngularMeasurement {
+	
 	/// Decimal Degree Notation
 	public func ddNotation() -> String {
 		return "\(decimalDegrees)"
@@ -70,6 +76,8 @@ extension AngularMeasurement {
 	
 }
 
+// MARK: - Codable
+
 extension AngularMeasurement {
 	
 	public init(from decoder: Decoder) throws {
@@ -82,4 +90,5 @@ extension AngularMeasurement {
 		var container = encoder.singleValueContainer()
 		try container.encode(self.decimalDegrees)
 	}
+	
 }
