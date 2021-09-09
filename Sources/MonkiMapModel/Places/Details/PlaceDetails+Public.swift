@@ -14,18 +14,18 @@ extension Place.Details {
 	public struct Public: Hashable {
 		
 		public var caption: Place.Caption?
-		public var satelliteImage: URL?
-		public var images: [URL]
+		public var satelliteImage: ImageSource?
+		public var images: [ImageSource]
 		public var location: Place.Location.Public?
 		public var properties: [Place.Property.Localized]
 		public var aliases: [Place.Name]
 		
-		public var allImages: [URL] { images + [satelliteImage].compactMap { $0 } }
+		public var allImages: [ImageSource] { images + [satelliteImage].compactMap { $0 } }
 		
 		public init(
 			caption: Place.Caption? = nil,
-			satelliteImage: URL? = nil,
-			images: [URL] = .init(),
+			satelliteImage: ImageSource? = nil,
+			images: [ImageSource] = .init(),
 			location: Place.Location.Public? = nil,
 			properties: [Place.Property.Localized] = .init(),
 			aliases: [Place.Name] = .init()

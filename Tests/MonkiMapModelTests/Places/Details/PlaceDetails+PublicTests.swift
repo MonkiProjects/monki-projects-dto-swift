@@ -16,7 +16,7 @@ internal final class PlaceDetailsPublicTests: XCTestCase {
 	func testCodingKeysCasing() throws {
 		let data = try Place.Details.Public(
 			caption: "Test",
-			satelliteImage: URL(string: "https://monkiprojects.com").require()
+			satelliteImage: .url(URL(string: "https://monkiprojects.com").require())
 		)
 		let jsonObject = try String(data: JSONEncoder().encode(data), encoding: .utf8).require()
 		

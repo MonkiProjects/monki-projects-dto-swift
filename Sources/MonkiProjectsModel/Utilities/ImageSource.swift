@@ -1,5 +1,5 @@
 //
-//  AvatarSource.swift
+//  ImageSource.swift
 //  MonkiProjectsModel
 //
 //  Created by BARDON Rémi on 22/08/2020.
@@ -8,22 +8,22 @@
 
 import Foundation
 
-/// An avatar source (`URL` or predefined asset).
+/// An image source (`URL`, image `Data` or predefined asset).
 ///
 /// # Example encoded values
 ///
 /// ```json
-/// {"url":"https:\/\/monkiprojects.com"}
+/// {"url":"https:\/\/monkiprojects.com/assets/avatars/person-1.jpg"}
 /// ```
 ///
 /// ```json
 /// {"asset":"person-1"}
 /// ```
-public enum AvatarSource: Hashable {
-	case url(URL), asset(String)
+public enum ImageSource: Hashable {
+	case url(URL), asset(String), data(Data)
 }
 
-extension AvatarSource: Codable {
+extension ImageSource: Codable {
 	
 	enum CodingKeys: String, CodingKey {
 		case url, asset
@@ -45,6 +45,8 @@ extension AvatarSource: Codable {
 			try container.encode(url, forKey: .url)
 		case .asset(let assetName):
 			try container.encode(assetName, forKey: .asset)
+		case .data:
+			throw EncodingError.invalidValue(self, .init(codingPath: [], debugDescription: ".data not supported for encoding"))
 		}
 	}
 	

@@ -12,7 +12,7 @@ public protocol UserPublicSmallProtocol {
 	var id: User.ID { get }
 	var username: User.Username { get set }
 	var displayName: User.DisplayName { get set }
-	var avatar: AvatarSource? { get set }
+	var avatar: ImageSource? { get set }
 	var country: User.Country? { get set }
 	var kind: User.Kind { get }
 	var updatedAt: Date { get set }
@@ -32,7 +32,7 @@ extension User {
 			public let id: User.ID
 			public var username: User.Username
 			public var displayName: User.DisplayName
-			public var avatar: AvatarSource?
+			public var avatar: ImageSource?
 			public var country: User.Country?
 			public let kind: User.Kind
 			public var updatedAt: Date
@@ -41,7 +41,7 @@ extension User {
 				id: User.ID = .init(),
 				username: User.Username,
 				displayName: User.DisplayName,
-				avatar: AvatarSource? = nil,
+				avatar: ImageSource? = nil,
 				country: User.Country? = nil,
 				kind: User.Kind = .user,
 				updatedAt: Date = .init()
@@ -63,7 +63,7 @@ extension User {
 			public let id: User.ID
 			public var username: User.Username
 			public var displayName: User.DisplayName
-			public var avatar: AvatarSource?
+			public var avatar: ImageSource?
 			public var country: User.Country?
 			public let kind: User.Kind
 			public var updatedAt: Date
@@ -74,7 +74,7 @@ extension User {
 				id: User.ID = .init(),
 				username: User.Username,
 				displayName: User.DisplayName,
-				avatar: AvatarSource? = nil,
+				avatar: ImageSource? = nil,
 				country: User.Country? = nil,
 				kind: User.Kind = .user,
 				updatedAt: Date = .init(),
