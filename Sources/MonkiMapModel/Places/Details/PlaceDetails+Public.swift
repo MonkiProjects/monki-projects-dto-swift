@@ -13,7 +13,7 @@ extension Place.Details {
 	
 	public struct Public: Hashable {
 		
-		public var caption: Place.Caption
+		public var caption: Place.Caption?
 		public var satelliteImage: URL?
 		public var images: [URL]
 		public var location: Place.Location.Public?
@@ -23,7 +23,7 @@ extension Place.Details {
 		public var allImages: [URL] { images + [satelliteImage].compactMap { $0 } }
 		
 		public init(
-			caption: Place.Caption = "",
+			caption: Place.Caption? = nil,
 			satelliteImage: URL? = nil,
 			images: [URL] = .init(),
 			location: Place.Location.Public? = nil,

@@ -15,19 +15,19 @@ extension Place {
 	public struct Public: Hashable, Identifiable {
 		
 		public let id: Place.ID
-		public var name: Place.Name
-		public var coordinate: Coordinate
-		public var kind: Place.Kind.ID
-		public var category: Place.Category.ID
+		public var name: Place.Name?
+		public var coordinate: Coordinate?
+		public var kind: Place.Kind.ID?
+		public var category: Place.Category.ID?
 		public var details: Place.Details.Public
 		public var metadata: Place.Metadata
 		
 		public init(
 			id: Place.ID = .init(),
-			name: Place.Name,
-			coordinate: Coordinate,
-			kind: Place.Kind.ID = .unknown,
-			category: Place.Category.ID = .unknown,
+			name: Place.Name? = nil,
+			coordinate: Coordinate? = nil,
+			kind: Place.Kind.ID? = nil,
+			category: Place.Category.ID? = nil,
 			details: Place.Details.Public = .init(),
 			metadata: Place.Metadata = .init()
 		) {
