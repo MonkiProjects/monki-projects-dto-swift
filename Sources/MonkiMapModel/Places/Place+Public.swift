@@ -16,7 +16,6 @@ extension Place {
 		
 		public let id: Place.ID
 		public var name: Place.Name
-		public var aliases: [Place.Name]
 		public var coordinate: Coordinate
 		public var kind: Place.Kind.ID
 		public var category: Place.Category.ID
@@ -26,7 +25,6 @@ extension Place {
 		public init(
 			id: Place.ID = .init(),
 			name: Place.Name,
-			aliases: [Place.Name] = .init(),
 			coordinate: Coordinate,
 			kind: Place.Kind.ID = .unknown,
 			category: Place.Category.ID = .unknown,
@@ -35,7 +33,6 @@ extension Place {
 		) {
 			self.id = id
 			self.name = name
-			self.aliases = aliases
 			self.coordinate = coordinate
 			self.kind = kind
 			self.category = category
@@ -50,7 +47,7 @@ extension Place {
 extension Place.Public: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
-		case id, name, aliases
+		case id, name
 		case coordinate
 		case kind, category
 		case details, metadata
