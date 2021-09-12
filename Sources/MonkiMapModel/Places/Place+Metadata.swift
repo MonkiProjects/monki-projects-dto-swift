@@ -13,7 +13,7 @@ extension Place {
 	
 	public struct Metadata: Hashable {
 		
-		public let isDraft: Bool
+		public var isDraft: Bool
 		public let creator: User.ID?
 		public let createdAt: Date
 		public var updatedAt: Date
