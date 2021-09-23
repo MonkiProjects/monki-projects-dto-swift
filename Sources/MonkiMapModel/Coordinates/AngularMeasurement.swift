@@ -54,22 +54,41 @@ extension AngularMeasurement {
 	
 	/// Decimal Degree Notation
 	public func ddNotation() -> String {
-		return "\(decimalDegrees)"
+		let formatter = NumberFormatter()
+		formatter.numberStyle = .decimal
+		formatter.maximumFractionDigits = 6
+		return formatter.string(from: NSNumber(value: decimalDegrees))!
 	}
 	
 	/// Degree Minute Notation
 	public func dmNotation(full: Bool = false) -> String {
-		var parts = ["\(decimalDegrees.whole)°"]
-		if full || minutes > 0 { parts.append("\(minutes)'") }
+		// Degree
+		var parts = ["\(Int(decimalDegrees.whole))°"]
+		
+		// Minute
+		let formatter = NumberFormatter()
+		formatter.numberStyle = .decimal
+		formatter.maximumFractionDigits = 3
+		if full || minutes > 0 { parts.append("\(formatter.string(from: NSNumber(value: minutes))!)'") }
+		
 		parts.append("\(directionChar)")
 		return parts.joined(separator: " ")
 	}
 	
 	/// Degree Minute Second Notation
 	public func dmsNotation(full: Bool = false) -> String {
-		var parts = ["\(decimalDegrees.whole)°"]
-		if full || minutes > 0 { parts.append("\(minutes.whole)'") }
-		if full || seconds > 0 { parts.append("\(seconds)\"") }
+		// Degree
+		var parts = ["\(Int(decimalDegrees.whole))°"]
+		
+		// Minute
+		if full || minutes > 0 { parts.append("\(Int(minutes.whole))'") }
+		
+		// Second
+		let formatter = NumberFormatter()
+		formatter.numberStyle = .decimal
+		formatter.maximumFractionDigits = 1
+		if full || seconds > 0 { parts.append("\(formatter.string(from: NSNumber(value: seconds))!)\"") }
+		
 		parts.append("\(directionChar)")
 		return parts.joined(separator: " ")
 	}
