@@ -56,7 +56,7 @@ where Key: Hashable & RawRepresentable,
 
 extension RawKeyedCodableDictionary: Equatable where Value: Equatable {
 	
-	public static func == (lhs: Self<Key, Value>, rhs: Self<Key, Value>) -> Bool {
+	public static func == (lhs: Self, rhs: Self) -> Bool {
 		lhs.wrappedValue == rhs.wrappedValue
 	}
 	
