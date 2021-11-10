@@ -46,6 +46,7 @@ extension ImageSource: Codable {
 		case .asset(let assetName):
 			try container.encode(assetName, forKey: .asset)
 		case .data:
+			// swiftlint:disable:next line_length
 			throw EncodingError.invalidValue(self, .init(codingPath: [], debugDescription: ".data not supported for encoding"))
 		}
 	}

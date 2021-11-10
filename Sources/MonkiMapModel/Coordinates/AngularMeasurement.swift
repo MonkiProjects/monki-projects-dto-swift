@@ -57,7 +57,7 @@ extension AngularMeasurement {
 		let formatter = NumberFormatter()
 		formatter.numberStyle = .decimal
 		formatter.maximumFractionDigits = 6
-		return formatter.string(from: NSNumber(value: decimalDegrees))!
+		return formatter.string(from: NSNumber(value: decimalDegrees)) ?? "\(decimalDegrees)"
 	}
 	
 	/// Degree Minute Notation
@@ -69,7 +69,9 @@ extension AngularMeasurement {
 		let formatter = NumberFormatter()
 		formatter.numberStyle = .decimal
 		formatter.maximumFractionDigits = 3
-		if full || minutes > 0 { parts.append("\(formatter.string(from: NSNumber(value: minutes))!)'") }
+		if full || minutes > 0, let string = formatter.string(from: NSNumber(value: minutes)) {
+			parts.append("\(string)'")
+		}
 		
 		parts.append("\(directionChar)")
 		return parts.joined(separator: " ")
@@ -87,7 +89,9 @@ extension AngularMeasurement {
 		let formatter = NumberFormatter()
 		formatter.numberStyle = .decimal
 		formatter.maximumFractionDigits = 1
-		if full || seconds > 0 { parts.append("\(formatter.string(from: NSNumber(value: seconds))!)\"") }
+		if full || seconds > 0, let string = formatter.string(from: NSNumber(value: seconds)) {
+			parts.append("\(string)\"")
+		}
 		
 		parts.append("\(directionChar)")
 		return parts.joined(separator: " ")
