@@ -25,6 +25,7 @@ let package = Package(
 			url: "https://github.com/RemiBardon/swift-prefixed-type",
 			.upToNextMajor(from: "2.0.0")
 		),
+		.package(url: "https://github.com/apple/swift-algorithms", .upToNextMajor(from: "1.0.0")),
 	],
 	targets: [
 		// Monki Projects Core Models
@@ -44,7 +45,10 @@ let package = Package(
 		// Monki Map Models
 		.target(
 			name: "MonkiMapModel",
-			dependencies: ["MonkiProjectsModel"],
+			dependencies: [
+				.target(name: "MonkiProjectsModel"),
+				.product(name: "Algorithms", package: "swift-algorithms"),
+			],
 			resources: [
 				.process("Resources"),
 			]

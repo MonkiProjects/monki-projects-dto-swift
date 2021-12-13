@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Algorithms
 import MonkiProjectsModel
 
 extension Place.Details {
@@ -20,7 +21,7 @@ extension Place.Details {
 		public var features: [Place.Feature]
 		public var aliases: [Place.Name]
 		
-		public var allImages: [ImageSource] { images + [satelliteImage].compactMap { $0 } }
+		public var allImages: [ImageSource] { images + [satelliteImage].compacted() }
 		
 		public init(
 			caption: Place.Caption? = nil,
