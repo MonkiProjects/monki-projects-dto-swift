@@ -165,6 +165,15 @@ extension Place.Feature.Kind.DTO.Localized: Codable {
 
 // MARK: - Comparators
 
+extension Place.Feature.Kind.DTO.Localized: Comparable {
+	
+	public static func < (lhs: Self, rhs: Self) -> Bool {
+		return lhs.id < rhs.id
+	}
+	
+}
+
+#if os(iOS) || os(macOS) || os(tvOS) || os(watchOS)
 public struct PlaceFeatureKindLocalizedComparator: SortComparator {
 	
 	public typealias Compared = Place.Feature.Kind.DTO.Localized
@@ -188,3 +197,4 @@ public struct DictionaryByPlaceFeatureKindComparator<T>: SortComparator {
 	}
 	
 }
+#endif

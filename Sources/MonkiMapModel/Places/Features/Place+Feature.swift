@@ -96,6 +96,20 @@ extension Place.Feature.Kind {
 
 // MARK: - Comparators
 
+extension Place.Feature.Kind: Comparable {
+	
+	public static func < (lhs: Self, rhs: Self) -> Bool {
+		// swiftlint:disable force_unwrapping
+		let lhsi = Self.allCases.firstIndex(of: lhs)!
+		let rhsi = Self.allCases.firstIndex(of: rhs)!
+		// swiftlint:enable force_unwrapping
+		
+		return lhsi < rhsi
+	}
+	
+}
+
+#if os(iOS) || os(macOS) || os(tvOS) || os(watchOS)
 public struct PlaceFeatureKindComparator: SortComparator {
 	
 	public typealias Compared = Place.Feature.Kind
@@ -129,3 +143,4 @@ public struct PlaceFeatureKindComparator: SortComparator {
 	// swiftlint:enable identifier_name
 	
 }
+#endif
