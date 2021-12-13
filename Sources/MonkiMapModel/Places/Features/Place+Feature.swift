@@ -108,39 +108,3 @@ extension Place.Feature.Kind: Comparable {
 	}
 	
 }
-
-#if os(iOS) || os(macOS) || os(tvOS) || os(watchOS)
-public struct PlaceFeatureKindComparator: SortComparator {
-	
-	public typealias Compared = Place.Feature.Kind
-	
-	public var order: SortOrder
-	
-	// swiftlint:disable identifier_name
-	public func compare(_ lhs: Compared, _ rhs: Compared) -> ComparisonResult {
-		// swiftlint:disable force_unwrapping
-		let lhsi = Compared.allCases.firstIndex(of: lhs)!
-		let rhsi = Compared.allCases.firstIndex(of: rhs)!
-		// swiftlint:enable force_unwrapping
-		
-		let compared: (Int, Int)
-		switch order {
-		case .forward:
-			compared = (lhsi, rhsi)
-		case .reverse:
-			compared = (rhsi, lhsi)
-		}
-		
-		switch compared {
-		case let (a, b) where a < b:
-			return .orderedAscending
-		case let (a, b) where a > b:
-			return .orderedDescending
-		default:
-			return .orderedSame
-		}
-	}
-	// swiftlint:enable identifier_name
-	
-}
-#endif

@@ -172,29 +172,3 @@ extension Place.Feature.Kind.DTO.Localized: Comparable {
 	}
 	
 }
-
-#if os(iOS) || os(macOS) || os(tvOS) || os(watchOS)
-public struct PlaceFeatureKindLocalizedComparator: SortComparator {
-	
-	public typealias Compared = Place.Feature.Kind.DTO.Localized
-	
-	public var order: SortOrder
-	
-	public func compare(_ lhs: Compared, _ rhs: Compared) -> ComparisonResult {
-		PlaceFeatureKindComparator(order: order).compare(lhs.id, rhs.id)
-	}
-	
-}
-
-public struct DictionaryByPlaceFeatureKindComparator<T>: SortComparator {
-	
-	public typealias Compared = Dictionary<Place.Feature.Kind.DTO.Localized, T>.Element
-	
-	public var order: SortOrder
-	
-	public func compare(_ lhs: Compared, _ rhs: Compared) -> ComparisonResult {
-		return PlaceFeatureKindLocalizedComparator(order: order).compare(lhs.key, rhs.key)
-	}
-	
-}
-#endif
