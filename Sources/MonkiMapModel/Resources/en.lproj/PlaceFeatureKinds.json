@@ -1,41 +1,38 @@
-// Created by Rémi Bardon on 27/11/2021.
-// Copyright (c) 2021 Monki Projects. All rights reserved.
-// This document uses [JSON5](https://json5.org) formatting.
 [
 	{
 		"id": "element",
 		"label": "Element",
 		"section_title": "Elements",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "technique",
 		"label": "Technique",
 		"section_title": "Good for training",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "benefit",
 		"label": "Benefit",
 		"section_title": "benefits",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "hazard",
 		"label": "Hazard",
 		"section_title": "Hazards",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "custom",
 		"label": "Custom",
 		"section_title": "Custom tags",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "unknown",
 		"label": "Unknown",
 		"section_title": "Unknown tags",
-		"lang": "en",
-	},
+		"lang": "en"
+	}
 ]

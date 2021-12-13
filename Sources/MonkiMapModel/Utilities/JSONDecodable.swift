@@ -1,5 +1,5 @@
 //
-//  JSON5Decodable.swift
+//  JSONDecodable.swift
 //  MonkiMapModel
 //
 //  Created by Rémi Bardon on 08/12/2021.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-internal protocol JSON5Decodable: Decodable {
+internal protocol JSONDecodable: Decodable {
 	
 	static var fileName: String { get }
 	
 }
 
-extension JSON5Decodable {
+extension JSONDecodable {
 	
 	public static func all(locale: Locale? = nil) -> [Self] {
 		JSON5DecodableCacheStorage.shared
@@ -70,7 +70,7 @@ fileprivate final class JSON5DecodableCache<Cached: Decodable> {
 	private func fetch(locale: Locale?) -> [Cached] {
 		guard let url = Bundle.module.url(
 			forResource: fileName,
-			withExtension: "json5",
+			withExtension: "json",
 			subdirectory: nil,
 			localization: locale?.identifier
 		) else {
@@ -81,7 +81,6 @@ fileprivate final class JSON5DecodableCache<Cached: Decodable> {
 			let data = try Data(contentsOf: url)
 			
 			let decoder = JSONDecoder()
-			decoder.allowsJSON5 = true
 			return try decoder.decode([Cached].self, from: data)
 		} catch {
 			return []

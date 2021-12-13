@@ -29,7 +29,7 @@ extension Place.Feature {
 	
 }
 
-extension Place.Feature.Internal: JSON5Decodable {
+extension Place.Feature.Internal: JSONDecodable {
 	
 	static var fileName: String { "PlaceFeatures" }
 	
@@ -54,7 +54,7 @@ extension Place.Feature.Kind {
 	
 }
 
-extension Place.Feature.Kind.Internal: JSON5Decodable {
+extension Place.Feature.Kind.Internal: JSONDecodable {
 	
 	static var fileName: String { "PlaceFeatureKinds" }
 	

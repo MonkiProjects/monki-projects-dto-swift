@@ -1,6 +1,3 @@
-// Created by Rémi Bardon on 05/06/2020.
-// Copyright (c) 2020 Monki Projects. All rights reserved.
-// This document uses [JSON5](https://json5.org) formatting.
 [
 	{
 		"id": "wall-small",
@@ -8,7 +5,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/wall-small.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "wall-medium",
@@ -16,7 +13,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/wall-medium.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "wall-big",
@@ -24,14 +21,14 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/wall-big.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "railing",
 		"label": "Railing",
 		"kind": "element",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "stairs",
@@ -39,7 +36,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/stairs.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "pull-up-bars",
@@ -47,14 +44,14 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/pull-up-bars.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "parallel-bars",
 		"label": "Parallel bars",
 		"kind": "element",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "ladder",
@@ -62,7 +59,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/ladder.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "grass",
@@ -70,7 +67,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/grass.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "sand",
@@ -78,7 +75,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/sand.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "water",
@@ -86,7 +83,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/water.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "tree",
@@ -94,7 +91,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/tree.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "tree-trunk",
@@ -102,7 +99,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/tree-trunk.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "rocks-small",
@@ -110,7 +107,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/rocks-small.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "rocks-medium",
@@ -118,7 +115,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/rocks-medium.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "rocks-big",
@@ -126,7 +123,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/rocks-big.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "trampoline",
@@ -134,42 +131,42 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/trampoline.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "foam-pit",
 		"label": "Foam pit",
 		"kind": "element",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "airbag",
 		"label": "Airbag",
 		"kind": "element",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "ninja-warrior-area",
 		"label": "Ninja Warrior area",
 		"kind": "element",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "ninja-warrior-wall",
 		"label": "Ninja Warrior wall",
 		"kind": "element",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "chase-tag-setup",
 		"label": "Chase Tag setup",
 		"kind": "element",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "floors-1",
@@ -177,7 +174,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/floors-1.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "floors-2",
@@ -185,7 +182,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/floors-2.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "floors-3",
@@ -193,7 +190,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/floors-3.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "floors-4",
@@ -201,7 +198,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/floors-4.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "floors-5",
@@ -209,7 +206,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/floors-5.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "floors-6",
@@ -217,7 +214,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/floors-6.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "floors-7",
@@ -225,7 +222,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/floors-7.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "floors-7+",
@@ -233,7 +230,7 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/floors-7+.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "bench",
@@ -241,14 +238,14 @@
 		"kind": "element",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/bench.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "precision-jump",
 		"label": "Precision jump",
 		"kind": "technique",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "kong-simple",
@@ -256,7 +253,7 @@
 		"kind": "technique",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/kong-simple.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "kong-double",
@@ -264,7 +261,7 @@
 		"kind": "technique",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/kong-double.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "kong-triple",
@@ -272,21 +269,21 @@
 		"kind": "technique",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/kong-triple.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "cat-leap",
 		"label": "Cat leap",
 		"kind": "technique",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "180-cat-leap",
 		"label": "180° cat leap",
 		"kind": "technique",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "drop-small",
@@ -294,7 +291,7 @@
 		"kind": "technique",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/drop-small.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "drop-medium",
@@ -302,7 +299,7 @@
 		"kind": "technique",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/drop-medium.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "drop-high",
@@ -310,7 +307,7 @@
 		"kind": "technique",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/drop-high.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "flips",
@@ -318,21 +315,21 @@
 		"kind": "technique",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/flips.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "ninja-warrior",
 		"label": "Ninja Warrior",
 		"kind": "technique",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "chase-tag",
 		"label": "Chase Tag",
 		"kind": "technique",
 		"system_defined": true,
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "drinking-fountain",
@@ -340,7 +337,7 @@
 		"kind": "benefit",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/drinking-fountain.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "covered-area",
@@ -348,7 +345,7 @@
 		"kind": "benefit",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/covered-area.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "hooks",
@@ -356,7 +353,7 @@
 		"kind": "benefit",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/hooks.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "changing-room",
@@ -364,7 +361,7 @@
 		"kind": "benefit",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/changing-room.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "coaching",
@@ -372,7 +369,7 @@
 		"kind": "benefit",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/coaching.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "well-known",
@@ -380,7 +377,7 @@
 		"kind": "benefit",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/well-known.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "equipment-rental",
@@ -388,7 +385,7 @@
 		"kind": "benefit",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/equipment-rental.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "shop",
@@ -396,7 +393,7 @@
 		"kind": "benefit",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/shop.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "security",
@@ -404,7 +401,7 @@
 		"kind": "hazard",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/security.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "security-cam",
@@ -412,7 +409,7 @@
 		"kind": "hazard",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/security-cam.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "slippery-surface",
@@ -420,7 +417,7 @@
 		"kind": "hazard",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/slippery-surface.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "drop-too-high",
@@ -428,7 +425,7 @@
 		"kind": "hazard",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/drop-too-high.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "drop-deadly",
@@ -436,7 +433,7 @@
 		"kind": "hazard",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/drop-deadly.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "uneasy-access",
@@ -444,7 +441,7 @@
 		"kind": "hazard",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/uneasy-access.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "locked-door",
@@ -452,7 +449,7 @@
 		"kind": "hazard",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/locked-door.png",
-		"lang": "en",
+		"lang": "en"
 	},
 	{
 		"id": "alarm",
@@ -460,6 +457,6 @@
 		"kind": "hazard",
 		"system_defined": true,
 		"icon_url": "https://cdn.monkiprojects.com/assets/features/system/alarm.png",
-		"lang": "en",
-	},
+		"lang": "en"
+	}
 ]
