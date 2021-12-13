@@ -86,8 +86,14 @@ internal final class PlaceFeatureTests: XCTestCase {
 		let feature1 = Feature.DTO.Localized(id: "test", kind: .unknown, locale: .en)
 		let data = try JSONEncoder().encode(feature1)
 		
-		let expected = "{\"id\":\"test\",\"kind\":\"unknown\",\"lang\":\"en\"}"
-		XCTAssertEqual(String(data: data, encoding: .utf8), expected)
+		let expected = [
+			"\"id\":\"test\"",
+			"\"kind\":\"unknown\"",
+			"\"lang\":\"en\"",
+		].sorted()
+		let string = String(data: data, encoding: .utf8) ?? ""
+		let actual = string.dropFirst().dropLast().split(separator: ",").sorted().map(String.init)
+		XCTAssertEqual(actual, expected)
 		
 		let feature2 = try JSONDecoder().decode(Feature.DTO.Localized.self, from: data)
 		XCTAssertEqual(feature1, feature2)
