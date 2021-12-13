@@ -26,6 +26,7 @@ let package = Package(
 			.upToNextMajor(from: "2.0.0")
 		),
 		.package(url: "https://github.com/apple/swift-algorithms", .upToNextMajor(from: "1.0.0")),
+		.package(url: "https://github.com/apple/swift-log.git", .upToNextMajor(from: "1.4.2")),
 	],
 	targets: [
 		// Monki Projects Core Models
@@ -48,6 +49,7 @@ let package = Package(
 			dependencies: [
 				.target(name: "MonkiProjectsModel"),
 				.product(name: "Algorithms", package: "swift-algorithms"),
+				.product(name: "Logging", package: "swift-log"),
 			],
 			resources: [
 				.process("Resources"),

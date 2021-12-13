@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import OSLog
+import Logging
 
-fileprivate let logger = Logger(subsystem: "com.monkiprojects.monkimap", category: "locale")
+fileprivate let logger = Logger(label: "com.monkiprojects.monkimap.locale")
 
 extension Locale {
 	
