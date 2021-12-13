@@ -13,7 +13,7 @@ extension Place.Submission.Review.Issue {
 	public enum Reason: String, Codable, Hashable {
 		case name, coordinates, type, caption
 		case satelliteImage = "satellite_image"
-		case images, location, properties
+		case images, location, features
 		case other
 	}
 	

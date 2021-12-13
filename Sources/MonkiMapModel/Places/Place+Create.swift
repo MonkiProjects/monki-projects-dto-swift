@@ -20,7 +20,7 @@ extension Place {
 		public var kind: Place.Kind.ID
 		public var caption: Place.Caption
 		public var images: [URL]
-		public var properties: [Property]
+		public var features: [Place.Feature]
 		
 		public init(
 			id: Place.ID? = nil,
@@ -30,7 +30,7 @@ extension Place {
 			kind: Place.Kind.ID,
 			caption: Place.Caption = .init(),
 			images: [URL] = .init(),
-			properties: [Property] = .init()
+			features: [Place.Feature] = .init()
 		) {
 			self.id = id
 			self.name = name
@@ -39,12 +39,14 @@ extension Place {
 			self.kind = kind
 			self.caption = caption
 			self.images = images
-			self.properties = properties
+			self.features = features
 		}
 		
 	}
 	
 }
+
+// MARK: - Codable conformances
 
 extension Place.Create: Codable {
 	
@@ -53,7 +55,7 @@ extension Place.Create: Codable {
 		case name, aliases
 		case coordinate
 		case kind
-		case caption, images, properties
+		case caption, images, features
 	}
 	
 }

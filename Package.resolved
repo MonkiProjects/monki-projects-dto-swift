@@ -2,7 +2,7 @@
   "object": {
     "pins": [
       {
-        "package": "swift-prefixed-type",
+        "package": "prefixed",
         "repositoryURL": "https://github.com/RemiBardon/swift-prefixed-type",
         "state": {
           "branch": null,

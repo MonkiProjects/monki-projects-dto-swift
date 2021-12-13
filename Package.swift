@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 
 import PackageDescription
 
@@ -6,10 +6,8 @@ let package = Package(
 	name: "monki-projects-model",
 	defaultLocalization: "en",
 	platforms: [
-		.iOS(.v13),
-		.macOS(.v10_10),
-		.watchOS(.v6),
-		.tvOS(.v13),
+		.iOS(.v15),
+		.macOS(.v12),
 	],
 	products: [
 		.library(

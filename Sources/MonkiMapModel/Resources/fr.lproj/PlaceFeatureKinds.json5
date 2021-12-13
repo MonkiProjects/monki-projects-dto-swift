@@ -1,0 +1,41 @@
+// Created by Rémi Bardon on 27/11/2021.
+// Copyright (c) 2021 Monki Projects. All rights reserved.
+// This document uses [JSON5](https://json5.org) formatting.
+[
+	{
+		"id": "element",
+		"label": "Élément",
+		"section_title": "Éléments",
+		"lang": "fr",
+	},
+	{
+		"id": "technique",
+		"label": "Technique",
+		"section_title": "Bien pour entraîner",
+		"lang": "fr",
+	},
+	{
+		"id": "benefit",
+		"label": "Avantage",
+		"section_title": "Avantages",
+		"lang": "en",
+	},
+	{
+		"id": "hazard",
+		"label": "Danger",
+		"section_title": "Dangers",
+		"lang": "fr",
+	},
+	{
+		"id": "custom",
+		"label": "Personnalisé",
+		"section_title": "Tags personnalisés",
+		"lang": "fr",
+	},
+	{
+		"id": "unknown",
+		"label": "Inconnu",
+		"section_title": "Tags inconnus",
+		"lang": "fr",
+	},
+]

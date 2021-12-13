@@ -17,7 +17,7 @@ extension Place.Details {
 		public var satelliteImage: ImageSource?
 		public var images: [ImageSource]
 		public var location: Place.Location.Public?
-		public var properties: [Place.Property]
+		public var features: [Place.Feature]
 		public var aliases: [Place.Name]
 		
 		public var allImages: [ImageSource] { images + [satelliteImage].compactMap { $0 } }
@@ -27,14 +27,14 @@ extension Place.Details {
 			satelliteImage: ImageSource? = nil,
 			images: [ImageSource] = .init(),
 			location: Place.Location.Public? = nil,
-			properties: [Place.Property] = .init(),
+			features: [Place.Feature] = .init(),
 			aliases: [Place.Name] = .init()
 		) {
 			self.caption = caption
 			self.satelliteImage = satelliteImage
 			self.images = images
 			self.location = location
-			self.properties = properties
+			self.features = features
 			self.aliases = aliases
 		}
 		
@@ -49,7 +49,7 @@ extension Place.Details.Public: Codable {
 		case satelliteImage = "satellite_image"
 		case images
 		case location
-		case properties
+		case features
 		case aliases
 	}
 	
