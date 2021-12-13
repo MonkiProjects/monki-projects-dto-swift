@@ -50,7 +50,7 @@ internal final class PlaceFeatureTests: XCTestCase {
 			let feature = try self.jsonDecoder.decode(Feature.DTO.Localized.self, from: data)
 			XCTAssertEqual(feature.id, featureId)
 			XCTAssertEqual(feature.kind, featureKind)
-			XCTAssertEqual(feature.isSystemDefined, true)
+			XCTAssertTrue(feature.isSystemDefined)
 			XCTAssertEqual(feature.iconUrl, iconUrl)
 			XCTAssertEqual(feature.label, featureLabel)
 		}

@@ -49,18 +49,6 @@ extension Locale {
 		return best
 	}
 	
-	internal var orBestLocale: Locale {
-		logger.trace("\(#function) \(self)")
-		
-		let best = Locale.preferredLanguages
-			.map(Locale.init(identifier:))
-			.first(where: { $0 == self || $0.languageCode == self.languageCode })
-		
-		logger.trace("\(#function) best=\(best?.identifier ?? "nil")")
-		
-		return best ?? self
-	}
-	
 	internal static var bestLanguage: Locale? {
 		checkCache()
 		
@@ -84,6 +72,18 @@ extension Locale {
 		bestLanguageCache = best
 		
 		return best
+	}
+	
+	internal var orBestLocale: Locale {
+		logger.trace("\(#function) \(self)")
+		
+		let best = Locale.preferredLanguages
+			.map(Locale.init(identifier:))
+			.first(where: { $0 == self || $0.languageCode == self.languageCode })
+		
+		logger.trace("\(#function) best=\(best?.identifier ?? "nil")")
+		
+		return best ?? self
 	}
 	
 	internal var orBestLanguage: Locale {

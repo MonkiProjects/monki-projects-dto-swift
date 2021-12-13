@@ -26,11 +26,11 @@ extension JSON5Decodable {
 
 fileprivate final class JSON5DecodableCacheStorage {
 	
-	internal static let shared = JSON5DecodableCacheStorage()
+	fileprivate static let shared = JSON5DecodableCacheStorage()
 	
 	private var cache = [String: Any]()
 	
-	internal func cache<T: Decodable>(for type: T.Type, in fileName: String) -> JSON5DecodableCache<T> {
+	fileprivate func cache<T: Decodable>(for type: T.Type, in fileName: String) -> JSON5DecodableCache<T> {
 		if let cached = self.cache[fileName] as? JSON5DecodableCache<T> {
 			return cached
 		} else {
@@ -46,13 +46,14 @@ fileprivate final class JSON5DecodableCache<Cached: Decodable> {
 	
 	private var fileName: String
 	private var locale: Locale?
+	// swiftlint:disable:next discouraged_optional_collection
 	private var cache: [Cached]?
 	
 	fileprivate init(fileName: String) {
 		self.fileName = fileName
 	}
 	
-	internal func all(locale: Locale?) -> [Cached] {
+	fileprivate func all(locale: Locale?) -> [Cached] {
 		if self.locale != locale { invalidate() }
 		if let cache = cache { return cache }
 		
@@ -62,7 +63,7 @@ fileprivate final class JSON5DecodableCache<Cached: Decodable> {
 		return all
 	}
 	
-	internal func invalidate() {
+	fileprivate func invalidate() {
 		self.cache = nil
 	}
 	

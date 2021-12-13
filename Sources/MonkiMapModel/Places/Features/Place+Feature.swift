@@ -102,9 +102,12 @@ public struct PlaceFeatureKindComparator: SortComparator {
 	
 	public var order: SortOrder
 	
+	// swiftlint:disable identifier_name
 	public func compare(_ lhs: Compared, _ rhs: Compared) -> ComparisonResult {
+		// swiftlint:disable force_unwrapping
 		let lhsi = Compared.allCases.firstIndex(of: lhs)!
 		let rhsi = Compared.allCases.firstIndex(of: rhs)!
+		// swiftlint:enable force_unwrapping
 		
 		let compared: (Int, Int)
 		switch order {
@@ -115,13 +118,14 @@ public struct PlaceFeatureKindComparator: SortComparator {
 		}
 		
 		switch compared {
-		case let (a, b) where a<b:
+		case let (a, b) where a < b:
 			return .orderedAscending
-		case let (a, b) where a>b:
+		case let (a, b) where a > b:
 			return .orderedDescending
 		default:
 			return .orderedSame
 		}
 	}
+	// swiftlint:enable identifier_name
 	
 }

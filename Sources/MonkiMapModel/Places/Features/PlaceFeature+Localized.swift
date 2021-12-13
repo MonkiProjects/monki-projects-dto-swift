@@ -105,6 +105,7 @@ extension Place.Feature.DTO.Localized: Codable {
 		case locale = "lang"
 	}
 	
+	// swiftlint:disable operator_usage_whitespace
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		
@@ -115,6 +116,7 @@ extension Place.Feature.DTO.Localized: Codable {
 		self.iconUrl 			= try container.decodeIfPresent(URL.self, forKey: .iconUrl)
 		self.locale 			= Locale(identifier: try container.decode(String.self, forKey: .locale))
 	}
+	// swiftlint:enable operator_usage_whitespace
 	
 	public func encode(to encoder: Encoder) throws {
 		var container = encoder.container(keyedBy: CodingKeys.self)
@@ -139,6 +141,7 @@ extension Place.Feature.Kind.DTO.Localized: Codable {
 		case locale = "lang"
 	}
 	
+	// swiftlint:disable operator_usage_whitespace
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		
@@ -147,6 +150,7 @@ extension Place.Feature.Kind.DTO.Localized: Codable {
 		self.sectionTitle 	= try container.decodeIfPresent(String.self, forKey: .sectionTitle)
 		self.locale 		= Locale(identifier: try container.decode(String.self, forKey: .locale))
 	}
+	// swiftlint:enable operator_usage_whitespace
 	
 	public func encode(to encoder: Encoder) throws {
 		var container = encoder.container(keyedBy: CodingKeys.self)

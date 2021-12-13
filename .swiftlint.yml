@@ -7,6 +7,7 @@ included:
 
 disabled_rules:
   - deployment_target 							# lint
+  - private_over_fileprivate 					# idiomatic
   - todo 										# lint
 opt_in_rules:
   - anyobject_protocol 							# lint
@@ -39,7 +40,7 @@ opt_in_rules:
   - fatal_error_message 						# idiomatic
   - file_header 								# style
   - file_name_no_space 							# idiomatic
-  - file_types_order 							# style
+# - file_types_order 							# style
 # - first_where 								# performance
   - flatmap_over_map_reduce 					# performance
   - for_where 									# idiomatic
@@ -85,7 +86,6 @@ opt_in_rules:
   - prefer_zero_over_explicit_init 				# idiomatic
   - private_action 								# lint
   - private_outlet 								# lint
-  - private_over_fileprivate 					# idiomatic
 # - private_subject 							# lint
   - private_unit_test 							# lint
   - prohibited_interface_builder 				# lint
