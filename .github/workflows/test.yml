@@ -15,7 +15,7 @@ jobs:
         os: [ubuntu-latest, macos-latest]
         swift:
           - "5"   # Latest
-          - "5.3" # Lowest
+          - "5.5" # Lowest
     steps:
     - uses: actions/checkout@v2
     - uses: fwal/setup-swift@v1
