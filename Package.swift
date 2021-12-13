@@ -5,10 +5,6 @@ import PackageDescription
 let package = Package(
 	name: "monki-projects-model",
 	defaultLocalization: "en",
-	platforms: [
-		.iOS(.v15),
-		.macOS(.v12),
-	],
 	products: [
 		.library(
 			name: "MonkiProjectsModel",
