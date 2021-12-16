@@ -3,16 +3,16 @@
 import PackageDescription
 
 let package = Package(
-	name: "monki-projects-model",
+	name: "monki-projects-dto",
 	defaultLocalization: "en",
 	products: [
 		.library(
-			name: "MonkiProjectsModel",
-			targets: ["MonkiProjectsModel"]
+			name: "MonkiProjectsDTO",
+			targets: ["MonkiProjectsDTO"]
 		),
 		.library(
-			name: "MonkiMapModel",
-			targets: ["MonkiMapModel"]
+			name: "MonkiMapDTO",
+			targets: ["MonkiMapDTO"]
 		),
 	],
 	dependencies: [
@@ -27,7 +27,7 @@ let package = Package(
 	targets: [
 		// Monki Projects Core Models
 		.target(
-			name: "MonkiProjectsModel",
+			name: "MonkiProjectsDTO",
 			dependencies: [
 				.product(name: "Prefixed", package: "prefixed"),
 			],
@@ -36,14 +36,14 @@ let package = Package(
 			]
 		),
 		.testTarget(
-			name: "MonkiProjectsModelTests",
-			dependencies: ["MonkiProjectsModel"]
+			name: "MonkiProjectsDTOTests",
+			dependencies: ["MonkiProjectsDTO"]
 		),
 		// Monki Map Models
 		.target(
-			name: "MonkiMapModel",
+			name: "MonkiMapDTO",
 			dependencies: [
-				.target(name: "MonkiProjectsModel"),
+				.target(name: "MonkiProjectsDTO"),
 				.product(name: "Algorithms", package: "swift-algorithms"),
 				.product(name: "Logging", package: "swift-log"),
 			],
@@ -52,8 +52,8 @@ let package = Package(
 			]
 		),
 		.testTarget(
-			name: "MonkiMapModelTests",
-			dependencies: ["MonkiMapModel"]
+			name: "MonkiMapDTOTests",
+			dependencies: ["MonkiMapDTO"]
 		),
 	]
 )

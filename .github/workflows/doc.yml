@@ -14,16 +14,16 @@ jobs:
       max-parallel: 1
       matrix:
         docs:
-          - product: MonkiProjectsModel
-            target-folder: monki-projects-model
-          - product: MonkiMapModel
-            target-folder: monki-map-model
+          - product: MonkiProjectsDTO
+            target-folder: monki-projects-dto
+          - product: MonkiMapDTO
+            target-folder: monki-map-dto
     steps:
       - uses: actions/checkout@v2
       - name: Generate Documentation
         uses: SwiftDocOrg/swift-doc@master
         with:
-          base-url: /monki-projects-model-swift/${{ matrix.docs.target-folder }}
+          base-url: /monki-projects-dto-swift/${{ matrix.docs.target-folder }}
           format: html
           inputs: Sources/${{ matrix.docs.product }}
           module-name: ${{ matrix.docs.product }}
