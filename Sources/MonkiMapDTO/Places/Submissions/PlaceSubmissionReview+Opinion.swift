@@ -10,13 +10,10 @@ import Foundation
 
 extension Place.Submission.Review {
 	
-	public enum Opinion: String, Codable, Hashable {
+	public enum Opinion: String, Codable, Hashable, CaseIterable {
 		case positive
 		case needsChanges = "needs_changes"
 		case negative
 	}
 	
 }
-
-/// Extend for testing purposes
-extension Place.Submission.Review.Opinion: CaseIterable {}

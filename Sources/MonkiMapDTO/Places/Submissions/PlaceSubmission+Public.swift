@@ -8,26 +8,26 @@
 
 import Foundation
 
-extension Place.Submission {
+extension Place.Submission.DTO {
 	
 	public struct Public: Hashable, Identifiable {
 		
-		public let id: UUID
-		public let place: Place.Public.ID
-		public let state: State
-		public let reviews: [Review.Public]
+		public let id: Place.Submission.ID
+		public let place: Place.ID
+		public let state: Place.Submission.State
+		public let reviews: [Place.Submission.Review.DTO.Public]
 		public let positiveReviews, negativeReviews: UInt8
 		public let createdAt, updatedAt: Date
 		
 		public init(
-			id: ID = UUID(),
-			place: Place.Public.ID,
-			state: State = .waitingForReviews,
-			reviews: [Review.Public] = [],
+			id: ID = .init(),
+			place: Place.ID,
+			state: Place.Submission.State = .waitingForReviews,
+			reviews: [Place.Submission.Review.DTO.Public] = [],
 			positiveReviews: UInt8 = 0,
 			negativeReviews: UInt8 = 0,
-			createdAt: Date = Date(),
-			updatedAt: Date = Date()
+			createdAt: Date = .init(),
+			updatedAt: Date = .init()
 		) {
 			self.id = id
 			self.place = place
@@ -43,7 +43,7 @@ extension Place.Submission {
 	
 }
 
-extension Place.Submission.Public: Codable {
+extension Place.Submission.DTO.Public: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
 		case id

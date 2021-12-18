@@ -7,9 +7,16 @@
 //
 
 import Foundation
+import MonkiProjectsDTO
 
 extension Place {
 	
-	public enum Kind {}
+	public enum Kind: Transferable {
+		
+		public typealias Title = String
+		
+		public enum DTO {}
+		
+	}
 	
 }

@@ -7,9 +7,16 @@
 //
 
 import Foundation
+import MonkiProjectsDTO
 
 extension Place.Submission {
 	
-	public enum Review {}
+	public enum Review: Transferable {
+		
+		public typealias ID = UUID
+		
+		public enum DTO {}
+		
+	}
 	
 }

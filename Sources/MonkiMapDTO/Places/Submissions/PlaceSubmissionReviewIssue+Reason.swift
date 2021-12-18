@@ -10,7 +10,7 @@ import Foundation
 
 extension Place.Submission.Review.Issue {
 	
-	public enum Reason: String, Codable, Hashable {
+	public enum Reason: String, Codable, Hashable, CaseIterable {
 		case name, coordinates, type, caption
 		case satelliteImage = "satellite_image"
 		case images, location, features
@@ -18,6 +18,3 @@ extension Place.Submission.Review.Issue {
 	}
 	
 }
-
-/// Extend for testing purposes
-extension Place.Submission.Review.Issue.Reason: CaseIterable {}

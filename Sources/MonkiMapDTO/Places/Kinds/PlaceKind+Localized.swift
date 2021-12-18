@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Place.Kind {
+extension Place.Kind.DTO {
 	
 	/// A localized `Place.Kind`.
 	/// It's used by APIs to return localized content.
@@ -26,7 +26,7 @@ extension Place.Kind {
 		public let id: Place.Kind.ID
 		public let title: Place.Kind.Title
 		
-		fileprivate init(id: Place.Kind.ID, title: Place.Kind.Title) {
+		fileprivate init(id: ID, title: Place.Kind.Title) {
 			self.id = id
 			self.title = title
 		}
@@ -35,19 +35,19 @@ extension Place.Kind {
 	
 }
 
-extension Place.Kind.ID {
+extension Place.Kind.DTO.Localized: Codable {
 	
-	public func localized(in locale: Locale? = nil) throws -> Place.Kind.Localized {
-		let locale = locale ?? .default
-		return Place.Kind.Localized(id: self, title: try self.title(in: locale))
+	internal enum CodingKeys: String, CodingKey {
+		case id, title
 	}
 	
 }
 
-extension Place.Kind.Localized: Codable {
+extension Place.Kind.ID {
 	
-	internal enum CodingKeys: String, CodingKey {
-		case id, title
+	public func localized(in locale: Locale? = nil) throws -> Place.Kind.DTO.Localized {
+		let locale = locale ?? .default
+		return Place.Kind.DTO.Localized(id: self, title: try self.title(in: locale))
 	}
 	
 }

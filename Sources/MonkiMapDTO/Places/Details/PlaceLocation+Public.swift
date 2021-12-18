@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Place.Location {
+extension Place.Location.DTO {
 	
 	public struct Public: Hashable {
 		
@@ -24,7 +24,7 @@ extension Place.Location {
 	
 }
 
-extension Place.Location.Public: Codable {
+extension Place.Location.DTO.Public: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
 		case city, country

@@ -10,7 +10,7 @@ import Foundation
 
 extension Place.Submission {
 	
-	public enum State: String, Codable, Hashable {
+	public enum State: String, Codable, Hashable, CaseIterable {
 		case waitingForReviews = "waiting_for_reviews"
 		case needsChanges = "needs_changes"
 		case waitingForChanges = "waiting_for_changes"

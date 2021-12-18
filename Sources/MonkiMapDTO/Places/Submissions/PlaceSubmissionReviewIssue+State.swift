@@ -10,11 +10,8 @@ import Foundation
 
 extension Place.Submission.Review.Issue {
 	
-	public enum State: String, Codable, Hashable {
+	public enum State: String, Codable, Hashable, CaseIterable {
 		case submitted, addressed, denied
 	}
 	
 }
-
-/// Extend for testing purposes
-extension Place.Submission.Review.Issue.State: CaseIterable {}

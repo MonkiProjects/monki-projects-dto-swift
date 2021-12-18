@@ -6,8 +6,14 @@
 //  Copyright © 2021 Monki Projects. All rights reserved.
 //
 
+import MonkiProjectsDTO
+
 extension Place {
 	
-	public enum Details {}
+	public enum Details: Transferable {
+		
+		public enum DTO {}
+		
+	}
 	
 }

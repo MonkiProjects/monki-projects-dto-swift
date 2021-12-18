@@ -9,26 +9,26 @@
 import Foundation
 import MonkiProjectsDTO
 
-extension Place.Submission.Review.Issue {
+extension Place.Submission.Review.Issue.DTO {
 	
 	public struct Public: Hashable, Identifiable {
 		
-		public let id: UUID
-		public let place: Place.Public.ID
-		public let issuer: User.Public.Small.ID
-		public let reason: Reason
+		public let id: Place.Submission.Review.Issue.ID
+		public let place: Place.ID
+		public let issuer: User.ID
+		public let reason: Place.Submission.Review.Issue.Reason
 		public let comment: String
-		public let state: State
+		public let state: Place.Submission.Review.Issue.State
 		public let createdAt: Date
 		
 		public init(
-			id: ID = UUID(),
-			place: Place.Public.ID,
+			id: ID = .init(),
+			place: Place.DTO.Public.ID,
 			issuer: User.Public.Small.ID,
-			reason: Reason,
+			reason: Place.Submission.Review.Issue.Reason,
 			comment: String,
-			state: State,
-			createdAt: Date = Date()
+			state: Place.Submission.Review.Issue.State,
+			createdAt: Date = .init()
 		) {
 			self.id = id
 			self.place = place
@@ -43,7 +43,7 @@ extension Place.Submission.Review.Issue {
 	
 }
 
-extension Place.Submission.Review.Issue.Public: Codable {
+extension Place.Submission.Review.Issue.DTO.Public: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
 		case id

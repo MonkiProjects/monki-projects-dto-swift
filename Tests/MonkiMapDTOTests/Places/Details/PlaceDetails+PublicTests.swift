@@ -14,7 +14,7 @@ internal final class PlaceDetailsPublicTests: XCTestCase {
 	// MARK: - Valid Domain
 	
 	func testCodingKeysCasing() throws {
-		let data = try Place.Details.Public(
+		let data = try Place.Details.DTO.Public(
 			caption: "Test",
 			satelliteImage: .url(URL(string: "https://monkiprojects.com").require())
 		)

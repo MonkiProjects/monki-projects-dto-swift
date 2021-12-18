@@ -10,15 +10,15 @@ import Foundation
 import Algorithms
 import MonkiProjectsDTO
 
-extension Place.Details {
+extension Place.Details.DTO {
 	
 	public struct Public: Hashable {
 		
 		public var caption: Place.Caption?
 		public var satelliteImage: ImageSource?
 		public var images: [ImageSource]
-		public var location: Place.Location.Public?
-		public var features: [Place.Feature]
+		public var location: Place.Location.DTO.Public?
+		public var features: [Place.Feature.DTO.Full]
 		public var aliases: [Place.Name]
 		
 		public var allImages: [ImageSource] { images + [satelliteImage].compacted() }
@@ -27,8 +27,8 @@ extension Place.Details {
 			caption: Place.Caption? = nil,
 			satelliteImage: ImageSource? = nil,
 			images: [ImageSource] = .init(),
-			location: Place.Location.Public? = nil,
-			features: [Place.Feature] = .init(),
+			location: Place.Location.DTO.Public? = nil,
+			features: [Place.Feature.DTO.Full] = .init(),
 			aliases: [Place.Name] = .init()
 		) {
 			self.caption = caption
@@ -43,7 +43,7 @@ extension Place.Details {
 	
 }
 
-extension Place.Details.Public: Codable {
+extension Place.Details.DTO.Public: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
 		case caption

@@ -6,4 +6,44 @@
 //  Copyright © 2021 Monki Projects. All rights reserved.
 //
 
-public enum Place {}
+import Foundation
+import MonkiProjectsDTO
+import Prefixed
+
+public struct PlaceIDPrefix: PrefixProtocol {
+	public static var prefix: String { "place_" }
+}
+
+
+public enum Place: Transferable {
+	
+	/// A unique place identifier.
+	public typealias ID = PrefixedUUID<PlaceIDPrefix>
+	
+	/// A place `name`.
+	///
+	/// # Notes
+	///
+	/// 1. Length: `3...48`
+	public typealias Name = String
+	
+	/// A place `caption`. Possibly empty.
+	public typealias Caption = String
+	
+	/// The city in which a place is.
+	///
+	/// # Notes
+	///
+	/// 1. Length: `1...`
+	public typealias City = String
+	
+	/// The city in which a place is.
+	///
+	/// # Notes
+	///
+	/// 1. Length: `1...`
+	public typealias Country = String
+	
+	public enum DTO {}
+	
+}

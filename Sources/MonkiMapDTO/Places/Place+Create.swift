@@ -9,7 +9,7 @@
 import Foundation
 import MonkiProjectsDTO
 
-extension Place {
+extension Place.DTO {
 	
 	public struct Create: Hashable {
 		
@@ -48,7 +48,7 @@ extension Place {
 
 // MARK: - Codable conformances
 
-extension Place.Create: Codable {
+extension Place.DTO.Create: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
 		case id

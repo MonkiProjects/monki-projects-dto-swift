@@ -80,16 +80,14 @@ extension Place.Feature {
 	
 }
 
-extension Place.Feature {
+extension Place.Feature: Transferable {
 	
-	/// An enumeration containing types that will be sent to / received by the API.
 	public enum DTO {}
 	
 }
 
-extension Place.Feature.Kind {
+extension Place.Feature.Kind: Transferable {
 	
-	/// An enumeration containing types that will be sent to / received by the API.
 	public enum DTO {}
 	
 }

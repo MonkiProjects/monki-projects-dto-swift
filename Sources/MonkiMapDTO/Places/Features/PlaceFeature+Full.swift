@@ -14,9 +14,7 @@ extension Place.Feature.DTO {
 	
 	public struct Full: Identifiable, Hashable, PlaceFeatureWithIcon {
 		
-		public typealias ID = String
-		
-		public let id: ID
+		public let id: Place.Feature.ID
 		public let kind: Place.Feature.Kind
 		public let isSystemDefined: Bool
 		public var iconUrl: URL?

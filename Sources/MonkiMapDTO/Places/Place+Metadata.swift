@@ -9,7 +9,7 @@
 import Foundation
 import MonkiProjectsDTO
 
-extension Place {
+extension Place.DTO {
 	
 	public struct Metadata: Hashable {
 		
@@ -37,7 +37,7 @@ extension Place {
 	
 }
 
-extension Place.Metadata: Codable {
+extension Place.DTO.Metadata: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
 		case visibility

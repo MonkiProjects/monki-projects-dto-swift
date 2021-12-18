@@ -9,7 +9,7 @@
 import Foundation
 import MonkiProjectsDTO
 
-extension Place {
+extension Place.DTO {
 	
 	/// Model of a place used in APIs responses.
 	public struct Public: Hashable, Identifiable {
@@ -19,8 +19,8 @@ extension Place {
 		public var coordinate: Coordinate?
 		public var kind: Place.Kind.ID?
 		public var category: Place.Category.ID?
-		public var details: Place.Details.Public
-		public var metadata: Place.Metadata
+		public var details: Place.Details.DTO.Public
+		public var metadata: Place.DTO.Metadata
 		
 		public init(
 			id: Place.ID = .init(),
@@ -28,8 +28,8 @@ extension Place {
 			coordinate: Coordinate? = nil,
 			kind: Place.Kind.ID? = nil,
 			category: Place.Category.ID? = nil,
-			details: Place.Details.Public = .init(),
-			metadata: Place.Metadata = .init()
+			details: Place.Details.DTO.Public = .init(),
+			metadata: Place.DTO.Metadata = .init()
 		) {
 			self.id = id
 			self.name = name
@@ -44,7 +44,7 @@ extension Place {
 	
 }
 
-extension Place.Public: Codable {
+extension Place.DTO.Public: Codable {
 	
 	internal enum CodingKeys: String, CodingKey {
 		case id, name
