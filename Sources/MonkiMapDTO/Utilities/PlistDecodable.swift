@@ -23,7 +23,7 @@ extension PlistDecodable {
 				[Self].self,
 				fromFile: Self.fileName,
 				ofType: "plist",
-				in: Bundle.module,
+				in: Bundle.fixedModule,
 				locale: locale
 			)
 		} catch {

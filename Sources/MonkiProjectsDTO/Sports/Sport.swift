@@ -18,19 +18,19 @@ public enum Sport: String, Codable, Hashable {
 	public var name: String {
 		switch self {
 		case .parkour:
-			return NSLocalizedString("SPORT_PARKOUR", bundle: .module, comment: "")
+			return NSLocalizedString("SPORT_PARKOUR", bundle: .fixedModule, comment: "")
 		case .freerunning:
-			return NSLocalizedString("SPORT_FREERUNNING", bundle: .module, comment: "")
+			return NSLocalizedString("SPORT_FREERUNNING", bundle: .fixedModule, comment: "")
 		case .tricking:
-			return NSLocalizedString("SPORT_TRICKING", bundle: .module, comment: "")
+			return NSLocalizedString("SPORT_TRICKING", bundle: .fixedModule, comment: "")
 		case .chaseTag:
-			return NSLocalizedString("SPORT_CHASE_TAG", bundle: .module, comment: "")
+			return NSLocalizedString("SPORT_CHASE_TAG", bundle: .fixedModule, comment: "")
 		case .ninjaWarrior:
-			return NSLocalizedString("SPORT_NINJA_WARRIOR", bundle: .module, comment: "")
+			return NSLocalizedString("SPORT_NINJA_WARRIOR", bundle: .fixedModule, comment: "")
 		case .bouldering:
-			return NSLocalizedString("SPORT_BOULDERING", bundle: .module, comment: "")
+			return NSLocalizedString("SPORT_BOULDERING", bundle: .fixedModule, comment: "")
 		case .gymnastics:
-			return NSLocalizedString("SPORT_GYMNASTICS", bundle: .module, comment: "")
+			return NSLocalizedString("SPORT_GYMNASTICS", bundle: .fixedModule, comment: "")
 		}
 	}
 	

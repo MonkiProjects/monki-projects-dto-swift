@@ -68,7 +68,7 @@ fileprivate final class JSON5DecodableCache<Cached: Decodable> {
 	}
 	
 	private func fetch(locale: Locale?) -> [Cached] {
-		guard let url = Bundle.module.url(
+		guard let url = Bundle.fixedModule.url(
 			forResource: fileName,
 			withExtension: "json",
 			subdirectory: nil,
