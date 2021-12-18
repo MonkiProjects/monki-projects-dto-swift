@@ -25,7 +25,7 @@ let package = Package(
 		.package(url: "https://github.com/apple/swift-log.git", .upToNextMajor(from: "1.4.2")),
 	],
 	targets: [
-		// Monki Projects Core Models
+		// Monki Projects Shared DTOs
 		.target(
 			name: "MonkiProjectsDTO",
 			dependencies: [
@@ -39,7 +39,7 @@ let package = Package(
 			name: "MonkiProjectsDTOTests",
 			dependencies: ["MonkiProjectsDTO"]
 		),
-		// Monki Map Models
+		// Monki Map DTOs
 		.target(
 			name: "MonkiMapDTO",
 			dependencies: [

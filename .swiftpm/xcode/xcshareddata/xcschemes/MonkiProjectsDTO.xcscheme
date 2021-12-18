@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1310"
+   LastUpgradeVersion = "1320"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MonkiMapModel"
-               BuildableName = "MonkiMapModel"
-               BlueprintName = "MonkiMapModel"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MonkiMapModelTests"
-               BuildableName = "MonkiMapModelTests"
-               BlueprintName = "MonkiMapModelTests"
+               BlueprintIdentifier = "MonkiProjectsDTO"
+               BuildableName = "MonkiProjectsDTO"
+               BlueprintName = "MonkiProjectsDTO"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,7 +26,21 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      enableThreadSanitizer = "YES"
+      systemAttachmentLifetime = "keepNever"
+      userAttachmentLifetime = "keepAlways"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "MonkiProjectsDTO"
+            BuildableName = "MonkiProjectsDTO"
+            BlueprintName = "MonkiProjectsDTO"
+            ReferencedContainer = "container:">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -48,9 +48,9 @@
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MonkiMapModelTests"
-               BuildableName = "MonkiMapModelTests"
-               BlueprintName = "MonkiMapModelTests"
+               BlueprintIdentifier = "MonkiProjectsDTOTests"
+               BuildableName = "MonkiProjectsDTOTests"
+               BlueprintName = "MonkiProjectsDTOTests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
@@ -76,9 +76,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "MonkiMapModel"
-            BuildableName = "MonkiMapModel"
-            BlueprintName = "MonkiMapModel"
+            BlueprintIdentifier = "MonkiProjectsDTO"
+            BuildableName = "MonkiProjectsDTO"
+            BlueprintName = "MonkiProjectsDTO"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
