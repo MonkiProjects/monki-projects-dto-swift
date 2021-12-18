@@ -25,3 +25,16 @@ public struct NilError: Error, CustomStringConvertible {
 	}
 	
 }
+
+extension Optional {
+	
+	public func require() throws -> Wrapped {
+		switch self {
+		case .some(let wrapped):
+			return wrapped
+		case .none:
+			throw NilError(Self.self)
+		}
+	}
+	
+}
