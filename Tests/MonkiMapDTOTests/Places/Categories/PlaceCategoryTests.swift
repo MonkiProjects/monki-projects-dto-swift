@@ -24,7 +24,7 @@ internal final class PlaceCategoryTests: XCTestCase {
 	
 	func testsInitFromKindWorks() {
 		for kind in Place.Kind.ID.nonDefaultCases {
-			let result = Place.Category.ID(for: kind)
+			let result = Place.Category.ID(forKindId: kind)
 			XCTAssertNotEqual(result, .unknown)
 		}
 	}

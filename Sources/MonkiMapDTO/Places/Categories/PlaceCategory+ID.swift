@@ -24,14 +24,24 @@ extension Place.Category {
 		
 		public var id: RawValue { self.rawValue }
 		
-		public init(for kindId: Place.Kind.ID) {
-			do {
-				self = try kindId.internal().category
-			} catch {
-				self = .unknown
-			}
-		}
-		
 	}
+	
+}
+
+extension Place.Category.ID {
+	
+	public init(forKindId kindId: Place.Kind.ID) {
+		do {
+			self = try kindId.internal().category
+		} catch {
+			self = .unknown
+		}
+	}
+	
+}
+
+extension Place.Kind.ID {
+	
+	public var category: Place.Category.ID { .init(forKindId: self) }
 	
 }
