@@ -33,4 +33,8 @@ extension DefaultCaseDecodable {
 		self = Self(rawValue: rawValue) ?? Self.defaultCase
 	}
 	
+	public var toValidCase: Self? {
+		self == Self.defaultCase ? nil : self
+	}
+	
 }
