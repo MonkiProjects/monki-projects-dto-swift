@@ -111,6 +111,21 @@ extension Coordinate {
 		}
 	}
 	
+	public init(from clLocationCoordinate: CLLocationCoordinate2D) {
+		self.init(
+			latitude: clLocationCoordinate.latitude,
+			longitude: clLocationCoordinate.longitude
+		)
+	}
+	
+	public init?(from clLocationCoordinate: CLLocationCoordinate2D?) {
+		if let coordinate = clLocationCoordinate {
+			self.init(from: coordinate)
+		} else {
+			return nil
+		}
+	}
+	
 }
 #endif
 
