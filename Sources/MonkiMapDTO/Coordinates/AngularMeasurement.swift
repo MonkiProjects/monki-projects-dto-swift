@@ -30,7 +30,7 @@ extension AngularMeasurement {
 	
 	/// `(dd - deg) * 60`
 	public var minutes: Double {
-		return decimalDegrees.fraction * 60
+		return abs(decimalDegrees.fraction) * 60
 	}
 	
 	/// `(|(dd - deg) * 60| - min) * 60`
